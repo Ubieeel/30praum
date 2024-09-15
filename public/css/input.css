@@ -1,8 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-<<<<<<< HEAD
-=======
 
 
 .text-nav {
@@ -12,4 +10,3 @@
  .hr-foot {
     @apply bg-[#01E1FF] h-[6px] mb-5;
  }
->>>>>>> da1f284412e8ff53b5c2d63004a612bcebf41e7a

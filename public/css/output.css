@@ -554,8 +554,6 @@ video {
   --tw-contain-style:  ;
 }
 
-<<<<<<< HEAD
-=======
 .container {
   width: 100%;
 }
@@ -590,7 +588,6 @@ video {
   }
 }
 
->>>>>>> da1f284412e8ff53b5c2d63004a612bcebf41e7a
 .absolute {
   position: absolute;
 }
@@ -599,8 +596,6 @@ video {
   position: relative;
 }
 
-<<<<<<< HEAD
-=======
 .right-\[80px\] {
   right: 80px;
 }
@@ -618,18 +613,14 @@ video {
   margin-right: auto;
 }
 
->>>>>>> da1f284412e8ff53b5c2d63004a612bcebf41e7a
 .-mb-40 {
   margin-bottom: -10rem;
 }
 
-<<<<<<< HEAD
-=======
 .-ml-\[5px\] {
   margin-left: -5px;
 }
 
->>>>>>> da1f284412e8ff53b5c2d63004a612bcebf41e7a
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -638,8 +629,6 @@ video {
   margin-bottom: 2.5rem;
 }
 
-<<<<<<< HEAD
-=======
 .ml-4 {
   margin-left: 1rem;
 }
@@ -660,31 +649,10 @@ video {
   margin-top: 4rem;
 }
 
->>>>>>> da1f284412e8ff53b5c2d63004a612bcebf41e7a
 .mt-7 {
   margin-top: 1.75rem;
 }
 
-<<<<<<< HEAD
-.mt-8 {
-  margin-top: 2rem;
-}
-
-.mt-44 {
-  margin-top: 11rem;
-}
-
-.mb-\[100px\] {
-  margin-bottom: 100px;
-}
-
-.mb-\[200px\] {
-  margin-bottom: 200px;
-}
-
-.mb-16 {
-  margin-bottom: 4rem;
-=======
 .mt-\[10px\] {
   margin-top: 10px;
 }
@@ -710,7 +678,7 @@ video {
 }
 
 .mt-\[\] {
-  margin-top: ;
+  margin-top: 0;
 }
 
 .mt-\[40px\] {
@@ -747,15 +715,12 @@ video {
 
 .ml-40 {
   margin-left: 10rem;
->>>>>>> da1f284412e8ff53b5c2d63004a612bcebf41e7a
 }
 
 .flex {
   display: flex;
 }
 
-<<<<<<< HEAD
-=======
 .contents {
   display: contents;
 }
@@ -836,16 +801,10 @@ video {
   flex-direction: column;
 }
 
->>>>>>> da1f284412e8ff53b5c2d63004a612bcebf41e7a
 .justify-center {
   justify-content: center;
 }
 
-<<<<<<< HEAD
-.gap-x-52 {
-  -moz-column-gap: 13rem;
-       column-gap: 13rem;
-=======
 .justify-between {
   justify-content: space-between;
 }
@@ -891,7 +850,6 @@ video {
 .bg-\[\#585757\] {
   --tw-bg-opacity: 1;
   background-color: rgb(88 87 87 / var(--tw-bg-opacity));
->>>>>>> da1f284412e8ff53b5c2d63004a612bcebf41e7a
 }
 
 .bg-cinza {
@@ -899,16 +857,6 @@ video {
   background-color: rgb(21 20 20 / var(--tw-bg-opacity));
 }
 
-<<<<<<< HEAD
-.bg-pink-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(244 114 182 / var(--tw-bg-opacity));
-}
-
-.bg-slate-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
-=======
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -934,7 +882,6 @@ video {
 
 .pt-\[54px\] {
   padding-top: 54px;
->>>>>>> da1f284412e8ff53b5c2d63004a612bcebf41e7a
 }
 
 .text-center {
@@ -950,18 +897,12 @@ video {
   line-height: 2rem;
 }
 
-<<<<<<< HEAD
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-=======
 .text-\[16px\] {
   font-size: 16px;
 }
 
 .text-\[20px\] {
   font-size: 20px;
->>>>>>> da1f284412e8ff53b5c2d63004a612bcebf41e7a
 }
 
 .font-semibold {
@@ -973,14 +914,6 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-<<<<<<< HEAD
-.text-red-400 {
-  --tw-text-opacity: 1;
-  color: rgb(248 113 113 / var(--tw-text-opacity));
-}
-
-=======
->>>>>>> da1f284412e8ff53b5c2d63004a612bcebf41e7a
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -989,12 +922,6 @@ video {
   transition-duration: 150ms;
 }
 
-<<<<<<< HEAD
-@media (min-width: 640px) {
-  .sm\:bg-yellow-300 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(253 224 71 / var(--tw-bg-opacity));
-=======
 .text-nav {
   font-family: poppins;
   font-size: 16px;
@@ -1096,28 +1023,10 @@ video {
   .lg\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
->>>>>>> da1f284412e8ff53b5c2d63004a612bcebf41e7a
   }
 }
 
 @media (min-width: 1280px) {
-<<<<<<< HEAD
-  .xl\:bg-slate-500 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(100 116 139 / var(--tw-bg-opacity));
-  }
-
-  .xl\:bg-pink-400 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(244 114 182 / var(--tw-bg-opacity));
-  }
-
-  .xl\:bg-yellow-300 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(253 224 71 / var(--tw-bg-opacity));
-  }
-}
-=======
   .xl\:right-\[142px\] {
     right: 142px;
   }
@@ -1143,4 +1052,3 @@ video {
          column-gap: 74px;
   }
 }
->>>>>>> da1f284412e8ff53b5c2d63004a612bcebf41e7a
