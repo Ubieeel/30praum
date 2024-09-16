@@ -16,6 +16,7 @@
     <!-- CSS_TAIL -->
     <link href="css/output.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/style.css">
 
     <style>
         /* Adiciona a transição personalizada para o sublinhado */
@@ -107,8 +108,7 @@
                             src="img/img-desktop/Search.png" alt="Search">
                     </button>
 
-                    <input class="mt-[71px] rounded-xl bg-[#585757]  max-w-[225px] min-w-[180px] h-[35px]"
-                        type="text">
+                    <input class="mt-[71px] rounded-xl bg-[#585757]  max-w-[225px] min-w-[180px] h-[35px]" type="text">
 
 
                     <img class="mt-[75px] ml-[40px] w-[24px] h-[27px]" src="img/img-desktop/person.png"
@@ -122,8 +122,266 @@
 
     </header>
 
-    <div>
-        <h1>SHOWS</h1>
+
+    <div class="container max-w-[327px] lg:max-w-[1000px] md:max-w-[800px] sm:max-w-[600px] mx-auto">
+
+    <div class="mt-[83px] mb-[53px]">
+        <h1 class="text-white font-poppins  text-center text-[36px]">SHOWS</h1>
+    </div>
+
+    <div class="mx-auto flex-col gap-y-2 lg:flex flex justify-between lg:flex-row rounded-xl max-w-[930px] lg:h-[59px] bg-[#313131]">
+
+
+        <form class=" mx-auto pt-2 max-w-[338px]">
+
+            <select id="artistas"
+                class="bg-zinc-600 max-h-[40px]  w-[228px] border border-gray-300 text-gray-900 text-[14px] rounded-lg focus:ring-blue-500 focus:border-blue-500 block font-medium p-2.5 dark:bg-zinc-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option selected class="">Qual o artista da vez?</option>
+                <option value="TETO">TETO</option>
+                <option value="WUY">WIU</option>
+                <option value="MATUE">MATUÊ</option>
+                <option value="BRANDÃO">BRANDÃO</option>
+            </select>
+        </form>
+
+
+        <form class=" mx-auto my-auto w-[184px]">
+
+            <select id="artistas"
+                class="bg-zinc-600 w-[184px]  border border-gray-300 text-gray-900 text-[14px] rounded-lg font-medium focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-zinc-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option selected class="">Selecione o Estado</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+                <option value="EX">Estrangeiro</option>
+            </select>
+        </form>
+
+
+
+        <form
+            class="bgborder mx-auto  my-auto border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 font-medium dark:bg-zinc-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 p-2.5 text-[14px] rounded-lg  flex flex-row"
+            action="/action_page.php">
+            <label class="mr-3 my-auto" for="birthday">Qual data?</label>
+            <input class="bg-slate-500" type="date" id="birthday" name="birthday">
+        </form>
+
+        <button type="submit">
+        <img class="mx-auto lg:mr-2 my-auto p-1 bg-zinc-600 rounded-xl" src="img/img-desktop/Search.png" alt="Lupa submit">
+        </button>
+    </div>
+
+
+
+
+        <!-- cards -->
+        <div class="pt-20 gap-8 justify-center flex flex-row mx-auto flex-wrap">
+
+
+            <div class="card max-w-[150px] lg:max-w-[226px] hover:scale-110 transition-all">
+
+                <div class=" flex flex-col font-bold text-white">
+
+
+                    <img src="img/img-desktop/card1.png" class="pb-3" alt="">
+                    <p class="pb-3 text-center">06 de Abril</p>
+                    <p class="text-center font-thin">Trap Fama</p>
+
+
+                </div>
+
+
+            </div>
+
+            <div class="card max-w-[150px] lg:max-w-[226px]">
+
+                <div class=" flex flex-col font-bold text-white hover:scale-110 transition-all">
+
+
+                    <img src="img/img-desktop/card1.png" class="pb-3" alt="">
+                    <p class="pb-3 text-center">06 de Abril</p>
+                    <p class="text-center font-thin">Trap Fama</p>
+
+
+                </div>
+
+            </div>
+
+
+
+            <div class="card max-w-[150px] lg:max-w-[226px]">
+
+                <div class=" flex flex-col font-bold text-white hover:scale-110 transition-all">
+
+
+                    <img src="img/img-desktop/card1.png" class="pb-3" alt="">
+                    <p class="pb-3 text-center">06 de Abril</p>
+                    <p class="text-center font-thin">Trap Fama</p>
+
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="card max-w-[150px] lg:max-w-[226px]">
+
+                <div class=" flex flex-col font-bold text-white hover:scale-110 transition-all">
+
+
+                    <img src="img/img-desktop/card1.png" class="pb-3" alt="">
+                    <p class="pb-3 text-center">06 de Abril</p>
+                    <p class="text-center font-thin">Trap Fama</p>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- LINHA 2 -->
+             
+            <div class="card max-w-[150px] lg:max-w-[226px]">
+
+                <div class=" flex flex-col font-bold text-white hover:scale-110 transition-all">
+
+
+                    <img src="img/img-desktop/card1.png" class="pb-3" alt="">
+                    <p class="pb-3 text-center">06 de Abril</p>
+                    <p class="text-center font-thin">Trap Fama</p>
+
+
+                </div>
+
+            </div>
+            
+            <div class="card max-w-[150px] lg:max-w-[226px]">
+
+                <div class=" flex flex-col font-bold text-white hover:scale-110 transition-all">
+
+
+                    <img src="img/img-desktop/card1.png" class="pb-3" alt="">
+                    <p class="pb-3 text-center">06 de Abril</p>
+                    <p class="text-center font-thin">Trap Fama</p>
+
+
+                </div>
+
+            </div>
+            
+            <div class="card max-w-[150px] lg:max-w-[226px]">
+
+                <div class=" flex flex-col font-bold text-white hover:scale-110 transition-all">
+
+
+                    <img src="img/img-desktop/card1.png" class="pb-3" alt="">
+                    <p class="pb-3 text-center">06 de Abril</p>
+                    <p class="text-center font-thin">Trap Fama</p>
+
+
+                </div>
+
+            </div>
+            
+            <div class="card max-w-[150px] lg:max-w-[226px]">
+
+                <div class=" flex flex-col font-bold text-white hover:scale-110 transition-all">
+
+
+                    <img src="img/img-desktop/card1.png" class="pb-3" alt="">
+                    <p class="pb-3 text-center">06 de Abril</p>
+                    <p class="text-center font-thin">Trap Fama</p>
+
+
+                </div>
+                
+            </div>
+
+
+            <div class="card max-w-[150px] lg:max-w-[226px]">
+
+                <div class=" flex flex-col font-bold text-white hover:scale-110 transition-all">
+
+
+                    <img src="img/img-desktop/card1.png" class="pb-3" alt="">
+                    <p class="pb-3 text-center">06 de Abril</p>
+                    <p class="text-center font-thin">Trap Fama</p>
+
+
+                </div>
+
+            </div>
+
+            <div class="card max-w-[150px] lg:max-w-[226px]">
+
+                <div class=" flex flex-col font-bold text-white hover:scale-110 transition-all">
+
+
+                    <img src="img/img-desktop/card1.png" class="pb-3" alt="">
+                    <p class="pb-3 text-center">06 de Abril</p>
+                    <p class="text-center font-thin">Trap Fama</p>
+
+
+                </div>
+
+            </div>
+
+            <div class="card max-w-[150px] lg:max-w-[226px]">
+
+                <div class=" flex flex-col font-bold text-white hover:scale-110 transition-all">
+
+
+                    <img src="img/img-desktop/card1.png" class="pb-3" alt="">
+                    <p class="pb-3 text-center">06 de Abril</p>
+                    <p class="text-center font-thin">Trap Fama</p>
+
+
+                </div>
+
+            </div>
+
+            <div class="card max-w-[150px] lg:max-w-[226px]">
+
+                <div class=" flex flex-col font-bold text-white hover:scale-110 transition-all">
+
+
+                    <img src="img/img-desktop/card1.png" class="pb-3" alt="">
+                    <p class="pb-3 text-center">06 de Abril</p>
+                    <p class="text-center font-thin">Trap Fama</p>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
     </div>
 
 
@@ -131,10 +389,29 @@
 
 
 
+    <!-- LETREIRO -->
+    <marquee class="bg-black mt-[185px] mb-[80px] flex flex-row text-white" direction="left" scrollamount="20">
+        <p> TETO • WIU • MATUÊ • BRANDÃO TETO • WIU • MATUÊ • BRANDÃO TETO • WIU • MATUÊ • BRANDÃO TETO • WIU •
+            MATUÊ • BRANDÃO • TETO • WIU • MATUÊ • BRANDÃO
+            TETO • WIU • MATUÊ • BRANDÃO TETO • WIU • MATUÊ • BRANDÃO TETO • WIU • MATUÊ • BRANDÃO TETO • WIU •
+            MATUÊ • BRANDÃO • TETO • WIU • MATUÊ • BRANDÃO </p>
+    </marquee>
 
 
+    <!-- CONTRATANTES -->
 
+    <div class="mt-[83px] mb-[24px]">
+        <h2 class="text-white mb-[34px] font-poppins  text-center text-[32px]">PARA CONTRATANTES</h2>
 
+        <img src="img/img-desktop/Contratacao.png" class="mx-auto" alt="">
+
+        <button type="button" class=" contents mx-auto">
+            <a class="contents mx-auto" href="">
+                <img class="mx-auto mb-[142px] mt-16" src="img/img-desktop/Contatobutton.png" alt="button contact">
+            </a>
+        </button>
+
+    </div>
 
     <!-- Footer -->
 
@@ -209,7 +486,7 @@
     </footer>
 
 
-
+    <script type="text/javascript" src="js/homepageshows.js"></script>
 </body>
 
 </html>
