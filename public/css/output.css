@@ -870,14 +870,6 @@ video {
   max-width: 44px;
 }
 
-.max-w-\[530px\] {
-  max-width: 530px;
-}
-
-.max-w-\[930px\] {
-  max-width: 930px;
-}
-
 .flex-row {
   flex-direction: row;
 }
@@ -1224,12 +1216,12 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:max-w-\[800px\] {
-    max-width: 800px;
-  }
-
   .md\:max-w-\[530px\] {
     max-width: 530px;
+  }
+
+  .md\:max-w-\[800px\] {
+    max-width: 800px;
   }
 }
 
