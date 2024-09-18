@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artistas</title>
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="img/img-desktop/30logo(1).png" type="image/x-icon">
+    <!-- FONTES -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS_TAIL -->
+    <link href="css/output.css" rel="stylesheet">
+
+
+    <style>
+        /* Adiciona a transição personalizada para o sublinhado */
+        .underline-hover {
+            position: relative;
+            display: inline-block;
+        }
+
+        .underline-hover::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            /* Espessura do sublinhado */
+            background-color: currentColor;
+            /* Cor do sublinhado igual à cor do texto */
+            transition: width 1s ease;
+            /* Duração da transição */
+        }
+
+        .underline-hover:hover::after {
+            width: 100%;
+            /* Largura total quando hover */
+        }
+
+        /* Brandão / card */
+        @keyframes blink {
+            0% {
+                background-color: #4F46E5;
+            }
+
+            /* Cor inicial */
+            50% {
+                background-color: #3B82F6;
+            }
+
+            /* Cor intermediária */
+            100% {
+                background-color: #4F46E5;
+            }
+
+            /* Cor final */
+        }
+
+        /* Estilo do retângulo com animação de piscar */
+        .blink {
+            animation: blink 1s infinite;
+            /* Animação de piscar com duração de 1s e repetição infinita */
+            padding: 1rem;
+            /* Menos padding para torná-lo mais fino */
+            border-radius: 0.5rem;
+            text-align: center;
+            width: 16rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
+</head>
+
+<body class=" bg-cinza">
+
+
+    <header class="h-[128px] bg-gradient-to-b from-black to-transparent">
+        <div class="lg:max-w-[1000px] container mx-auto ">
+
+            <!-- Header Mobile -->
+
+            <div class="lg:hidden container max-w-[330px] mx-auto">
+                <div class="justify-center flex-row flex gap-x-[190px]">
+                    <img class="pt-[45px]" src="img/img-mobile/30logo(2).png" alt="Logo">
+
+                    <div class="flex gap-[40px]">
+                        <button class="contents">
+                            <img class="max-w-[31px] max-h-[31px] mt-16" src="img/img-mobile/Search.png" alt="">
+                        </button>
+
+                        <button class="contents">
+                            <img class="max-w-[40px] mt-[67px] max-h-[27px]" src="img/img-mobile/nav.png" alt="">
+                        </button>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- HEADER TABLET AND COMPUTER-->
+        <div class="hidden lg:block">
+
+
+
+            <div class="flex px-[85px] flex-row justify-between">
+
+                <img class="pt-[54px]" src="img/img-mobile/30logo(2).png" alt="../Logo">
+
+                <div class="mt-[77px] flex flex-row ml-40">
+                    <ul class=" flex flex-row gap-x-[39px]">
+                        <li class="text-nav ">
+                            <a href="../index.html">INÍCIO</a>
+                        </li>
+                        <li class="text-nav">
+                            <a href="">SHOWS</a>
+                        </li>
+                        <li class="text-nav ">
+                            <a href="">CONTATO</a>
+                        </li>
+                        <li class="text-nav ">
+                            <a href="">ARTISTAS</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="flex flex-row">
+                    <button class=" contents">
+                        <img class="max-w-[33px] max-h-[33px] absolute top-[71px] sm:right-[135px] lg:right-[152px] xl:right-[152px]"
+                            src="img/img-desktop/Search.png" alt="Search">
+                    </button>
+
+                    <input class="mt-[71px] rounded-xl bg-[#585757]  max-w-[225px] min-w-[180px] h-[35px]" type="text">
+
+
+                    <img class="mt-[75px] ml-[40px] w-[24px] h-[27px]" src="img/img-desktop/person.png"
+                        alt="Icon person">
+                </div>
+
+            </div>
+
+        </div>
+        </div>
+
+    </header>
+
+
+
+    <!-- <section class="container max-w-[325px] mx-auto">
+        <div class="text-white font-poppins"> -->
+
+    <!-- 
+        </div>
+    </section> -->
+
+
+    <!-- <section class="max-w-[320px] jus">
+        <div class="text-white font-poppins">
+            <div class="lg:flex">
+                <div class="">
+                    <img src="img/img-artistas/Teto.png" class="rounded-full hidden lg:block">
+                </div>
+                <div class="mx-10">
+                    <div class="">
+                        <p>Clériton Sávio Santos Silva tem 19 anos e é de Jacobina - Salvador, na Bahia. O
+                            artista, conhecido como o “rei das prévias”, ganhou popularidade em 2020 antes mesmo
+                            de lançar uma música oficialmente. Isso ocorreu porque desde o início da sua
+                            carreira, Teto publicava vídeos com trechos de suas composições nas redes sociais;
+                            as prévias. As primeiras composições do rapper foram feitas aos 12 anos e as
+                            gravações eram realizadas em seu quarto, sem muitos recursos. Teto pesquisa na
+                            internet informações para produzir suas músicas.</p>
+                    </div>
+                    <div class="md:flex md:justify-center lg:flex lg:justify-start"><a
+                            href="https://www.instagram.com/euteto/?hl=pt-br" class="md: flex justify-center">
+                            <img src="../public/img/img-desktop/instagram1.png" alt="">
+                        </a></div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <div class="card font-poppins text-white">
+        <div>
+            <div class="titulo text-center">
+                <h1 class="font-bold text-3xl mt-10">ARTISTAS</h1>
+            </div>
+            <div class="teto text-center">
+                <h1 class="font-semibold text-3xl mt-8">TETO</h1>
+            </div>
+        </div>
+    
+        <div class="flex flex-col lg:flex-row lg:items-start lg:justify-center lg:mx-12 mt-6 lg:space-x-12">
+            <!-- Imagem para telas grandes -->
+            <div class="hidden lg:block">
+                <img src="img/img-artistas/Teto.png" class="rounded-full w-64 h-64">
+            </div>
+    
+            <!-- Imagem para telas menores -->
+            <div class="lg:hidden mb-6">
+                <img src="img/img-artistas/Teto.png" class="rounded-full w-48 h-48 mx-auto">
+            </div>
+    
+            <div class="lg:w-1/2">
+                <p class="text-lg text-center lg:text-left mb-4">
+                    Clériton Sávio Santos Silva tem 19 anos e é de Jacobina - Salvador, na Bahia. O
+                    artista, conhecido como o “rei das prévias”, ganhou popularidade em 2020 antes mesmo
+                    de lançar uma música oficialmente. Isso ocorreu porque desde o início da sua
+                    carreira, Teto publicava vídeos com trechos de suas composições nas redes sociais;
+                    as prévias. As primeiras composições do rapper foram feitas aos 12 anos e as
+                    gravações eram realizadas em seu quarto, sem muitos recursos. Teto pesquisa na
+                    internet informações para produzir suas músicas.
+                </p>
+                <div class="flex justify-center lg:justify-start">
+                    <a href="https://www.instagram.com/euteto/?hl=pt-br">
+                        <img src="img/img-desktop/instagram1.png" alt="Instagram" class="w-8 h-8">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <!-- LETREIRO -->
+    <marquee class="bg-black mt-[85px] mb-[80px] flex flex-row text-white" direction="left" scrollamount="20">
+        <p> TETO • WIU • MATUÊ • BRANDÃO TETO • WIU • MATUÊ • BRANDÃO TETO • WIU • MATUÊ • BRANDÃO TETO • WIU •
+            MATUÊ • BRANDÃO • TETO • WIU • MATUÊ • BRANDÃO
+            TETO • WIU • MATUÊ • BRANDÃO TETO • WIU • MATUÊ • BRANDÃO TETO • WIU • MATUÊ • BRANDÃO TETO • WIU •
+            MATUÊ • BRANDÃO • TETO • WIU • MATUÊ • BRANDÃO </p>
+    </marquee>
+
+    <!-- SOBRE NÒS -->
+    <section class="container max-w-[325px] mx-auto flex justify-center; 
+    <div class="mr-10 ml-10">
+    <div class="text-white font-poppins ">
+        <div class="flex flex-col justify-center">
+            <div class=" font-bold">
+                <h1 class="text-center text-8xl">SOBRE NÓS</h1>
+            </div>
+            <div class="justify-center flex mt-5 mb-3"><img src="img/img-artistas/banner.png" class="rounded-2xl"></div>
+    <div class=""><p class="text-center md:text-2xl">A 30PRAUM é a produtora e selo musical fundada pelo rapper Matuê junto a sua sócia Clara Mendes em Fortaleza-CE. Criada em 2016, a “30” - como é intimamente referenciada pelos milhões de fãs espalhados pelo Brasil - tem sido pioneira na fomentação da música e cultura urbana no Nordeste, além de ter se tornado, nos últimos anos, uma referência em excelência artística e sucesso comercial no país, posicionando o rap e o trap nordestinos no topo dos charts nacionais.</p></div>
+    <div class=""><p class="text-center ">Seu casting, composto atualmente pelos artistas Matuê, WIU e Teto, representa uma das grandes potências do cenário musical brasileiro, acumulando bilhões de plays em hits como “Vampiro”, “Coração de Gelo”, “Fim de Semana no Rio” e “Conexões de Máfia”, além de uma agenda de shows esgotados dentro e fora do país.</p></div>
+    <div class="flex justify-center items-center">
+        <div><a href=" https://www.instagram.com/30praum/?hl=pt-br"><img src="img/img-desktop/instagram1.png"
+                    alt=""></a></div>
+            <div class="font-light">@30praum</div>
+        </div>
+    </div>
+    </div>
+</div>
+</section>
+
+
+    <!-- Footer -->
+
+    <hr class="hr-foot">
+
+    <footer class="font-poppins container max-w-[302px] lg:max-w-[650px] mx-auto text-white xl:w-auto">
+        <div class="mt-7 mb-10">
+
+
+
+            <h2 class="font-semibold text-2xl text-center ">
+                30praum.hub
+            </h2>
+
+
+
+        </div>
+
+
+        <section class=" xl:mb-[192px] lg:flex gap-x-20 lg:justify-between">
+
+
+            <div class="lg:flex flex-col hidden">
+                <h1 class="text-center text-[20px]">Redes Sociais</h1>
+
+                <ul class="mt-10 flex flex-ro gap-x-10 justify-center">
+                    <li><img src="img/img-desktop/instagram1.png" alt="instagram"></li>
+                    <li><img class="-ml-[5px] max-w-[44px] mt-[10px]" src="img/img-desktop/youtube.png" alt="youtube">
+                    </li>
+                    <li><img class="mt-[10px]" src="img/img-desktop/linkedin.png" alt="linkedin"></li>
+                </ul>
+
+            </div>
+
+
+
+
+            <div class=" xl:gap-x-[74px] contents   gap-x-[100px] mx-auto text-[16px] lg:text-lg">
+
+                <div class="flex flex-col justify-center">
+
+                    <h1 class="hidden lg:block text-center">Menu</h1>
+
+                    <div class="flex flex-row mt-6 gap-x-[74px]">
+
+                        <div class=" text-center">
+                            <ul>
+                                <li class="mb-1 "><a href="../index.html">Voltar ao ínicio</a></li>
+                                <li class="mb-1"><a href="#">Minha conta</a></li>
+                                <li><a href="#">Shows</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <ul class="text-center">
+                                <li class="mb-1"><a href="#">Contato</a></li>
+                                <li class="mb-1"><a href="#">Artistas</li>
+                                <li><a href="#">Fórum</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </section>
+
+        <div class="flex justify-center mt-[171px] mb-10 lg:mb-4 lg:mt-[149px]">
+            © 2024 Todos os direitos reservados
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
