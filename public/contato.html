@@ -65,9 +65,9 @@
 
       <section>
         <nav class="flex flex-col text-center text-xl gap-y-3 mt-8 text-white">
-          <a href="#">INÍCIO</a>
+          <a href="index.html">INÍCIO</a>
           <a href="shows.html">SHOWS</a>
-          <a href="#">CONTATO</a>
+          <a href="contato.html">CONTATO</a>
           <a href="#">ARTISTAS</a>
         </nav>
       </section>
@@ -130,13 +130,13 @@
           <div class="mt-[77px] flex flex-row ml-40">
             <ul class="flex flex-row gap-x-[39px]">
               <li class="text-nav">
-                <a href="">INÍCIO</a>
+                <a href="index.html">INÍCIO</a>
               </li>
               <li class="text-nav">
-                <a href="">SHOWS</a>
+                <a href="shows.html">SHOWS</a>
               </li>
               <li class="text-nav">
-                <a href="">CONTATO</a>
+                <a href="contato.html">CONTATO</a>
               </li>
               <li class="text-nav">
                 <a href="">ARTISTAS</a>
@@ -177,31 +177,36 @@
           preenchendo os campos abaixo, e logo retornaremos o seu contato
         </p>
         <div class="flex flex-col justify-center items-center">
+          <!-- email -->
           <p class="text-white my-[10px] mr-[50%] lg:mr-[40%]">E-mail:</p>
           <input
             type="email"
             placeholder="E-mail..."
-            class="w-[70%] lg:w-[50%] bg-stone-400 rounded-xl placeholder-stone-500 placeholder:pl-[20px]" />
+            required
+            class="w-[70%] lg:w-[50%] bg-stone-400 rounded-xl placeholder-stone-500 placeholder:pl-[20px] pl-2" />
         </div>
         <div class="flex flex-col justify-center items-center">
+          <!-- assunto -->
           <p class="text-white mt-[10px] mr-[50%] lg:mr-[40%]">Assunto:</p>
           <input
             type="text"
             placeholder="Assunto..."
-            class="w-[70%] lg:w-[50%] bg-stone-400 rounded-xl placeholder-stone-500 placeholder:pl-[20px]" />
+            class="w-[70%] lg:w-[50%] bg-stone-400 rounded-xl placeholder-stone-500 placeholder:pl-[20px] pl-2" />
         </div>
         <div class="flex flex-col justify-center items-center">
+          <!-- mensagem -->
           <p
             class="text-white mt-[10px] mr-[42%] sm:mr-[50%] lg:mr-[34%] xl:mr-[37%]">
             Mensagem:
           </p>
+          <textarea
+            name="Mensagem"
+            id="msg"
+            class="w-[70%] lg:w-[50%] h-[150px] bg-stone-400 rounded-xl pl-2 pt-2"></textarea>
           <input
-            type="text"
-            placeholder="Mensagem..."
-            class="w-[70%] lg:w-[50%] h-[150px] bg-stone-400 rounded-xl placeholder-stone-500 placeholder:pl-[15px] placeholder:absolute placeholder:top-3" />
-          <div class="w-[100px] h-[30px] rounded-xl bg-[#1A6F84] mt-[20px]">
-            <p class="text-white text-center">Enviar</p>
-          </div>
+            type="submit"
+            value="Enviar"
+            class="w-[100px] h-[30px] rounded-xl bg-[#1A6F84] mt-[20px] cursor-pointer" />
         </div>
       </div>
     </div>
