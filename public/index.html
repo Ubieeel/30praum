@@ -57,131 +57,121 @@
   <body class="bg-cinza">
     <!-- sidebar -->
 
-    <div
-      class="fixed hidden h-full w-full sm:max-w-[498px] right-0 bg-[#000000e7]">
+    <div id="sidebar" class="hidden fixed z-40 h-full w-full sm:max-w-[498px] right-0 bg-[#000000e7]">
+        
       <!-- Header -->
-      <div
-        class="flex flex-row justify-between max-w-[340px] container mx-auto mt-[45px]">
-        <img src="img/img-mobile/30logo(2).png" alt="" />
+  <div class="flex flex-row justify-between max-w-[340px]  container mx-auto mt-[45px]">
 
-        <button type="button" class="text-white font-poppins text-3xl">
-          X
-        </button>
-      </div>
+      <img src="img/img-mobile/30logo(2).png" alt="">
+  
+      <button type="button" onclick="closesidebar()" class="text-white font-poppins text-3xl">X</button>
+  </div>
 
-      <section>
-        <nav class="flex flex-col text-center text-xl gap-y-3 mt-8 text-white">
-          <a href="#">INÍCIO</a>
+  <section>
+      <nav class="flex flex-col text-center text-xl gap-y-3 mt-8 text-white">
+          <a href="index.html">INÍCIO</a>
           <a href="shows.html">SHOWS</a>
-          <a href="#">CONTATO</a>
-          <a href="#">ARTISTAS</a>
-        </nav>
-      </section>
+          <a href="contato.html">CONTATO</a>
+          <a href="artistas.html">ARTISTAS</a>
+      </nav>
+  </section>
+  
 
-      <div class="max-w-[245px] mx-auto mt-40">
-        <img class="mx-auto mb-5" src="img/img-mobile/iconperson2.png" alt="" />
+  <div class="max-w-[245px] mx-auto mt-40">
+      <img class="mx-auto mb-5" src="img/img-mobile/iconperson2.png" alt="">
 
-        <button
-          class="mx-auto mb-5 py-3 px-[91px] rounded-3xl text-[16px] bg-[#01e1ff7c] font-poppins text-white">
-          LOGIN
-        </button>
+      <button class="mx-auto mb-5 py-3 px-[91px] rounded-3xl text-[16px] bg-[#01e1ff7c] font-poppins text-white">LOGIN</button>
 
-        <button
-          class="mx-auto py-3 px-[66px] rounded-3xl text-[16px] bg-[#252323] font-poppins text-white">
-          CADASTRE-SE
-        </button>
-      </div>
-    </div>
+      <button class="mx-auto py-3 px-[66px] rounded-3xl text-[16px] bg-[#252323] font-poppins text-white">CADASTRE-SE</button>
 
-    <!-- FIM SIDE BAR -->
+  </div>
 
-    <header class="h-[128px] bg-gradient-to-b from-black to-transparent">
-      <div class="lg:max-w-[1000px] container mx-auto">
-        <!-- Header Mobile -->
+</div>
 
-        <div class="lg:hidden container max-w-[330px] mx-auto">
-          <div class="justify-center flex-row flex gap-x-[190px]">
-            <img
-              class="pt-[45px]"
-              src="img/img-mobile/30logo(2).png"
-              alt="Logo" />
+<!-- FIM SIDE BAR -->
 
-            <div class="flex gap-[40px]">
-              <button class="contents">
-                <img
-                  class="max-w-[31px] max-h-[31px] mt-16"
-                  src="img/img-mobile/Search.png"
-                  alt="" />
-              </button>
+  <header class="h-[128px] bg-gradient-to-b from-black to-transparent">
+      <div class="lg:max-w-[1000px] container mx-auto ">
 
-              <button class="contents">
-                <img
-                  class="max-w-[40px] mt-[67px] max-h-[27px]"
-                  src="img/img-mobile/nav.png"
-                  alt="" />
-              </button>
-            </div>
+          <!-- Header Mobile -->
+
+          <div class="lg:hidden container max-w-[330px] mx-auto">
+              <div class="justify-center flex-row flex gap-x-[190px]">
+                  <img class="pt-[45px]" src="img/img-mobile/30logo(2).png" alt="Logo">
+
+                  <div class="flex gap-[40px]">
+                      <button class="contents">
+                          <img class="max-w-[31px] max-h-[31px] mt-16" src="img/img-mobile/Search.png" alt="">
+                      </button>
+
+                      <button onclick="opensidebar()" class="contents">
+                          <img class="max-w-[40px] mt-[67px] max-h-[27px]" src="img/img-mobile/nav.png" alt="">
+                      </button>
+                  </div>
+
+
+              </div>
+
           </div>
-        </div>
       </div>
 
       <!-- HEADER TABLET AND COMPUTER-->
       <div class="hidden lg:block">
-        <div class="flex px-[85px] flex-row justify-between">
-          <img
-            class="pt-[54px]"
-            src="img/img-mobile/30logo(2).png"
-            alt="Logo" />
 
-          <div class="mt-[77px] flex flex-row ml-40">
-            <ul class="flex flex-row gap-x-[39px]">
-              <li class="text-nav">
-                <a href="#">INÍCIO</a>
-              </li>
-              <li class="text-nav">
-                <a href="shows.html">SHOWS</a>
-              </li>
-              <li class="text-nav">
-                <a href="contato.html">CONTATO</a>
-              </li>
-              <li class="text-nav">
-                <a href="">ARTISTAS</a>
-              </li>
-            </ul>
+
+
+          <div class="flex px-[85px] flex-row justify-between">
+
+              <img class="pt-[54px]" src="img/img-mobile/30logo(2).png" alt="Logo">
+
+              <div class="mt-[77px] flex flex-row ml-40">
+                  <ul class=" flex flex-row gap-x-[39px]">
+                      <li class="text-nav ">
+                          <a href="index.html">INÍCIO</a>
+                      </li>
+                      <li class="text-nav">
+                          <a href="shows.html">SHOWS</a>
+                      </li>
+                      <li class="text-nav ">
+                          <a href="contato.html">CONTATO</a>
+                      </li>
+                      <li class="text-nav ">
+                          <a href="artistas.html">ARTISTAS</a>
+                      </li>
+                  </ul>
+              </div>
+
+
+              <div class="flex flex-row">
+                  <button class=" contents">
+                      <img class="max-w-[33px] max-h-[33px] absolute top-[71px] sm:right-[135px] lg:right-[152px] xl:right-[152px]"
+                          src="img/img-desktop/Search.png" alt="Search">
+                  </button>
+
+                  <input class="mt-[71px] rounded-xl bg-[#585757]  max-w-[225px] min-w-[180px] h-[35px]" type="text">
+
+                  <a href="profile.html"  class="contents">                  
+                    <img class="mt-[75px] ml-[40px] w-[24px] h-[27px]" src="img/img-desktop/person.png"  alt="Icon person">
+                    </a>
+
+              </div>
+
           </div>
 
-          <div class="flex flex-row">
-            <button class="contents">
-              <img
-                class="max-w-[33px] max-h-[33px] absolute top-[71px] sm:right-[135px] lg:right-[152px] xl:right-[152px]"
-                src="img/img-desktop/Search.png"
-                alt="Search" />
-            </button>
-
-            <input
-              class="mt-[71px] rounded-xl bg-[#585757] max-w-[225px] min-w-[180px] h-[35px]"
-              type="text" />
-
-            <a class="contents" href="profile.html">
-            <img
-              class="mt-[75px] ml-[40px] w-[24px] h-[27px]"
-              src="img/img-desktop/person.png"
-              alt="Icon person" />
-            </a>
-          </div>
-        </div>
       </div>
-    </header>
+      </div>
+
+  </header>
 
     <!-- carrossel -->
     <!--HTML CODE-->
-    <div class="w-full relative md:w-[90%]  lg:w-[90%] px-5 mx-auto">
+    <div class="w-full relative md:w-[90%] lg:w-[90%] px-5 mx-auto">
       <div class="swiper default-carousel swiper-container">
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper ">
           <div class="swiper-slide">
             <img
               src="img/img-desktop/carroussel/Carroussel1.png"
-              class="w-[100%] rounded-2xl" />
+              class="w-[100%]  rounded-2xl" />
           </div>
           <div class="swiper-slide">
             <img
@@ -546,6 +536,8 @@
       </div>
     </footer>
 
+
+    <script type="text/javascript" src="js/sidebarmobile.js"></script>
     <script type="text/javascript" src="js/homepageshows.js"></script>
   </body>
 </html>
