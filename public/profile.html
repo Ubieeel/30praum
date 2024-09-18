@@ -51,14 +51,14 @@
 
     <!-- sidebar -->
 
-    <div class="fixed h-full w-full sm:max-w-[498px] right-0 bg-[#000000e7]">
+    <div id="sidebar" class="hidden fixed hiddenfixed z-20 h-full w-full sm:max-w-[498px] right-0 bg-[#000000e7]">
         
             <!-- Header -->
         <div class="flex flex-row justify-between max-w-[340px] container mx-auto mt-[45px]">
 
             <img src="img/img-mobile/30logo(2).png" alt="">
         
-            <button type="button" class="text-white font-poppins text-3xl">X</button>
+            <button type="button" onclick="closesidebar()" class="text-white font-poppins text-3xl">X</button>
         </div>
 
         <section>
@@ -100,7 +100,7 @@
                             <img class="max-w-[31px] max-h-[31px] mt-16" src="img/img-mobile/Search.png" alt="">
                         </button>
 
-                        <button class="contents">
+                        <button onclick="opensidebar()" class="contents">
                             <img class="max-w-[40px] mt-[67px] max-h-[27px]" src="img/img-mobile/nav.png" alt="">
                         </button>
                     </div>
@@ -428,6 +428,10 @@
                 © 2024 Todos os direitos reservados
             </div>
         </footer>
+
+
+        <script type="text/javascript" src="js/sidebarmobile.js"></script>
+
     </body>
 
 </html>
