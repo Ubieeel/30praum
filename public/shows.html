@@ -1,527 +1,456 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Style guide</title>
 
     <!-- FAVICON -->
-    <link rel="shortcut icon" href="../imagens/faviicon/logo2.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="../imagens/faviicon/logo2.png"
+      type="image/x-icon" />
     <!-- FONTES -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
 
     <!-- CSS_TAIL -->
-    <link href="css/output.css" rel="stylesheet">
+    <link href="css/output.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
 
     <style>
-        /* Adiciona a transição personalizada para o sublinhado */
-        .underline-hover {
-            position: relative;
-            display: inline-block;
-        }
+      /* Adiciona a transição personalizada para o sublinhado */
+      .underline-hover {
+        position: relative;
+        display: inline-block;
+      }
 
-        .underline-hover::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 0;
-            height: 2px;
-            /* Espessura do sublinhado */
-            background-color: currentColor;
-            /* Cor do sublinhado igual à cor do texto */
-            transition: width 1s ease;
-            /* Duração da transição */
-        }
+      .underline-hover::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        /* Espessura do sublinhado */
+        background-color: currentColor;
+        /* Cor do sublinhado igual à cor do texto */
+        transition: width 1s ease;
+        /* Duração da transição */
+      }
 
-        .underline-hover:hover::after {
-            width: 100%;
-            /* Largura total quando hover */
-        }
+      .underline-hover:hover::after {
+        width: 100%;
+        /* Largura total quando hover */
+      }
     </style>
+  </head>
 
-</head>
+  <body class="bg-cinza">
+    <!-- sidebar -->
 
-<body class=" bg-cinza">
+    <div
+      class="fixed hidden h-full w-full sm:max-w-[498px] right-0 bg-[#000000e7]">
+      <!-- Header -->
+      <div
+        class="flex flex-row justify-between max-w-[340px] container mx-auto mt-[45px]">
+        <img src="img/img-mobile/30logo(2).png" alt="" />
 
+        <button type="button" class="text-white font-poppins text-3xl">
+          X
+        </button>
+      </div>
 
-     <!-- sidebar -->
-
-     <div class="fixed hidden h-full w-full sm:max-w-[498px] right-0 bg-[#000000e7]">
-        
-        <!-- Header -->
-    <div class="flex flex-row justify-between max-w-[340px] container mx-auto mt-[45px]">
-
-        <img src="img/img-mobile/30logo(2).png" alt="">
-    
-        <button type="button" class="text-white font-poppins text-3xl">X</button>
-    </div>
-
-    <section>
+      <section>
         <nav class="flex flex-col text-center text-xl gap-y-3 mt-8 text-white">
-            <a href="#">INÍCIO</a>
-            <a href="shows.html">SHOWS</a>
-            <a href="#">CONTATO</a>
-            <a href="#">ARTISTAS</a>
+          <a href="#">INÍCIO</a>
+          <a href="shows.html">SHOWS</a>
+          <a href="#">CONTATO</a>
+          <a href="#">ARTISTAS</a>
         </nav>
-    </section>
-    
+      </section>
 
-    <div class="max-w-[245px] mx-auto mt-40">
-        <img class="mx-auto mb-5" src="img/img-mobile/iconperson2.png" alt="">
+      <div class="max-w-[245px] mx-auto mt-40">
+        <img class="mx-auto mb-5" src="img/img-mobile/iconperson2.png" alt="" />
 
-        <button class="mx-auto mb-5 py-3 px-[91px] rounded-3xl text-[16px] bg-[#01e1ff7c] font-poppins text-white">LOGIN</button>
+        <button
+          class="mx-auto mb-5 py-3 px-[91px] rounded-3xl text-[16px] bg-[#01e1ff7c] font-poppins text-white">
+          LOGIN
+        </button>
 
-        <button class="mx-auto py-3 px-[66px] rounded-3xl text-[16px] bg-[#252323] font-poppins text-white">CADASTRE-SE</button>
-
+        <button
+          class="mx-auto py-3 px-[66px] rounded-3xl text-[16px] bg-[#252323] font-poppins text-white">
+          CADASTRE-SE
+        </button>
+      </div>
     </div>
 
-</div>
-
-<!-- FIM SIDE BAR -->
+    <!-- FIM SIDE BAR -->
 
     <header class="h-[128px] bg-gradient-to-b from-black to-transparent">
-        <div class="lg:max-w-[1000px] container mx-auto ">
+      <div class="lg:max-w-[1000px] container mx-auto">
+        <!-- Header Mobile -->
 
-            <!-- Header Mobile -->
+        <div class="lg:hidden container max-w-[330px] mx-auto">
+          <div class="justify-center flex-row flex gap-x-[190px]">
+            <img
+              class="pt-[45px]"
+              src="img/img-mobile/30logo(2).png"
+              alt="Logo" />
 
-            <div class="lg:hidden container max-w-[330px] mx-auto">
-                <div class="justify-center flex-row flex gap-x-[190px]">
-                    <img class="pt-[45px]" src="img/img-mobile/30logo(2).png" alt="Logo">
+            <div class="flex gap-[40px]">
+              <button class="contents">
+                <img
+                  class="max-w-[31px] max-h-[31px] mt-16"
+                  src="img/img-mobile/Search.png"
+                  alt="" />
+              </button>
 
-                    <div class="flex gap-[40px]">
-                        <button class="contents">
-                            <img class="max-w-[31px] max-h-[31px] mt-16" src="img/img-mobile/Search.png" alt="">
-                        </button>
-
-                        <button class="contents">
-                            <img class="max-w-[40px] mt-[67px] max-h-[27px]" src="img/img-mobile/nav.png" alt="">
-                        </button>
-                    </div>
-
-
-                </div>
-
+              <button class="contents">
+                <img
+                  class="max-w-[40px] mt-[67px] max-h-[27px]"
+                  src="img/img-mobile/nav.png"
+                  alt="" />
+              </button>
             </div>
+          </div>
         </div>
+      </div>
 
-        <!-- HEADER TABLET AND COMPUTER-->
-        <div class="hidden lg:block">
+      <!-- HEADER TABLET AND COMPUTER-->
+      <div class="hidden lg:block">
+        <div class="flex px-[85px] flex-row justify-between">
+          <img
+            class="pt-[54px]"
+            src="img/img-mobile/30logo(2).png"
+            alt="Logo" />
 
+          <div class="mt-[77px] flex flex-row ml-40">
+            <ul class="flex flex-row gap-x-[39px]">
+              <li class="text-nav">
+                <a href="">INÍCIO</a>
+              </li>
+              <li class="text-nav">
+                <a href="">SHOWS</a>
+              </li>
+              <li class="text-nav">
+                <a href="">CONTATO</a>
+              </li>
+              <li class="text-nav">
+                <a href="">ARTISTAS</a>
+              </li>
+            </ul>
+          </div>
 
+          <div class="flex flex-row">
+            <button class="contents">
+              <img
+                class="max-w-[33px] max-h-[33px] absolute top-[71px] sm:right-[135px] lg:right-[152px] xl:right-[152px]"
+                src="img/img-desktop/Search.png"
+                alt="Search" />
+            </button>
 
-            <div class="flex px-[85px] flex-row justify-between">
+            <input
+              class="mt-[71px] rounded-xl bg-[#585757] max-w-[225px] min-w-[180px] h-[35px]"
+              type="text" />
 
-                <img class="pt-[54px]" src="img/img-mobile/30logo(2).png" alt="Logo">
-
-                <div class="mt-[77px] flex flex-row ml-40">
-                    <ul class=" flex flex-row gap-x-[39px]">
-                        <li class="text-nav ">
-                            <a href="">INÍCIO</a>
-                        </li>
-                        <li class="text-nav">
-                            <a href="">SHOWS</a>
-                        </li>
-                        <li class="text-nav ">
-                            <a href="">CONTATO</a>
-                        </li>
-                        <li class="text-nav ">
-                            <a href="">ARTISTAS</a>
-                        </li>
-                    </ul>
-                </div>
-
-
-                <div class="flex flex-row">
-                    <button class=" contents">
-                        <img class="max-w-[33px] max-h-[33px] absolute top-[71px] sm:right-[135px] lg:right-[152px] xl:right-[152px]"
-                            src="img/img-desktop/Search.png" alt="Search">
-                    </button>
-
-                    <input class="mt-[71px] rounded-xl bg-[#585757]  max-w-[225px] min-w-[180px] h-[35px]" type="text">
-
-
-                    <img class="mt-[75px] ml-[40px] w-[24px] h-[27px]" src="img/img-desktop/person.png"
-                        alt="Icon person">
-                </div>
-
-            </div>
-
+            <img
+              class="mt-[75px] ml-[40px] w-[24px] h-[27px]"
+              src="img/img-desktop/person.png"
+              alt="Icon person" />
+          </div>
         </div>
-        </div>
-
+      </div>
     </header>
 
+    <div
+      class="container max-w-[327px] lg:max-w-[1000px] md:max-w-[800px] sm:max-w-[600px] mx-auto">
+      <div class="mt-[83px] mb-[53px]">
+        <h1 class="text-white font-poppins text-center text-[36px]">SHOWS</h1>
+      </div>
 
-    <div class="container max-w-[327px] lg:max-w-[1000px] md:max-w-[800px] sm:max-w-[600px] mx-auto">
-
-    <div class="mt-[83px] mb-[53px]">
-        <h1 class="text-white font-poppins  text-center text-[36px]">SHOWS</h1>
-    </div>
-
-    <div class="mx-auto flex-col gap-y-2 lg:flex flex justify-between lg:flex-row rounded-xl lg:max-w-[930px] md:max-w-[530px] lg:h-[59px] bg-[#313131]">
-
-
-        <form class=" mx-auto pt-2 max-w-[338px]">
-
-            <select id="artistas"
-                class="bg-zinc-600 max-h-[40px]  w-[228px] border border-gray-300 text-gray-900 text-[14px] rounded-lg focus:ring-blue-500 focus:border-blue-500 block font-medium p-2.5 dark:bg-zinc-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                <option selected class="">Qual o artista da vez?</option>
-                <option value="TETO">TETO</option>
-                <option value="WUY">WIU</option>
-                <option value="MATUE">MATUÊ</option>
-                <option value="BRANDÃO">BRANDÃO</option>
-            </select>
+      <div
+        class="mx-auto flex-col gap-y-2 lg:flex flex justify-between lg:flex-row rounded-xl lg:max-w-[930px] md:max-w-[530px] lg:h-[59px] bg-[#313131]">
+        <form class="mx-auto pt-2 max-w-[338px]">
+          <select
+            id="artistas"
+            class="bg-zinc-600 max-h-[40px] w-[228px] border border-gray-300 text-gray-900 text-[14px] rounded-lg focus:ring-blue-500 focus:border-blue-500 block font-medium p-2.5 dark:bg-zinc-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option selected class="">Qual o artista da vez?</option>
+            <option value="TETO">TETO</option>
+            <option value="WUY">WIU</option>
+            <option value="MATUE">MATUÊ</option>
+            <option value="BRANDÃO">BRANDÃO</option>
+          </select>
         </form>
 
-
-        <form class=" mx-auto my-auto w-[184px]">
-
-            <select id="artistas"
-                class="bg-zinc-600 w-[184px]  border border-gray-300 text-gray-900 text-[14px] rounded-lg font-medium focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-zinc-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                <option selected class="">Selecione o Estado</option>
-                <option value="AC">Acre</option>
-                <option value="AL">Alagoas</option>
-                <option value="AP">Amapá</option>
-                <option value="AM">Amazonas</option>
-                <option value="BA">Bahia</option>
-                <option value="CE">Ceará</option>
-                <option value="DF">Distrito Federal</option>
-                <option value="ES">Espírito Santo</option>
-                <option value="GO">Goiás</option>
-                <option value="MA">Maranhão</option>
-                <option value="MT">Mato Grosso</option>
-                <option value="MS">Mato Grosso do Sul</option>
-                <option value="MG">Minas Gerais</option>
-                <option value="PA">Pará</option>
-                <option value="PB">Paraíba</option>
-                <option value="PR">Paraná</option>
-                <option value="PE">Pernambuco</option>
-                <option value="PI">Piauí</option>
-                <option value="RJ">Rio de Janeiro</option>
-                <option value="RN">Rio Grande do Norte</option>
-                <option value="RS">Rio Grande do Sul</option>
-                <option value="RO">Rondônia</option>
-                <option value="RR">Roraima</option>
-                <option value="SC">Santa Catarina</option>
-                <option value="SP">São Paulo</option>
-                <option value="SE">Sergipe</option>
-                <option value="TO">Tocantins</option>
-                <option value="EX">Estrangeiro</option>
-            </select>
+        <form class="mx-auto my-auto w-[184px]">
+          <select
+            id="artistas"
+            class="bg-zinc-600 w-[184px] border border-gray-300 text-gray-900 text-[14px] rounded-lg font-medium focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-zinc-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option selected class="">Selecione o Estado</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+            <option value="EX">Estrangeiro</option>
+          </select>
         </form>
-
-
 
         <form
-            class="bgborder mx-auto  my-auto border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 font-medium dark:bg-zinc-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 p-2.5 text-[14px] rounded-lg  flex flex-row"
-            action="/action_page.php">
-            <label class="mr-3 my-auto" for="birthday">Qual data?</label>
-            <input class="bg-slate-500" type="date" id="birthday" name="birthday">
+          class="bgborder mx-auto my-auto border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 font-medium dark:bg-zinc-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 p-2.5 text-[14px] rounded-lg flex flex-row"
+          action="/action_page.php">
+          <label class="mr-3 my-auto" for="birthday">Qual data?</label>
+          <input
+            class="bg-slate-500"
+            type="date"
+            id="birthday"
+            name="birthday" />
         </form>
 
         <button type="submit">
-        <img class="mx-auto lg:mr-2 my-auto p-1 bg-zinc-600 rounded-xl" src="img/img-desktop/Search.png" alt="Lupa submit">
+          <img
+            class="mx-auto lg:mr-2 my-auto p-1 bg-zinc-600 rounded-xl"
+            src="img/img-desktop/Search.png"
+            alt="Lupa submit" />
         </button>
-    </div>
-
-
-
-
-        <!-- cards -->
-        <div class="pt-20 gap-8 justify-center flex flex-row mx-auto flex-wrap">
-
-
-            <div class="card max-w-[150px] lg:max-w-[226px] hover:scale-110 transition-all">
-
-                <div class=" flex flex-col font-bold text-white">
-
-
-                    <img src="img/img-desktop/card1.png" class="pb-3" alt="">
-                    <p class="pb-3 text-center">06 de Abril</p>
-                    <p class="text-center font-thin">Trap Fama</p>
-
-
-                </div>
-
-
-            </div>
-
-            <div class="card max-w-[150px] lg:max-w-[226px]">
-
-                <div class=" flex flex-col font-bold text-white hover:scale-110 transition-all">
-
-
-                    <img src="img/img-desktop/card1.png" class="pb-3" alt="">
-                    <p class="pb-3 text-center">06 de Abril</p>
-                    <p class="text-center font-thin">Trap Fama</p>
-
-
-                </div>
-
-            </div>
-
-
-
-            <div class="card max-w-[150px] lg:max-w-[226px]">
-
-                <div class=" flex flex-col font-bold text-white hover:scale-110 transition-all">
-
-
-                    <img src="img/img-desktop/card1.png" class="pb-3" alt="">
-                    <p class="pb-3 text-center">06 de Abril</p>
-                    <p class="text-center font-thin">Trap Fama</p>
-
-
-                </div>
-
-            </div>
-
-
-            
-            <div class="card max-w-[150px] lg:max-w-[226px]">
-
-                <div class=" flex flex-col font-bold text-white hover:scale-110 transition-all">
-
-
-                    <img src="img/img-desktop/card1.png" class="pb-3" alt="">
-                    <p class="pb-3 text-center">06 de Abril</p>
-                    <p class="text-center font-thin">Trap Fama</p>
-
-
-                </div>
-
-            </div>
-
-
-            <!-- LINHA 2 -->
-             
-            <div class="card max-w-[150px] lg:max-w-[226px]">
-
-                <div class=" flex flex-col font-bold text-white hover:scale-110 transition-all">
-
-
-                    <img src="img/img-desktop/card1.png" class="pb-3" alt="">
-                    <p class="pb-3 text-center">06 de Abril</p>
-                    <p class="text-center font-thin">Trap Fama</p>
-
-
-                </div>
-
-            </div>
-            
-            <div class="card max-w-[150px] lg:max-w-[226px]">
-
-                <div class=" flex flex-col font-bold text-white hover:scale-110 transition-all">
-
-
-                    <img src="img/img-desktop/card1.png" class="pb-3" alt="">
-                    <p class="pb-3 text-center">06 de Abril</p>
-                    <p class="text-center font-thin">Trap Fama</p>
-
-
-                </div>
-
-            </div>
-            
-            <div class="card max-w-[150px] lg:max-w-[226px]">
-
-                <div class=" flex flex-col font-bold text-white hover:scale-110 transition-all">
-
-
-                    <img src="img/img-desktop/card1.png" class="pb-3" alt="">
-                    <p class="pb-3 text-center">06 de Abril</p>
-                    <p class="text-center font-thin">Trap Fama</p>
-
-
-                </div>
-
-            </div>
-            
-            <div class="card max-w-[150px] lg:max-w-[226px]">
-
-                <div class=" flex flex-col font-bold text-white hover:scale-110 transition-all">
-
-
-                    <img src="img/img-desktop/card1.png" class="pb-3" alt="">
-                    <p class="pb-3 text-center">06 de Abril</p>
-                    <p class="text-center font-thin">Trap Fama</p>
-
-
-                </div>
-                
-            </div>
-
-
-            <div class="card max-w-[150px] lg:max-w-[226px]">
-
-                <div class=" flex flex-col font-bold text-white hover:scale-110 transition-all">
-
-
-                    <img src="img/img-desktop/card1.png" class="pb-3" alt="">
-                    <p class="pb-3 text-center">06 de Abril</p>
-                    <p class="text-center font-thin">Trap Fama</p>
-
-
-                </div>
-
-            </div>
-
-            <div class="card max-w-[150px] lg:max-w-[226px]">
-
-                <div class=" flex flex-col font-bold text-white hover:scale-110 transition-all">
-
-
-                    <img src="img/img-desktop/card1.png" class="pb-3" alt="">
-                    <p class="pb-3 text-center">06 de Abril</p>
-                    <p class="text-center font-thin">Trap Fama</p>
-
-
-                </div>
-
-            </div>
-
-            <div class="card max-w-[150px] lg:max-w-[226px]">
-
-                <div class=" flex flex-col font-bold text-white hover:scale-110 transition-all">
-
-
-                    <img src="img/img-desktop/card1.png" class="pb-3" alt="">
-                    <p class="pb-3 text-center">06 de Abril</p>
-                    <p class="text-center font-thin">Trap Fama</p>
-
-
-                </div>
-
-            </div>
-
-            <div class="card max-w-[150px] lg:max-w-[226px]">
-
-                <div class=" flex flex-col font-bold text-white hover:scale-110 transition-all">
-
-
-                    <img src="img/img-desktop/card1.png" class="pb-3" alt="">
-                    <p class="pb-3 text-center">06 de Abril</p>
-                    <p class="text-center font-thin">Trap Fama</p>
-
-
-                </div>
-
-            </div>
-
+      </div>
+
+      <!-- cards -->
+      <div class="pt-20 gap-8 justify-center flex flex-row mx-auto flex-wrap">
+        <div
+          class="card max-w-[150px] lg:max-w-[226px] hover:scale-110 transition-all">
+          <div class="flex flex-col font-bold text-white">
+            <img src="img/img-desktop/card1.png" class="pb-3" alt="" />
+            <p class="pb-3 text-center">06 de Abril</p>
+            <p class="text-center font-thin">Trap Fama</p>
+          </div>
         </div>
 
+        <div class="card max-w-[150px] lg:max-w-[226px]">
+          <div
+            class="flex flex-col font-bold text-white hover:scale-110 transition-all">
+            <img src="img/img-desktop/card1.png" class="pb-3" alt="" />
+            <p class="pb-3 text-center">06 de Abril</p>
+            <p class="text-center font-thin">Trap Fama</p>
+          </div>
+        </div>
 
+        <div class="card max-w-[150px] lg:max-w-[226px]">
+          <div
+            class="flex flex-col font-bold text-white hover:scale-110 transition-all">
+            <img src="img/img-desktop/card1.png" class="pb-3" alt="" />
+            <p class="pb-3 text-center">06 de Abril</p>
+            <p class="text-center font-thin">Trap Fama</p>
+          </div>
+        </div>
+
+        <div class="card max-w-[150px] lg:max-w-[226px]">
+          <div
+            class="flex flex-col font-bold text-white hover:scale-110 transition-all">
+            <img src="img/img-desktop/card1.png" class="pb-3" alt="" />
+            <p class="pb-3 text-center">06 de Abril</p>
+            <p class="text-center font-thin">Trap Fama</p>
+          </div>
+        </div>
+
+        <!-- LINHA 2 -->
+
+        <div class="card max-w-[150px] lg:max-w-[226px]">
+          <div
+            class="flex flex-col font-bold text-white hover:scale-110 transition-all">
+            <img src="img/img-desktop/card1.png" class="pb-3" alt="" />
+            <p class="pb-3 text-center">06 de Abril</p>
+            <p class="text-center font-thin">Trap Fama</p>
+          </div>
+        </div>
+
+        <div class="card max-w-[150px] lg:max-w-[226px]">
+          <div
+            class="flex flex-col font-bold text-white hover:scale-110 transition-all">
+            <img src="img/img-desktop/card1.png" class="pb-3" alt="" />
+            <p class="pb-3 text-center">06 de Abril</p>
+            <p class="text-center font-thin">Trap Fama</p>
+          </div>
+        </div>
+
+        <div class="card max-w-[150px] lg:max-w-[226px]">
+          <div
+            class="flex flex-col font-bold text-white hover:scale-110 transition-all">
+            <img src="img/img-desktop/card1.png" class="pb-3" alt="" />
+            <p class="pb-3 text-center">06 de Abril</p>
+            <p class="text-center font-thin">Trap Fama</p>
+          </div>
+        </div>
+
+        <div class="card max-w-[150px] lg:max-w-[226px]">
+          <div
+            class="flex flex-col font-bold text-white hover:scale-110 transition-all">
+            <img src="img/img-desktop/card1.png" class="pb-3" alt="" />
+            <p class="pb-3 text-center">06 de Abril</p>
+            <p class="text-center font-thin">Trap Fama</p>
+          </div>
+        </div>
+
+        <div class="card max-w-[150px] lg:max-w-[226px]">
+          <div
+            class="flex flex-col font-bold text-white hover:scale-110 transition-all">
+            <img src="img/img-desktop/card1.png" class="pb-3" alt="" />
+            <p class="pb-3 text-center">06 de Abril</p>
+            <p class="text-center font-thin">Trap Fama</p>
+          </div>
+        </div>
+
+        <div class="card max-w-[150px] lg:max-w-[226px]">
+          <div
+            class="flex flex-col font-bold text-white hover:scale-110 transition-all">
+            <img src="img/img-desktop/card1.png" class="pb-3" alt="" />
+            <p class="pb-3 text-center">06 de Abril</p>
+            <p class="text-center font-thin">Trap Fama</p>
+          </div>
+        </div>
+
+        <div class="card max-w-[150px] lg:max-w-[226px]">
+          <div
+            class="flex flex-col font-bold text-white hover:scale-110 transition-all">
+            <img src="img/img-desktop/card1.png" class="pb-3" alt="" />
+            <p class="pb-3 text-center">06 de Abril</p>
+            <p class="text-center font-thin">Trap Fama</p>
+          </div>
+        </div>
+
+        <div class="card max-w-[150px] lg:max-w-[226px]">
+          <div
+            class="flex flex-col font-bold text-white hover:scale-110 transition-all">
+            <img src="img/img-desktop/card1.png" class="pb-3" alt="" />
+            <p class="pb-3 text-center">06 de Abril</p>
+            <p class="text-center font-thin">Trap Fama</p>
+          </div>
+        </div>
+      </div>
     </div>
 
-
-
-
-
-
     <!-- LETREIRO -->
-    <marquee class="bg-black mt-[185px] mb-[80px] flex flex-row text-white" direction="left" scrollamount="20">
-        <p> TETO • WIU • MATUÊ • BRANDÃO TETO • WIU • MATUÊ • BRANDÃO TETO • WIU • MATUÊ • BRANDÃO TETO • WIU •
-            MATUÊ • BRANDÃO • TETO • WIU • MATUÊ • BRANDÃO
-            TETO • WIU • MATUÊ • BRANDÃO TETO • WIU • MATUÊ • BRANDÃO TETO • WIU • MATUÊ • BRANDÃO TETO • WIU •
-            MATUÊ • BRANDÃO • TETO • WIU • MATUÊ • BRANDÃO </p>
+    <marquee
+      class="bg-black mt-[185px] mb-[80px] flex flex-row text-white"
+      direction="left"
+      scrollamount="20">
+      <p>
+        TETO • WIU • MATUÊ • BRANDÃO TETO • WIU • MATUÊ • BRANDÃO TETO • WIU •
+        MATUÊ • BRANDÃO TETO • WIU • MATUÊ • BRANDÃO • TETO • WIU • MATUÊ •
+        BRANDÃO TETO • WIU • MATUÊ • BRANDÃO TETO • WIU • MATUÊ • BRANDÃO TETO •
+        WIU • MATUÊ • BRANDÃO TETO • WIU • MATUÊ • BRANDÃO • TETO • WIU • MATUÊ
+        • BRANDÃO
+      </p>
     </marquee>
-
 
     <!-- CONTRATANTES -->
 
     <div class="mt-[83px] mb-[24px]">
-        <h2 class="text-white mb-[34px] font-poppins  text-center text-[32px]">PARA CONTRATANTES</h2>
+      <h2 class="text-white mb-[34px] font-poppins text-center text-[32px]">
+        PARA CONTRATANTES
+      </h2>
 
-        <img src="img/img-desktop/Contratacao.png" class="mx-auto" alt="">
+      <img src="img/img-desktop/Contratacao.png" class="mx-auto" alt="" />
 
-        <button type="button" class=" contents mx-auto">
-            <a class="contents mx-auto" href="">
-                <img class="mx-auto mb-[142px] mt-16" src="img/img-desktop/Contatobutton.png" alt="button contact">
-            </a>
-        </button>
-
+      <button type="button" class="contents mx-auto">
+        <a class="contents mx-auto" href="">
+          <img
+            class="mx-auto mb-[142px] mt-16"
+            src="img/img-desktop/Contatobutton.png"
+            alt="button contact" />
+        </a>
+      </button>
     </div>
 
     <!-- Footer -->
 
-    <hr class="hr-foot">
+    <hr class="hr-foot" />
 
-    <footer class="font-poppins container max-w-[302px] lg:max-w-[650px] mx-auto text-white xl:w-auto">
-        <div class="mt-7 mb-10">
+    <footer
+      class="font-poppins container max-w-[302px] lg:max-w-[650px] mx-auto text-white xl:w-auto">
+      <div class="mt-7 mb-10">
+        <h2 class="font-semibold text-2xl text-center">30praum.hub</h2>
+      </div>
 
+      <section class="xl:mb-[192px] lg:flex gap-x-20 lg:justify-between">
+        <div class="lg:flex flex-col hidden">
+          <h1 class="text-center text-[20px]">Redes Sociais</h1>
 
-
-            <h2 class="font-semibold text-2xl text-center ">
-                30praum.hub
-            </h2>
-
-
-
+          <ul class="mt-10 flex flex-ro gap-x-10 justify-center">
+            <li>
+              <img src="img/img-desktop/instagram1.png" alt="instagram" />
+            </li>
+            <li>
+              <img
+                class="-ml-[5px] max-w-[44px] mt-[10px]"
+                src="img/img-desktop/youtube.png"
+                alt="youtube" />
+            </li>
+            <li>
+              <img
+                class="mt-[10px]"
+                src="img/img-desktop/linkedin.png"
+                alt="linkedin" />
+            </li>
+          </ul>
         </div>
 
+        <div
+          class="xl:gap-x-[74px] contents gap-x-[100px] mx-auto text-[16px] lg:text-lg">
+          <div class="flex flex-col justify-center">
+            <h1 class="hidden lg:block text-center">Menu</h1>
 
-        <section class=" xl:mb-[192px] lg:flex gap-x-20 lg:justify-between">
-
-
-            <div class="lg:flex flex-col hidden">
-                <h1 class="text-center text-[20px]">Redes Sociais</h1>
-
-                <ul class="mt-10 flex flex-ro gap-x-10 justify-center">
-                    <li><img src="img/img-desktop/instagram1.png" alt="instagram"></li>
-                    <li><img class="-ml-[5px] max-w-[44px] mt-[10px]" src="img/img-desktop/youtube.png" alt="youtube">
-                    </li>
-                    <li><img class="mt-[10px]" src="img/img-desktop/linkedin.png" alt="linkedin"></li>
+            <div class="flex flex-row mt-6 gap-x-[74px]">
+              <div class="text-center">
+                <ul>
+                  <li class="mb-1"><a href="#">Voltar ao ínicio</a></li>
+                  <li class="mb-1"><a href="#">Minha conta</a></li>
+                  <li><a href="#">Shows</a></li>
                 </ul>
+              </div>
 
+              <div>
+                <ul class="text-center">
+                  <li class="mb-1"><a href="#">Contato</a></li>
+                  <li class="mb-1"><a href="#">Artistas</a></li>
+                  <li><a href="#">Fórum</a></li>
+                </ul>
+              </div>
             </div>
-
-
-
-
-            <div class=" xl:gap-x-[74px] contents   gap-x-[100px] mx-auto text-[16px] lg:text-lg">
-
-                <div class="flex flex-col justify-center">
-
-                    <h1 class="hidden lg:block text-center">Menu</h1>
-
-                    <div class="flex flex-row mt-6 gap-x-[74px]">
-
-                        <div class=" text-center">
-                            <ul>
-                                <li class="mb-1 "><a href="#">Voltar ao ínicio</a></li>
-                                <li class="mb-1"><a href="#">Minha conta</a></li>
-                                <li><a href="#">Shows</a></li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <ul class="text-center">
-                                <li class="mb-1"><a href="#">Contato</a></li>
-                                <li class="mb-1"><a href="#">Artistas</a></li>
-                                <li><a href="#">Fórum</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-        </section>
-
-        <div class="flex justify-center mt-[171px] mb-10 lg:mb-4 lg:mt-[149px]">
-            © 2024 Todos os direitos reservados
+          </div>
         </div>
+      </section>
+
+      <div class="flex justify-center mt-[171px] mb-10 lg:mb-4 lg:mt-[149px]">
+        © 2024 Todos os direitos reservados
+      </div>
     </footer>
 
-
     <script type="text/javascript" src="js/homepageshows.js"></script>
-</body>
-
+  </body>
 </html>
