@@ -48,20 +48,20 @@
     </style>
   </head>
 
-  <body class="bg-cinza">
-    <!-- sidebar -->
+<body class=" bg-cinza">
 
-    <div
-      class="fixed hidden h-full w-full sm:max-w-[498px] right-0 bg-[#000000e7]">
-      <!-- Header -->
-      <div
-        class="flex flex-row justify-between max-w-[340px] container mx-auto mt-[45px]">
-        <img src="img/img-mobile/30logo(2).png" alt="" />
 
-        <button type="button" class="text-white font-poppins text-3xl">
-          X
-        </button>
-      </div>
+      <!-- sidebar -->
+
+      <div id="sidebar" class="hidden fixed hiddenfixed z-20 h-full w-full sm:max-w-[498px] right-0 bg-[#000000e7]">
+        
+        <!-- Header -->
+    <div class="flex flex-row justify-between max-w-[340px] container mx-auto mt-[45px]">
+
+        <img src="img/img-mobile/30logo(2).png" alt="">
+    
+        <button type="button" onclick="closesidebar()" class="text-white font-poppins text-3xl">X</button>
+    </div>
 
       <section>
         <nav class="flex flex-col text-center text-xl gap-y-3 mt-8 text-white">
@@ -89,43 +89,41 @@
 
     <!-- FIM SIDE BAR -->
 
-    <header class="h-[128px] bg-gradient-to-b from-black to-transparent">
-      <div class="lg:max-w-[1000px] container mx-auto">
+<header class="h-[128px] bg-gradient-to-b from-black to-transparent">
+
+    
+    <div class="lg:max-w-[1000px] container mx-auto ">
+
         <!-- Header Mobile -->
 
         <div class="lg:hidden container max-w-[330px] mx-auto">
-          <div class="justify-center flex-row flex gap-x-[190px]">
-            <img
-              class="pt-[45px]"
-              src="img/img-mobile/30logo(2).png"
-              alt="Logo" />
+            <div class="justify-center flex-row flex gap-x-[190px]">
+                <img class="pt-[45px]" src="img/img-mobile/30logo(2).png" alt="Logo">
 
-            <div class="flex gap-[40px]">
-              <button class="contents">
-                <img
-                  class="max-w-[31px] max-h-[31px] mt-16"
-                  src="img/img-mobile/Search.png"
-                  alt="" />
-              </button>
+                <div class="flex gap-[40px]">
+                    <button class="contents">
+                        <img class="max-w-[31px] max-h-[31px] mt-16" src="img/img-mobile/Search.png" alt="">
+                    </button>
 
-              <button class="contents">
-                <img
-                  class="max-w-[40px] mt-[67px] max-h-[27px]"
-                  src="img/img-mobile/nav.png"
-                  alt="" />
-              </button>
+                    <button onclick="opensidebar()" class="contents">
+                        <img class="max-w-[40px] mt-[67px] max-h-[27px]" src="img/img-mobile/nav.png" alt="">
+                    </button>
+                </div>
+
+
             </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- HEADER TABLET AND COMPUTER-->
-      <div class="hidden lg:block">
-        <div class="flex px-[85px] flex-row justify-between">
-          <img
-            class="pt-[54px]"
-            src="img/img-mobile/30logo(2).png"
-            alt="Logo" />
+        </div>
+    </div>
+
+    <!-- HEADER TABLET AND COMPUTER-->
+        <div class="hidden lg:block">
+
+
+
+            <div class="flex px-[85px] flex-row justify-between">
+
+                <img class="pt-[54px]" src="img/img-mobile/30logo(2).png" alt="Logo">
 
           <div class="mt-[77px] flex flex-row ml-40">
             <ul class="flex flex-row gap-x-[39px]">
@@ -240,16 +238,24 @@
         </button>
       </div>
 
-      <!-- cards -->
-      <div class="pt-20 gap-8 justify-center flex flex-row mx-auto flex-wrap">
-        <div
-          class="card max-w-[150px] lg:max-w-[226px] hover:scale-110 transition-all">
-          <div class="flex flex-col font-bold text-white">
-            <img src="img/img-desktop/card1.png" class="pb-3" alt="" />
-            <p class="pb-3 text-center">06 de Abril</p>
-            <p class="text-center font-thin">Trap Fama</p>
-          </div>
-        </div>
+        <!-- cards -->
+        <div class="pt-20 gap-4 lg:gap-8 justify-center flex flex-row mx-auto flex-wrap">
+
+
+            <div class="card max-w-[150px] lg:max-w-[226px] hover:scale-110 transition-all">
+
+                <div class=" flex flex-col font-bold text-white">
+
+
+                    <img src="img/img-desktop/card1.png" class="pb-3" alt="">
+                    <p class="pb-3 text-center">06 de Abril</p>
+                    <p class="text-center font-thin">Trap Fama</p>
+
+
+                </div>
+
+
+            </div>
 
         <div class="card max-w-[150px] lg:max-w-[226px]">
           <div
@@ -451,6 +457,7 @@
       </div>
     </footer>
 
+    <script type="text/javascript" src="js/sidebarmobile.js"></script>
     <script type="text/javascript" src="js/homepageshows.js"></script>
   </body>
 </html>
