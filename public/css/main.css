@@ -1,16 +1,16 @@
-/* /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #ffffff
-} */
-
-p,
-label {
-  font: 1rem "Fira Sans", sans-serif;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
 }
+
+/* p,
+label {
+  font: 1rem "Inter", sans-serif;
+} */
 
 input {
   margin: 0.4rem;
@@ -64,7 +64,7 @@ input {
   width: 100%;
   height: 100vh;
   background-color: #ffffff;
-  background-image: url(/public/img/img-desktop/login/fundo.certo.jpeg);
+  background-image: url(../img/img-eduardo/fundo.certo.jpeg);
   background-size: cover;
 }
 
@@ -84,6 +84,11 @@ form#form {
 .field {
   margin: 10px 0px;
 }
+
+.field input:focus-visible {
+  outline: 3.2px solid #054f77;
+}
+
 input {
   position: relative;
   padding: 12px;
@@ -131,7 +136,7 @@ input.register {
 
 .btn:hover {
   transform: scale(1.05);
-  background-color: #00ad26bd;
+  background-color: #f700005d;
 }
 
 textarea {
@@ -149,7 +154,7 @@ textarea {
   position: fixed;
   bottom: 0;
   width: 100%;
-  margin-bottom: 16px;
+  padding: 16px;
   color: #e5e5e5;
 }
 
@@ -163,15 +168,14 @@ textarea {
   transform: scale(1.05);
 }
 
-.conta {  
-     margin-top: 20px;
-     width: 100%;
-     height: 15px;
-     color: #fff;
+.conta {
+  width: 100%;
+  height: 15px;
+  color: #fff;
 }
 
 .conta:hover {
-  color: cyan;
+  color: #f700005d;
   transition: all linear 160ms;
   transform: scale(1.05);
 }
@@ -196,4 +200,13 @@ section {
 
 .foto-header img {
   border-radius: 32%;
+}
+
+@media (min-width: 450px) and (max-width: 1024px) {
+  .container {
+    width: 50%;
+  }
+  .formCadastro {
+    width: 100%;
+  }
 }
