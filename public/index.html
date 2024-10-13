@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Style guide</title>
+    <title>30PraUM</title>
 
     <!-- FAVICON -->
     <link
@@ -25,6 +25,10 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
       rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- EFEITO DE ROLAGEM -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 
     <style>
       /* Adiciona a transição personalizada para o sublinhado */
@@ -51,11 +55,64 @@
         width: 100%;
         /* Largura total quando hover */
       }
+
+      .content {
+            height: 2000px; /* Simula conteúdo longo */
+            background: linear-gradient(to bottom, #f0f4f8, #d1e8e4);
+        }
+
+        /* DARK MODE */
+  /* Modo claro */
+  body.light-mode {
+    background-color: #b5b5b5; /* Fundo claro */
+    color: #fafafa; /* Texto escuro */
+  }
+
+  /* Cabeçalho no modo claro */
+  body.light-mode header {
+    background-color: #b5b5b5; /* Fundo branco para o cabeçalho */
+  }
+
+  /* Ajustes para textos que originalmente eram brancos no modo escuro */
+  body.light-mode .text-white {
+    color: #fafafa !important; /* Cor de texto mais escura no modo claro */
+  }
+
+  /* Ajustes para fundos escuros no modo claro */
+  body.light-mode .bg-black {
+    background-color: #b5b5b5 !important; /* Fundo claro no modo claro */
+  }
+
+  body.light-mode  {
+    background-color: #b5b5b5 !important; /* Fundo mais claro */
+  }
+
+  body.light-mode {
+    background-color: #b5b5b5 !important; /* Fundo branco */
+  }
+
+  /* Bordas no modo claro */
+  body.light-mode .rounded-xl {
+    border-color: #e0e0e0; /* Bordas mais claras */
+  }
+
+  /* Paginação do Swiper no modo claro */
+  body.light-mode .swiper-pagination-bullet {
+    background: #333 !important; /* Cor escura para os bullets de paginação */
+  }
+
+  .div.light-mode {
+    background-color: #b5b5b5;
+  }
     </style>
   </head>
 
   <body class="bg-cinza">
     <!-- sidebar -->
+
+   
+    
+
 
     <div id="sidebar" class="hidden fixed z-40 h-full w-full sm:max-w-[498px] right-0 bg-[#000000e7]">
         
@@ -73,8 +130,11 @@
           <a href="shows.html">SHOWS</a>
           <a href="contato.html">CONTATO</a>
           <a href="artistas.html">ARTISTAS</a>
+
+          
       </nav>
   </section>
+  
   
 
   <div class="max-w-[245px] mx-auto mt-40">
@@ -222,7 +282,7 @@
     </script>
 
     <!-- lançamentos -->
-    <div class="flex justify-center mt-12 font-poppins">
+    <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500" class="flex justify-center mt-12 font-poppins">
       <div
         class="w-[80%] h-[300px] rounded-2xl flex flex-col justify-center items-center bg-[#313131] relative">
         <p class="text-white text-3xl absolute top-[-20px]">Lançamentos</p>
@@ -256,7 +316,8 @@
 
     <!-- CONTRATANTES -->
 
-    <div class=" p-6 mt-[83px] mb-[24px]">
+    <div 
+    data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500" class=" p-6 mt-[83px] mb-[24px]">
       <h2 class="text-white mb-[34px] font-poppins text-center text-[32px]">
         PARA CONTRATANTES
       </h2>
@@ -264,7 +325,7 @@
       <img src="img/img-desktop/Contratacao.png" class="mx-auto" alt="" />
 
       <button type="button" class="contents mx-auto">
-        <a class="contents mx-auto" href="">
+        <a class="contents mx-auto" href="contato.html">
           <img
             class="mx-auto mb-[142px] mt-16"
             src="img/img-desktop/Contatobutton.png"
@@ -273,8 +334,8 @@
       </button>
     </div>
     <!-- LETREIRO -->
-    <marquee
-      class="bg-black mt-[185px] mb-[80px] flex flex-row text-white"
+    <marquee data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500"
+      class="bg-black mt-[18px] mb-[80px] flex flex-row text-white"
       direction="left"
       scrollamount="20">
       <p>
@@ -289,12 +350,12 @@
     <div class="flex flex-col items-center font-poppins">
       <!-- carrossel mobile -->
       <!--HTML CODE-->
-      <div class="w-full relative md:hidden">
+      <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500" class="w-full relative md:hidden">
         <div class="swiper centered-slide-carousel swiper-container relative">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="flex flex-col items-center">
-                <img
+              <div class="flex flex-col items-center hover:scale-110 transition-all cursor-pointer">
+                <a href="checkout.html"></a><img
                   src="img/img-mobile/matueTerra.avif"
                   class="rounded-xl w-[80%]" />
                 <p class="text-white font-bold">Matue TerraSP</p>
@@ -302,7 +363,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center hover:scale-110 transition-all cursor-pointer">
                 <img
                   src="img/img-mobile/reza-do-milhao.jpeg"
                   class="rounded-xl w-[80%]" />
@@ -311,7 +372,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center hover:scale-110 transition-all cursor-pointer">
                 <img
                   src="img/img-mobile/30praumRecife.jpeg"
                   class="rounded-xl w-[80%]" />
@@ -320,7 +381,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center hover:scale-110 transition-all cursor-pointer">
                 <img
                   src="img/img-mobile/matueTerra.avif"
                   class="rounded-xl w-[80%]" />
@@ -329,7 +390,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center hover:scale-110 transition-all cursor-pointer">
                 <img
                   src="img/img-mobile/reza-do-milhao.jpeg"
                   class="rounded-xl w-[80%]" />
@@ -338,7 +399,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center hover:scale-110 transition-all cursor-pointer ">
                 <img
                   src="img/img-mobile/30praumRecife.jpeg"
                   class="rounded-xl w-[80%]" />
@@ -396,12 +457,21 @@
         });
       </script>
       <!-- show laptop -->
-      <div
+      <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500"
         class="hidden pt-20 gap-8 justify-center md:flex flex-row mx-auto flex-wrap xl:w-[1024px]">
         <div
           class="card max-w-[150px] lg:max-w-[226px] hover:scale-110 transition-all cursor-pointer">
           <div class="flex flex-col font-bold text-white">
-            <img src="img/img-desktop/card1.png" class="pb-3" alt="" />
+            <a href="checkout.html"><img src="img/img-desktop/card1.png" class="pb-3" alt="" /></a>
+            <p class="pb-3 text-center">06 de Abril</p>
+            <p class="text-center font-thin">Matue TerraSP</p>
+          </div>
+        </div>
+
+        <div class="card max-w-[150px] lg:max-w-[226px]">
+          <div
+            class="flex flex-col font-bold text-white hover:scale-110 transition-all cursor-pointer">
+            <a href="checkout.html"><img src="img/img-desktop/card1.png" class="pb-3" alt="" /></a>
             <p class="pb-3 text-center">06 de Abril</p>
             <p class="text-center font-thin">Trap Fama</p>
           </div>
@@ -410,7 +480,7 @@
         <div class="card max-w-[150px] lg:max-w-[226px]">
           <div
             class="flex flex-col font-bold text-white hover:scale-110 transition-all cursor-pointer">
-            <img src="img/img-desktop/card1.png" class="pb-3" alt="" />
+            <a href="checkout.html"><img src="img/img-desktop/card1.png" class="pb-3" alt="" /></a>
             <p class="pb-3 text-center">06 de Abril</p>
             <p class="text-center font-thin">Trap Fama</p>
           </div>
@@ -419,16 +489,7 @@
         <div class="card max-w-[150px] lg:max-w-[226px]">
           <div
             class="flex flex-col font-bold text-white hover:scale-110 transition-all cursor-pointer">
-            <img src="img/img-desktop/card1.png" class="pb-3" alt="" />
-            <p class="pb-3 text-center">06 de Abril</p>
-            <p class="text-center font-thin">Trap Fama</p>
-          </div>
-        </div>
-
-        <div class="card max-w-[150px] lg:max-w-[226px]">
-          <div
-            class="flex flex-col font-bold text-white hover:scale-110 transition-all cursor-pointer">
-            <img src="img/img-desktop/card1.png" class="pb-3" alt="" />
+            <a href="checkout.html"><img src="img/img-desktop/card1.png" class="pb-3" alt="" /></a>
             <p class="pb-3 text-center">06 de Abril</p>
             <p class="text-center font-thin">Trap Fama</p>
           </div>
@@ -439,7 +500,7 @@
         <div class="card max-w-[150px] lg:max-w-[226px] md:max-w-[150px]">
           <div
             class="flex flex-col font-bold text-white hover:scale-110 transition-all cursor-pointer">
-            <img src="img/img-desktop/card1.png" class="pb-3" alt="" />
+            <a href="checkout.html"><img src="img/img-desktop/card1.png" class="pb-3" alt="" /></a>
             <p class="pb-3 text-center">06 de Abril</p>
             <p class="text-center font-thin">Trap Fama</p>
           </div>
@@ -448,7 +509,7 @@
         <div class="card max-w-[150px] lg:max-w-[226px]">
           <div
             class="flex flex-col font-bold text-white hover:scale-110 transition-all cursor-pointer">
-            <img src="img/img-desktop/card1.png" class="pb-3" alt="" />
+            <a href="checkout.html"><img src="img/img-desktop/card1.png" class="pb-3" alt="" /></a>
             <p class="pb-3 text-center">06 de Abril</p>
             <p class="text-center font-thin">Trap Fama</p>
           </div>
@@ -457,7 +518,7 @@
         <div class="card max-w-[150px] lg:max-w-[226px]">
           <div
             class="flex flex-col font-bold text-white hover:scale-110 transition-all cursor-pointer">
-            <img src="img/img-desktop/card1.png" class="pb-3" alt="" />
+            <a href="checkout.html"><img src="img/img-desktop/card1.png" class="pb-3" alt="" /></a>
             <p class="pb-3 text-center">06 de Abril</p>
             <p class="text-center font-thin">Trap Fama</p>
           </div>
@@ -466,7 +527,7 @@
         <div class="card max-w-[150px] lg:max-w-[226px]">
           <div
             class="flex flex-col font-bold text-white hover:scale-110 transition-all cursor-pointer">
-            <img src="img/img-desktop/card1.png" class="pb-3" alt="" />
+            <a href="checkout.html"><img src="img/img-desktop/card1.png" class="pb-3" alt="" /></a>
             <p class="pb-3 text-center">06 de Abril</p>
             <p class="text-center font-thin">Trap Fama</p>
           </div>
@@ -478,7 +539,7 @@
 
     <hr class="hr-foot mt-[100px]" />
 
-    <footer
+    <footer 
       class="font-poppins container max-w-[302px] lg:max-w-[650px] mx-auto text-white xl:w-auto">
       <div class="mt-7 mb-10">
         <h2 class="font-semibold text-2xl text-center">30praum.hub</h2>
@@ -490,19 +551,19 @@
 
           <ul class="mt-10 flex flex-ro gap-x-10 justify-center">
             <li>
-              <img src="img/img-desktop/instagram1.png" alt="instagram" />
+              <a href=https://www.instagram.com/30praum/?hl=pt-br"><img src="img/img-desktop/instagram1.png" alt="instagram" /></a>
             </li>
             <li>
-              <img
+              <a href="https://m.youtube.com/c/30PRAUM"><img
                 class="-ml-[5px] max-w-[44px] mt-[10px]"
                 src="img/img-desktop/youtube.png"
-                alt="youtube" />
+                alt="youtube" /></a>
             </li>
             <li>
-              <img
+              <a href="https://www.linkedin.com/company/30praum"><img
                 class="mt-[10px]"
                 src="img/img-desktop/linkedin.png"
-                alt="linkedin" />
+                alt="linkedin" /></a>
             </li>
           </ul>
         </div>
@@ -515,7 +576,7 @@
             <div class="flex flex-row mt-6 gap-x-[74px]">
               <div class="text-center">
                 <ul>
-                  <li class="mb-1"><a href="#">Voltar ao ínicio</a></li>
+                <button id="scrollToTop" class="">Voltar ao Topo</button>
                   <li class="mb-1"><a href="login.html">Minha conta</a></li>
                   <li><a href="shows.html">Shows</a></li>
                 </ul>
@@ -525,7 +586,18 @@
                 <ul class="text-center">
                   <li class="mb-1"><a href="contato.html">Contato</a></li>
                   <li class="mb-1"><a href="artistas.html">Artistas</a></li>
-                  <li><a href="#">Fórum</a></li>
+
+                  <header class="h-[128px] ">
+                    <div class="lg:max-w-[1000px] container mx-auto ">
+                      <button
+                        id="theme-toggle"
+                        class="text-white"
+                      >
+                        Toggle Theme
+                      </button>
+                    </div>
+                  </header>
+
                 </ul>
               </div>
             </div>
@@ -536,10 +608,60 @@
       <div class="flex justify-center mt-[171px] mb-10 lg:mb-4 lg:mt-[149px]">
         © 2024 Todos os direitos reservados
       </div>
+
     </footer>
 
 
     <script type="text/javascript" src="js/sidebarmobile.js"></script>
     <script type="text/javascript" src="js/homepageshows.js"></script>
+
+    <script>
+      document.getElementById('scrollToTop').addEventListener('click', function() {
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth' // Rolagem suave
+          });
+      });
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+  AOS.init();
+  </script>
+
+  <!-- dark mode -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const themeToggle = document.getElementById('theme-toggle');
+      const body = document.body;
+      
+      // Checa se o tema foi salvo no localStorage
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+  
+      if (savedTheme === 'light') {
+        body.classList.add('light-mode');
+        themeToggle.textContent = 'Dark Mode';
+      } else {
+        themeToggle.textContent = 'Light Mode';
+      }
+  
+      // Alternar entre claro e escuro
+      themeToggle.addEventListener('click', function () {
+        body.classList.toggle('light-mode');
+        
+        const isLightMode = body.classList.contains('light-mode');
+        if (isLightMode) {
+          themeToggle.textContent = 'Dark Mode';
+          localStorage.setItem('theme', 'light');
+        } else {
+          themeToggle.textContent = 'Light Mode';
+          localStorage.setItem('theme', 'dark');
+        }
+      });
+    });
+  </script>
+  
+
+
   </body>
 </html>
