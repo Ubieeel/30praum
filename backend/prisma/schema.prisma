@@ -1,0 +1,46 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model compra {
+  codigo     Int    @id @default(autoincrement())
+  cpf        BigInt
+  registro   Int
+  status     String @db.VarChar(20)
+  quantidade Int
+  cliente    user   @relation(fields: [cpf], references: [cpf], map: "Compra_cpf_fkey")
+
+  @@index([cpf], map: "Compra_cpf_fkey")
+  @@index([registro], map: "Compra_registro_fkey")
+}
+
+model show {
+  registro Int      @id @default(autoincrement())
+  data     DateTime @unique(map: "Show_data_key") @db.Date
+  horario  String   @db.VarChar(20)
+  preco    Decimal  @db.Decimal(10, 2)
+  endereco String   @db.VarChar(20)
+  artista  String   @db.VarChar(100)
+  nome     String   @db.VarChar(20)
+}
+
+model user {
+  id         Int      @id @default(autoincrement())
+  email      String   @unique(map: "User_email_key")
+  name       String?
+  password   String?
+  cidade     String   @db.VarChar(20)
+  cpf        BigInt   @unique
+  endereco   String   @db.VarChar(20)
+  nascimento DateTime @db.Date
+  rg         String   @unique(map: "User_rg_key") @db.VarChar(11)
+  sexo       String?  @db.Char(1)
+  telefone   BigInt
+  uf         String   @db.Char(2)
+  compra     compra[]
+}
