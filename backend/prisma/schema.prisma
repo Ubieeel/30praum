@@ -10,13 +10,14 @@ datasource db {
 model compra {
   codigo     Int    @id @default(autoincrement())
   cpf        BigInt
-  registro   Int
   status     String @db.VarChar(20)
   quantidade Int
+  registroid Int
   cliente    user   @relation(fields: [cpf], references: [cpf], map: "Compra_cpf_fkey")
+  registro   show   @relation(fields: [registroid], references: [registro], map: "Compra_registro_fkey")
 
   @@index([cpf], map: "Compra_cpf_fkey")
-  @@index([registro], map: "Compra_registro_fkey")
+  @@index([registroid], map: "Compra_registro_fkey")
 }
 
 model show {
@@ -27,6 +28,7 @@ model show {
   endereco String   @db.VarChar(20)
   artista  String   @db.VarChar(100)
   nome     String   @db.VarChar(20)
+  compras  compra[]
 }
 
 model user {
@@ -37,7 +39,7 @@ model user {
   cidade     String   @db.VarChar(20)
   cpf        BigInt   @unique
   endereco   String   @db.VarChar(20)
-  nascimento DateTime @db.Date
+  nascimento String   @db.VarChar(10)
   rg         String   @unique(map: "User_rg_key") @db.VarChar(11)
   sexo       String?  @db.Char(1)
   telefone   BigInt

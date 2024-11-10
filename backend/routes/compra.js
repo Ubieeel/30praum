@@ -51,11 +51,96 @@ router.get('/', async (req, res) => {
     }
   });
 
+// GET /api/Compra/{codigo}
+
+router.get('/:codigo', async (req, res) => {
+  try {
+
+    const codigo = Number(req.params.codigo);
+    const compra = await prisma.compra.findUniqueOrThrow({
+      where: {
+        codigo : codigo
+      },
+      select: selectDefault
+    });
+    res.json(compra);
+  }
+  catch (exception) {
+      return res.status(404).json({
+          error: "Compra não encontrada."
+        });
+  }
+});
+
+//GET /api/Compra/{cpf}
 
 
-// GET /api/Compra/{id}
-// PATH /api/Compra/{id}
-// DELETE /api/Compra/{id}
+router.get('/:cpf', async (req, res) => {
+  try {
+    const cpf = req.params.cpf;
+    const compra = await prisma.compra.findUnique({
+      where: {
+        cpf: cpf
+      },
+      select: selectDefault
+    });
+    res.json(compra);
+  }
+  catch (exception) {
+      return res.status(404).json({
+          error: "Compra não encontrada."
+        });
+  }
+});
+
+// PATCH /api/Compra/{codigo}
+
+router.patch('/:codigo', async (req, res) => {
+  try {
+    const codigo = Number(req.params.codigo);
+    const data = req.body;
+
+    const checkcompra = await prisma.compra.findUnique({
+      where: {
+        codigo: codigo,
+      }
+    });
+    console.log(checkcompra);
+
+    const compra = await prisma.compra.update({
+      where: {
+        codigo: codigo
+      },
+      data: data,
+      select: selectDefault
+    });
+    res.json(compra)
+  }
+  catch (exception) {
+    exceptionHandler(exception, res);
+  }
+});
+
+// DELETE /api/Compra/{codigo}
+
+router.delete('/:codigo', async (req, res) => {
+  try {
+    const codigo = Number(req.params.codigo);
+    const compra = await prisma.compra.delete({
+      where: {
+        codigo: codigo
+      }
+    });
+    res.status(200).json({
+      aviso: "compra apagada."
+    });
+  }
+  catch(exception) {
+    return res.status(400).json({
+      error: "compra não encontrada."
+    });
+  }
+});
 
 // catch all
 router.all('*', (req, res) => {
