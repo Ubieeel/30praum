@@ -18,6 +18,89 @@ BigInt.prototype['toJSON'] = function () {
   return this.toString()
 }
 
+// Rota para testar se email existe
+router.post('/check-email', async (req, res) => {
+  const { email } = req.body;
+
+  // Valida se o email foi enviado na requisição
+  if (!email) {
+    return res.status(400).json({ message: 'Email é necessário' });
+  }
+
+  try {
+    // Verifica se o email já existe no banco de dados
+    const user = await prisma.user.findUnique({
+      where: { email }
+    });
+
+    // Se o email já existir
+    if (user) {
+      return res.status(409).json({ message: 'Email já cadastrado' }); // 409 - Conflito
+    } else {
+      return res.status(200).json({ message: 'Email disponível' });
+    }
+  } catch (error) {
+    console.error('Erro ao verificar email', error);
+    return res.status(500).json({ message: 'Erro interno do servidor' });
+  }
+});
+
+// Rota para testar se email existe
+router.post('/check-email', async (req, res) => {
+  const { email } = req.body;
+
+  // Valida se o email foi enviado na requisição
+  if (!email) {
+    return res.status(400).json({ message: 'Email é necessário' });
+  }
+
+  try {
+    // Verifica se o email já existe no banco de dados
+    const user = await prisma.user.findUnique({
+      where: { email }
+    });
+
+    // Se o email já existir
+    if (user) {
+      return res.status(409).json({ message: 'Email já cadastrado' }); // 409 - Conflito
+    } else {
+      return res.status(200).json({ message: 'Email disponível' });
+    }
+  } catch (error) {
+    console.error('Erro ao verificar email', error);
+    return res.status(500).json({ message: 'Erro interno do servidor' });
+  }
+});
+
+// Rota para testar se cpf existe
+router.post('/check-cpf', async (req, res) => {
+  const { cpf } = req.body;
+
+  // Valida se o email foi enviado na requisição
+  if (!cpf) {
+    return res.status(400).json({ message: 'cpf é necessário' });
+  }
+
+  try {
+    // Verifica se o email já existe no banco de dados
+    const user = await prisma.user.findUnique({
+      where: { cpf }
+    });
+
+    // Se o email já existir
+    if (user) {
+      return res.status(409).json({ message: 'CPF já cadastrado' }); // 409 - Conflito
+    } else {
+      return res.status(200).json({ message: 'CPFdisponível' });
+    }
+  } catch (error) {
+    console.error('Erro ao verificar CPF', error);
+    return res.status(500).json({ message: 'Erro interno do servidor' });
+  }
+});
+
+
+
 // GET /api/users - Lista todos os usuários.
 
 router.get('/', async (req, res) => {

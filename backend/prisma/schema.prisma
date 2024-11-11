@@ -40,7 +40,6 @@ model user {
   cpf        BigInt   @unique
   endereco   String   @db.VarChar(20)
   nascimento String   @db.VarChar(10)
-  rg         String   @unique(map: "User_rg_key") @db.VarChar(11)
   sexo       String?  @db.Char(1)
   telefone   BigInt
   uf         String   @db.Char(2)

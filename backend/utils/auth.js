@@ -2,7 +2,7 @@
 const jwt = require('jsonwebtoken');
 
 // Gera um token assinado que expira em 30 minutos por padrão.
-function generateAccessToken(data, options={ expiresIn: '1800s' }) {
+function generateAccessToken(data, options={ expiresIn: '9999s' }) {
     return jwt.sign(data, process.env.SECRET_KEY, options);
 }
 

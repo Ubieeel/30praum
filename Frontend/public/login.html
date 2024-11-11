@@ -15,17 +15,17 @@
         <header class="header">
             <h1 class="title">30praum.hub</h1>
             </header>
-        <form method="POST" class="formLogin">
+        <form class="formLogin">
             <h1 class="logo"><img src="img/img-eduardo/logoo.ico" alt=""></h1>
             <p>Digite os seus dados de acesso no campo abaixo.</p>
 
             <label for="email">E-mail</label>
-            <input type="email" placeholder="Digite seu e-mail" autofocus="true" />
+            <input type="email" id="email_" placeholder="Digite seu e-mail" autofocus="true" />
             <label for="password">Senha</label>
-            <input type="password" placeholder="Digite seu e-mail" />
-            <a href="/">Esqueci minha senha</a>
-            <input type="submit" value="Acessar" class="btn" />
-            <input type="submit" value="Criar Conta" class="btn" />
+            <input type="password" id="password_" placeholder="Digite seu e-mail" />
+            <a href="#">Esqueci minha senha</a>
+            <button id="login" class="btn">Acessar</button>
+            <a href="cadastro.html" class="btn" >Criar Conta</a>
         </form>
 
         <a href="index.html" class="voltar">Voltar ao início</a>
@@ -35,6 +35,8 @@
        </footer>
     </div>
     
+
+    <script src="js/login.js"></script>
     
 </body>
 </html>

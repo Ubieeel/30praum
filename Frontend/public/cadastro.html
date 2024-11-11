@@ -36,9 +36,9 @@
                         <input type="email" name="email" id="Email_" placeholder="Digite seu email" required>
                     </div>
 
-                    <div class="field username">
-                        <label for="Username_">Confirme seu email</label>
-                        <input type="text" name="Username" id="Username_" placeholder="Digite novamente seu email"
+                    <div class="field confirmemail">
+                        <label for="confirmemail_">Confirme seu email</label>
+                        <input type="text" name="confirmemail" id="Email_confirm_" placeholder="Digite novamente seu email"
                             required>
                     </div>
 
@@ -66,20 +66,16 @@
 
                     <div class="field Nome">
                         <label for="Telefone_">Telefone</label>
-                        <input type="Telefone" name="Telefone" id="Telefone_" placeholder="Digite seu Telefone">
+                        <input type="Telefone" name="Telefone" id="Telefone_" placeholder="(XX) XXXXX-XXXX">
                     </div>
                     <div class="field Data">
                         <label for="data_">Data de nascimento </label>
-                        <input type="data" name="data" id="data_" placeholder="00/00/0000 ">
+                        <input type="date" name="data" id="data_">
 
                         <div class="field CPF">
                             <label for="CPF_">Informe seu CPF </label>
-                            <input type="CPF" name="CPF" id="CPF_" placeholder="Digite seu CPF">
+                            <input type="CPF" name="CPF" id="CPF_" maxlength="14" placeholder="Digite seu CPF">
 
-                            <div class="field idade">
-                                <label for="idade_">Informe sua idade</label>
-                                <input type="idade" name="idade" id="idade_" placeholder="Digite sua idade">
-                            </div>
 
 
                             <div class="field Nome">
@@ -87,11 +83,11 @@
                                 <input type="endeco" name="endereco" id="endereco_" placeholder="Endereço completo">
                             </div>
 
-                            <div class="field Nome">
+                            <div class="field estado">
                                 <label for="estado_">Estado : </label>
                                 <form class="formLogin">
                                     <select id="Estado_">
-                                        <option selected class="">Selecione o Estado</option>
+                                        <option value="" selected class="">Selecione o Estado</option>
                                         <option value="AC">Acre</option>
                                         <option value="AL">Alagoas</option>
                                         <option value="AP">Amapá</option>
@@ -123,17 +119,35 @@
                                     </select>
                                 </form>
                             </div>
+
+                            <div class="field sexo">
+                                <label for="sexo_">Sexo : </label>
+                                <form class="formLogin">
+                                    <select id="sexo_">
+                                        <option value="" selected class="">Selecione</option>
+                                        <option value="F">Feminino</option>
+                                        <option value="M">Masculino</option>
+                                        <option value="">Prefiro não informar</option>
+                                    </select>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
+               
+             
                 <button id="register-form" class="register, btn"> Criar Conta </button>
             </form>
-            </a href="/" class="conta">Já tenho conta </a>
+            </div>
+            </div>
+        
+        <div>
+            <a href="login.html" class="conta">Já tenho conta </a>
         </div>
-    </div>
-
+<div  class="voltariv">
     <a href="/" class="voltar">Voltar ao início</a>
-
+</div>
+</div>
+</div>
     <footer class="footer">
         &copy;Copyright 2024 30praum.hub
     </footer>
@@ -141,4 +155,4 @@
     <script src="js/cadastro.js"></script>
 </body>
 
-</html>
+</html> 
