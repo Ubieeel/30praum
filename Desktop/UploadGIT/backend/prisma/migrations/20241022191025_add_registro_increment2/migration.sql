@@ -1,2 +1,0 @@
--- AlterTable
-ALTER TABLE `show` MODIFY `registro` INTEGER NOT NULL AUTO_INCREMENT;
