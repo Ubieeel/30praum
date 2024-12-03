@@ -1,0 +1,88 @@
+<style>
+/* DARK MODE */
+/* Modo claro */
+body.light-mode {
+  background-color: #b5b5b5; /* Fundo claro */
+  color: #fafafa; /* Texto escuro */
+}
+
+/* Cabeçalho no modo claro */
+body.light-mode header {
+  background-color: #b5b5b5; /* Fundo branco para o cabeçalho */
+}
+
+/* Ajustes para textos que originalmente eram brancos no modo escuro */
+body.light-mode .text-white {
+  color: #fafafa !important; /* Cor de texto mais escura no modo claro */
+}
+
+/* Ajustes para fundos escuros no modo claro */
+body.light-mode .bg-black {
+  background-color: #b5b5b5 !important; /* Fundo claro no modo claro */
+}
+
+body.light-mode  {
+  background-color: #b5b5b5 !important; /* Fundo mais claro */
+}
+
+body.light-mode {
+  background-color: #b5b5b5 !important; /* Fundo branco */
+}
+
+/* Bordas no modo claro */
+body.light-mode .rounded-xl {
+  border-color: #e0e0e0; /* Bordas mais claras */
+}
+
+/* Paginação do Swiper no modo claro */
+body.light-mode .swiper-pagination-bullet {
+  background: #333 !important; /* Cor escura para os bullets de paginação */
+}
+
+.div.light-mode {
+  background-color: #b5b5b5;
+}
+  </style>
+    
+    <!-- dark mode -->
+    <header class="h-[128px] ">
+        <div class="lg:max-w-[1000px] container mx-auto ">
+          <button
+            id="theme-toggle"
+            class="text-white"
+          >
+            Toggle Theme
+          </button>
+        </div>
+      </header>
+   
+   <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const themeToggle = document.getElementById('theme-toggle');
+          const body = document.body;
+          
+          // Checa se o tema foi salvo no localStorage
+          const savedTheme = localStorage.getItem('theme') || 'dark';
+      
+          if (savedTheme === 'light') {
+            body.classList.add('light-mode');
+            themeToggle.textContent = 'Dark Mode';
+          } else {
+            themeToggle.textContent = 'Light Mode';
+          }
+      
+          // Alternar entre claro e escuro
+          themeToggle.addEventListener('click', function () {
+            body.classList.toggle('light-mode');
+            
+            const isLightMode = body.classList.contains('light-mode');
+            if (isLightMode) {
+              themeToggle.textContent = 'Dark Mode';
+              localStorage.setItem('theme', 'light');
+            } else {
+              themeToggle.textContent = 'Light Mode';
+              localStorage.setItem('theme', 'dark');
+            }
+          });
+        });
+      </script>
