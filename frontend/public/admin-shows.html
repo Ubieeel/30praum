@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Administração - Filmes</title>
+    <!-- Link do Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 h-screen w-screen font-sans">
+
+    <!-- Layout geral com menu lateral e conteúdo principal -->
+    <div class="flex w-full h-full">
+        
+        <!-- Sidebar -->
+        <div class="w-64  bg-gray-800 text-white p-4">
+
+            <div class="text-center flex flex-col mb-8">
+                <h2 class="text-2xl mb-5 font-bold">Admin</h2>
+
+
+                <hr class="">
+                <div class="flex py-4 gap-3 mt-4 flex-row">
+                    
+                    <img src="img/img-admin/iconadm.jpg" alt="Foto de perfil" class="rounded-full my-auto  mx-auto w-12">
+                    <h3 id="nameADM" class="text-left my-auto mr-5 text-1xl mb-2 font-poppins ">Name ADM</h3>
+                 </div>
+                 <hr>
+               
+            </div>
+            <ul class="space-y-4">
+
+              
+                <li><a href="admin.html" class="hover:bg-gray-700 p-2 rounded block">Dashboard</a></li>
+                <li><a href="#" class="hover:bg-gray-700 p-2 rounded block">Usuários</a></li>
+                <li><a href="admin-shows.html" class="hover:bg-gray-700 p-2 rounded block">Filmes</a></li>
+                <li><a href="#" class="hover:bg-gray-700 p-2 rounded block">Relatórios</a></li>
+                <li><a href="#" class="hover:bg-gray-700 p-2 rounded block">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Conteúdo Principal -->
+
+        <div class="flex-1  bg-gray-900 p-8">
+            <!-- Cabeçalho -->
+            <header class="flex  justify-between items-center mb-8">
+                <div class="flex flex-col">
+                    
+                     <h1 class="text-3xl font-bold text-white">
+                        Dashboard Shows
+                     </h1> 
+                     
+                    
+                     <button onclick="abrirmodaladc()" class="mt-5 mr-5 py-2 px-4 rounded-md bg-green-400 font-bold hover:scale-110 transition-all text-white">Adicionar Show</button>
+                    
+                    <h2 class="text-1xl font-thin text-white mt-5">Clique para editar informações: </h2>
+                    
+                 </div>
+                <div class="flex items-center space-x-4">
+                    <span id="saudacaoheader" class="text-white">None</span>
+                    <a href="index.html"><img src="img/img-desktop/30logo(1).png" alt="Foto da 30" class="rounded-full w-12"></a>
+                </div>
+
+            </header>
+
+            <!-- Cards de Shows -->
+            <div id="main-filmes" class=" px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-2 gap-y-10">
+             
+             </div>
+
+             <!-- MODAL ALTERAÇÃO FILME -->
+             <!-- Main modal -->
+
+    </div>
+
+            <!-- <div id="modalconfirm" class="w-full hidden h-full fixed"> -->
+
+        <!-- MODAL ALTERAÇÃO FILME -->
+             <!-- Main modal -->
+
+             <div id="modalmodify" class="w-full hidden h-full fixed bg-black bg-opacity-30 ">
+
+                <!-- Contents -->
+                <div class=" relative shadow-2xl flex flex-col mx-auto max-w-[500px] h-[700px] w-[500px] mt-20 bg-gray-700 rounded-3xl  max-h-[700px]"> 
+                    
+                    <p onclick="fecharmodal()" class="relativ font-bold hover:cursor-pointer text-white text-2xl mr-5 mt-2 ml-auto">X</p>
+
+                    <div class="mx-auto flex flex-col">
+
+                        <h2 id="Titlemodal" class="text-xl font-semibold  text-white text-center pb-4">Alterar <br> informações do Show</h2>
+
+
+                         <div class=" flex flex-col">
+
+                          
+
+
+                            <label class="mx-auto text-white mb-2 mt-3" for="Cape">Capa do evento :</label>
+                            <input class="w-[250px] max-w-[300px] rounded-md" type="text" id="Cape." placeholder="Insira a URL da capa do show..." autofocus="true" />
+           
+
+                            <label class="mx-auto text-white mb-2 mt-3" for="Cape">Data do evento :</label>
+                            <input class="w-[250px] max-w-[300px] rounded-md" type="date" id="data." placeholder="Insira a URL da capa do show..." autofocus="true" />
+           
+                            <label class="mx-auto text-white mb-2 mt-3" for="Cape">Horário :</label>
+                            <input class="w-[250px] max-w-[300px] rounded-md" type="time" id="horario." placeholder="Insira o horário do show." autofocus="true" />
+
+                            <label class="mx-auto text-white mb-2 mt-3" for="Cape">Preço do show em R$ :</label>
+                            <input class="w-[250px] max-w-[300px] rounded-md" type="text" oninput="formatarMoeda(this)" id="valor." placeholder="Insira o preço do show." autofocus="true" />
+           
+                            
+                            <label class="mx-auto text-white mb-2 mt-3" for="Cape">Endereço do evento :</label>
+                            <input class="w-[250px] max-w-[300px] rounded-md" type="text" id="enderecoevento." placeholder="Insira o endereço completo" autofocus="true" />
+                            
+                            <label class="mx-auto text-white mb-2 mt-3" for="Cape">Nome do Artista do evento :</label>
+                            <input class="w-[250px] max-w-[300px] rounded-md" type="text" id="artista." placeholder="Insira os nomes dos artistas" autofocus="true" />
+
+                            <label class="mx-auto text-white mb-2 mt-3" for="Cape">Nome do evento :</label>
+                            <input class="w-[250px] max-w-[300px] rounded-md" type="text" id="nomevento." placeholder="Insira o nome do evento" autofocus="true" />
+
+
+                            <div id="btns" class="flex-row mt-10 mx-auto gap-3 flex"> 
+                                
+                                <button onclick="fecharmodal()" class=" py-2 px-3 rounded-lg bg-red-400 text-white"> Cancelar </button>
+                            
+
+                                
+                                <button id="delete" onclick="deleteshow()" class="py-2 px-3 rounded-lg bg-green-600 text-white"> Excluir </button>
+                                
+                                <button id="enviar" onclick="editshow()" class="  py-2 px-3 rounded-lg bg-green-600 text-white"> Enviar </button>
+
+                            </div>
+
+                         </div>
+                    </div>
+                
+                </div>   
+           
+           
+            </div>
+
+    <script src="js/Admin/admin-shows.js"></script>
+    <script src="js/Admin/cabecalhoadmin.js"></script>
+</body>
+</html>

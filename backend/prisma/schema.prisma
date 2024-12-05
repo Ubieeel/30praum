@@ -27,7 +27,7 @@ model show {
   horario  String   @db.VarChar(20)
   preco    Decimal  @db.Decimal(10, 2)
   endereco String   @db.VarChar(20)
-  capa String       @db.VarChar(200)
+  capa      String  @db.VarChar(200)
   artista  String   @db.VarChar(100)
   nome     String   @db.VarChar(20)
   compras  compra[]
@@ -43,7 +43,7 @@ model user {
   endereco   String   @db.VarChar(20)
   nascimento String   @db.VarChar(10)
   sexo       String?  @db.Char(1)
-  telefone   BigInt
+  telefone   String?
   uf         String   @db.Char(2)
   compra     compra[]
   is_admin   String?  @db.Char(7)

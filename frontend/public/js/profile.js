@@ -1,8 +1,7 @@
 
 var iduser = sessionStorage.getItem('iduser', iduser);
-var id = iduser
-const url1 = `http://localhost:5000/api/users/profile/${id}`;
-const url2 = `http://localhost:5000/api/users/${id}`;
+const url1 = `http://localhost:5000/api/users/profile/${iduser}`;
+const url2 = `http://localhost:5000/api/users/${iduser}`;
 
 
 async function carregardados() {
@@ -65,13 +64,11 @@ document.addEventListener('DOMContentLoaded', carregardados);
 
 
 function abrirmodal(){
-   const modalhtml =  document.getElementById('MODAL')
+
 
    // Preenchimento automático
 
-   carregardados()
-
-   async function carregardados() { 
+  async function inserirdados() { 
     
     try {
 
@@ -84,29 +81,38 @@ function abrirmodal(){
       },
     });
 
+    
     const bodydata = await responsedados.json()
   
 
 
-  document.getElementById('Nome_').value = bodydata.name;
-  document.getElementById('Email_').value = bodydata.email;
-  document.getElementById('Password_').value = bodydata.password;
-  document.getElementById("Telefone_").value =  bodydata.telefone;;
-  document.getElementById('data_').value = bodydata.nascimento; ;
-  document.getElementById('sexo_').value = bodydata.sexo ;
-  document.getElementById('Cidade_').value = bodydata.cidade ;
-  document.getElementById('CPF_').value = bodydata.cpf ;
-  document.getElementById('endereco_').value = bodydata.endereco ;
-  document.getElementById('Estado_').value = bodydata.uf;
+    document.getElementById('Nome_').value = bodydata.name;
+    document.getElementById('Email_').value = bodydata.email;
+    document.getElementById('Password_').value = bodydata.password;
+    document.getElementById("Telefone_").value =  bodydata.telefone;
+    document.getElementById('data_').value = bodydata.nascimento;
+    document.getElementById('sexo_').value = bodydata.sexo ;
+    document.getElementById('CPF_').value = bodydata.cpf ;
+    document.getElementById('endereco_').value = bodydata.endereco ;
+    document.getElementById('Estado_').value = bodydata.uf;
+    document.getElementById('Cidade_').value = bodydata.cidade;
+       
      
+
+    
 
 } catch (error) {
   console.log(error)
  }
-
+ 
+    
  }
+   
+ 
+  const modalhtml =  document.getElementById('MODAL')
+  modalhtml.classList.remove('hidden')
+  inserirdados()
 
-   modalhtml.classList.remove('hidden')
 }
 
 function fecharmodal(){
@@ -193,13 +199,20 @@ try {
 
     }
 
-    if (document.getElementById('Telefone_').value) bodydata.telefone = document.getElementById('Telefone_').value;
-
-
+  
     if(document.getElementById('data_').value) bodydata.nascimento = document.getElementById('data_').value;
     if(document.getElementById('sexo_').value) bodydata.sexo = document.getElementById('sexo_').value;
-    if(document.getElementById('Cidade_').value) bodydata.cidade = document.getElementById('Cidade_').value;
-    if(document.getElementById('CPF_').value) bodydata.cpf = document.getElementById('CPF_').value;
+    if(document.getElementById('Cidade_').value) {bodydata.cidade = document.getElementById('Cidade_').value;}
+    if(document.getElementById('CPF_').value) {
+
+      const cpfformat = document.getElementById('CPF_').value;
+
+      bodydata.cpf = cpfformat.replace(/\D/g, '');              
+    
+    
+    }
+
+
     if(document.getElementById('endereco_').value) bodydata.endereco = document.getElementById('endereco_').value;
     if(document.getElementById('Estado_').value) bodydata.uf = document.getElementById('Estado_').value;
       
@@ -215,7 +228,7 @@ try {
 
     let resultform = true;
     
-     if(bodydata.password) if(bodydata.password.length <= 8){
+     if(bodydata.password) if(bodydata.password.length < 8){
     resultform = "A senha deve conter no mínimo 8 dígitos"
   }
 
@@ -234,10 +247,12 @@ try {
 
     const data2 = await response2.json();
     
-    if(response2.ok){
-        window.alert('Sessão expirada após atualização de dados.')
-        window.location.href = "../login.html"
-    }
+    if (response2.ok) {
+      window.alert('Sessão expirada após atualização de dados.');
+      setTimeout(() => {
+          window.location.href = "../login.html";
+      }, 1000); 
+  }
   }
     }
   catch (error) {

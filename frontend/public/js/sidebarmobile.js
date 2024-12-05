@@ -1,11 +1,15 @@
 
-const sidebar = document.getElementById('sidebar');
+
 
 function opensidebar() {
+
+    const sidebar = document.getElementById('sidebar');
     sidebar.classList.remove('hidden');
 }
 
 function closesidebar() {
+
+    const sidebar = document.getElementById('sidebar');
     sidebar.classList.add('hidden');
 }
 
@@ -28,7 +32,7 @@ document.addEventListener('DOMContentLoaded', adminbutton);
 async function adminbutton() {
 
 
-    var tokenuser =sessionStorage.getItem('token');
+    var tokenuser = sessionStorage.getItem('token');
     
     // console.log(tokenuser)
 

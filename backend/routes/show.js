@@ -14,6 +14,8 @@ const selectDefault = {
   data: true,
   endereco: true,
   capa: true,
+  horario: true,
+  preco: true
 };
 
 // GET /api/show - Lista todos os shows.
@@ -73,11 +75,12 @@ router.get('/:registro', async (req, res) => {
   });
   
 // PACTH /api/show/{registro}
-router.patch('/:registro', async (req, res) => {
+router.patch('/:registro', authenticateToken, async (req, res) => {
     try {
       const registro = Number(req.params.registro);
       const data = req.body;
-  
+      const token = req.accessToken;
+
       const checkShow = await prisma.show.findUnique({
         where: {
           registro: registro,
@@ -85,6 +88,12 @@ router.patch('/:registro', async (req, res) => {
       });
       console.log(checkShow);
   
+  
+      if(token.is_admin != "true"){
+        return res.sendStatus(403); // 403 Forbidden.
+      }
+
+
       const show = await prisma.show.update({
         where: {
           registro: registro
@@ -92,6 +101,8 @@ router.patch('/:registro', async (req, res) => {
         data: data,
         select: selectDefault
       });
+
+
       res.json(show)
     }
     catch (exception) {

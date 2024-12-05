@@ -218,236 +218,132 @@ body.light-mode .swiper-pagination-bullet {
         <!-- Nome completo  -->
 
     <section> 
-      <form id="profileForm">
+      <div id="profileForm">
     
 
     
-        <div class="w-full scale-75 -mt-20 rounded-2xl pt-7 pb-7 bg-[#141414] h-auto ">
+        <div class="w-[90%] mx-auto scale-100 mt-20 rounded-2xl pb-7 bg-[#141414] h-auto ">
 
             
     <div class=" mb-2">
-      <h1 class="text-white font-poppins mx-auto w-[90%] rounded-xl bg-slate-500 text-center text-[32px]">Alterar Perfil</h1>
+      <h1 class="text-white font-poppins mx-auto  rounded-xl bg-slate-500 text-center text-[32px]">Alterar Perfil</h1>
   </div>
 
-          
-            <div class=" max-h-[80px] gap-y-2 flex flex-col col-span-2 max-w-[260px] lg:max-w-[595px] mx-auto">
-
-                <div class="flex flex-row justify-between text-white font-poppins">
-
-                    <p>Nome Completo</p>
-
-                </div>
-
-                <input type="name" name="nome" id="Nome_" placeholder="Digite seu nome completo">
-
-
-                <div class="h-1 bg-white rounded-2xl"></div>
-            </div>
-
-
-            <!-- Email -->
-
-            <div class=" mt-7 max-h-[80px] gap-y-2 flex flex-col max-w-[260px] lg:max-w-[595px] mx-auto">
-
-
-                <div class="flex flex-row justify-between text-white font-poppins">
-
-                    <p>Endereço de e-mail</p>
-
-                 
-                </div>
-
-                <input type="email" name="email" id="Email_" placeholder="Digite seu email" required>
-                
-
-                <div class="h-1 bg-white rounded-2xl"></div>
-            </div>
-
-            <!-- Telefone -->
-
-            <div class=" mt-7 max-h-[80px] gap-y-2 flex flex-col max-w-[260px] lg:max-w-[595px] mx-auto">
-
-                <div class="flex flex-row justify-between text-white font-poppins">
-
-                    <p>Número de telefone</p>
-
-                   
-                </div>
-
-                <input type="Telefone" name="Telefone" id="Telefone_" placeholder="(XX) XXXXX-XXXX">
-
-
-                <div class="h-1 bg-white rounded-2xl"></div>
-            </div>
-
-
-            <!-- ESTADO -->
-
-            <div class=" mt-7 max-h-[80px] gap-y-2 flex flex-col max-w-[260px] lg:max-w-[595px] mx-auto">
-
-                <div class="flex flex-row justify-between text-white font-poppins">
-
-                    <p>Estado</p>
-
-                  
-                </div>
-
-                <form class="formLogin">
-                  <select id="Estado_">
-                      <option value="" selected class="">Selecione o Estado</option>
-                      <option value="AC">Acre</option>
-                      <option value="AL">Alagoas</option>
-                      <option value="AP">Amapá</option>
-                      <option value="AM">Amazonas</option>
-                      <option value="BA">Bahia</option>
-                      <option value="CE">Ceará</option>
-                      <option value="DF">Distrito Federal</option>
-                      <option value="ES">Espírito Santo</option>
-                      <option value="GO">Goiás</option>
-                      <option value="MA">Maranhão</option>
-                      <option value="MT">Mato Grosso</option>
-                      <option value="MS">Mato Grosso do Sul</option>
-                      <option value="MG">Minas Gerais</option>
-                      <option value="PA">Pará</option>
-                      <option value="PB">Paraíba</option>
-                      <option value="PR">Paraná</option>
-                      <option value="PE">Pernambuco</option>
-                      <option value="PI">Piauí</option>
-                      <option value="RJ">Rio de Janeiro</option>
-                      <option value="RN">Rio Grande do Norte</option>
-                      <option value="RS">Rio Grande do Sul</option>
-                      <option value="RO">Rondônia</option>
-                      <option value="RR">Roraima</option>
-                      <option value="SC">Santa Catarina</option>
-                      <option value="SP">São Paulo</option>
-                      <option value="SE">Sergipe</option>
-                      <option value="TO">Tocantins</option>
-                      <option value="EX">Estrangeiro</option>
-                  </select>
-              </form>
-
-
-                <div class="h-1 bg-white rounded-2xl"></div>
-            </div>
-
-
-            <!-- ENDEREÇO -->
-
-            <div class=" mt-7 max-h-[80px] gap-y-2 flex flex-col max-w-[260px] lg:max-w-[595px] mx-auto">
-
-                <div class="flex flex-row justify-between text-white font-poppins">
-
-                    <p>Endereço</p>
-
-                   
-                </div>
-
-                <input type="endeco" name="endereco" id="endereco_" placeholder="Endereço completo">
-
-
-                <div class="h-1 bg-white rounded-2xl"></div>
-            </div>
-
-
-              <!-- Contato de Emergência -->
-
-              <div class=" mt-7 max-h-[80px] gap-y-2 flex flex-col max-w-[260px] lg:max-w-[595px] mx-auto">
-
-                <div class="flex flex-row justify-between text-white font-poppins">
-
-                    <p>CPF</p>
-
-                  
-                </div>
-
-                <input type="CPF" name="CPF" id="CPF_" maxlength="14" placeholder="Digite seu CPF">
-
-
-                <div class="h-1 bg-white rounded-2xl"></div>
-            </div>
-
-
-            <!-- Data de nascimento -->
-
-            <div class=" mt-7 max-h-[80px] gap-y-2 flex flex-col max-w-[260px] lg:max-w-[595px] mx-auto">
-
-                <div class="flex flex-row justify-between text-white font-poppins">
-
-                    <p>Data de nascimento</p>
-
-                    
-                </div>
-                <input type="date" name="data" id="data_">
-
-
-                <div class="h-1 bg-white rounded-2xl"></div>
-            </div>
-
-
-
-             <!-- Senha -->
-
-             <div class=" mt-7 max-h-[80px] gap-y-2 flex flex-col max-w-[260px] lg:max-w-[595px] mx-auto">
-
-                <div class="flex flex-row justify-between text-white font-poppins">
-
-                    <p>Senha</p>
-
-                    
-                </div>
-
-                <input  name="password" id="Password_" placeholder="Digite sua senha" required>
-
-
-                <div class="h-1 bg-white rounded-2xl"></div>
-            </div>
-
-              <!-- CIDADE -->
-
-              <div class=" mt-7 max-h-[80px] gap-y-2 flex flex-col max-w-[260px] lg:max-w-[595px] mx-auto">
-
-                <div class="flex flex-row justify-between text-white font-poppins">
-
-                    <p>CIDADE</p>
-
-                    
-                </div>
-
-                <input type="city" name="cidade" id="Cidade_" placeholder="Digite a cidade" required>
-
-
-                <div class="h-1 bg-white rounded-2xl"></div>
-            </div>
-
-             <!-- SEXO -->
-
-             <div class=" mt-7 max-h-[80px] gap-y-2 flex flex-col max-w-[260px] lg:max-w-[595px] mx-auto">
-
-              <div class="flex flex-row justify-between text-white font-poppins">
-
-                  <p>SEXO</p>
-
-                  
-              </div>
-
-              <form class="formLogin">
-                <select id="sexo_">
-                    <option value="" selected class="">Selecione</option>
-                    <option value="F">Feminino</option>
-                    <option value="M">Masculino</option>
-                    <option value="">Prefiro não informar</option>
-                </select>
-            </form>
-            
-
-              <div class="h-1 bg-white rounded-2xl"></div>
-          </div>
-                
-                 
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 py-6 max-w-[800px] mx-auto"> <!-- Ajuste do espaçamento e largura para centralizar no modal -->
+  
+    <!-- Nome Completo -->
+    <div class="flex flex-col gap-y-2 mx-auto w-full max-w-[400px]">
+        <label for="Nome_" class="text-white font-poppins">Nome Completo</label>
+        <input type="text" name="nome" id="Nome_" placeholder="Digite seu nome completo" class="px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <div class="h-1 bg-white rounded-2xl"></div>
+    </div>
+
+    <!-- Email -->
+    <div class="flex flex-col gap-y-2 mx-auto w-full max-w-[400px]">
+        <label for="Email_" class="text-white font-poppins">Endereço de e-mail</label>
+        <input type="email" name="email" id="Email_" placeholder="Digite seu email" class="px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        <div class="h-1 bg-white rounded-2xl"></div>
+    </div>
+
+    <!-- Telefone -->
+    <div class="flex flex-col gap-y-2 mx-auto w-full max-w-[400px]">
+        <label for="Telefone_" class="text-white font-poppins">Número de telefone</label>
+        <input type="text" name="Telefone" id="Telefone_" placeholder="(XX) XXXXX-XXXX" class="px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <div class="h-1 bg-white rounded-2xl"></div>
+    </div>
+
+    <!-- Estado -->
+    <div class="flex flex-col gap-y-2 mx-auto w-full max-w-[400px]">
+        <label for="Estado_" class="text-white font-poppins">Estado</label>
+        <select id="Estado_" class="px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="" selected>Selecione o Estado</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+            <option value="EX">Estrangeiro</option>
+        </select>
+        <div class="h-1 bg-white rounded-2xl"></div>
+    </div>
+
+    <!-- Endereço -->
+    <div class="flex flex-col gap-y-2 mx-auto w-full max-w-[400px]">
+        <label for="endereco_" class="text-white font-poppins">Endereço</label>
+        <input type="text" name="endereco" id="endereco_" placeholder="Endereço completo" class="px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <div class="h-1 bg-white rounded-2xl"></div>
+    </div>
+
+    <!-- CPF -->
+    <div class="flex flex-col gap-y-2 mx-auto w-full max-w-[400px]">
+        <label for="CPF_" class="text-white font-poppins">CPF</label>
+        <input type="text" name="CPF" id="CPF_" maxlength="14" placeholder="Digite seu CPF" class="px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <div class="h-1 bg-white rounded-2xl"></div>
+    </div>
+
+    <!-- Data de Nascimento -->
+    <div class="flex flex-col gap-y-2 mx-auto w-full max-w-[400px]">
+        <label for="data_" class="text-white font-poppins">Data de Nascimento</label>
+        <input type="date" name="data" id="data_" class="px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <div class="h-1 bg-white rounded-2xl"></div>
+    </div>
+
+    <!-- Senha -->
+    <div class="flex flex-col gap-y-2 mx-auto w-full max-w-[400px]">
+        <label for="Password_" class="text-white font-poppins">Senha</label>
+        <input type="text" name="password" id="Password_" placeholder="Digite sua senha" class="px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500" >
+        <div class="h-1 bg-white rounded-2xl"></div>
+    </div>
+
+    <!-- Cidade -->
+    <div class="flex flex-col gap-y-2 mx-auto w-full max-w-[400px]">
+      <label for="Cidade_" class="text-white font-poppins">Cidade</label>
+      <input type="text" name="city" id="Cidade_" placeholder="Digite sua Cidade" class="px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none" required>
+      <div class="h-1 bg-white rounded-2xl"></div>
+  </div>
+
+    <!-- Sexo -->
+    <div class="flex flex-col gap-y-2 mx-auto w-full max-w-[400px]">
+        <label for="sexo_" class="text-white font-poppins">Sexo</label>
+        <select id="sexo_" class="px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="" selected>Selecione</option>
+            <option value="F">Feminino</option>
+            <option value="M">Masculino</option>
+            <option value="">Prefiro não informar</option>
+        </select>
+        <div class="h-1 bg-white rounded-2xl"></div>
+    </div>
+
+    
+
+</div>
+       
 
 
             <div class=" mt-7 max-h-[80px] gap-y-2 flex flex-col max-w-[260px] lg:max-w-[595px] mx-auto">
-              <button onclick="submitedit()" class="p-2 rounded-xl text-xl bg-green-300">Salvar</button>
+              <button onclick="submitedit()" class="py-2 px-3 rounded-xl text-md bg-green-300">Salvar</button>
           </div>
 
           <div class=" mt-7 max-h-[80px] gap-y-2 flex flex-col max-w-[260px] lg:max-w-[595px] mx-auto">
@@ -490,7 +386,7 @@ body.light-mode .swiper-pagination-bullet {
 
                             <p>Nome Completo</p>
 
-                            <button onclick="abrirmodal()" class="text-blue-500 underline">Edit</button>
+                            <button id="openmodal" onclick="abrirmodal()" class="text-blue-500 underline">Edit</button>
                         </div>
                         <p id="campname" class="font-poppins text-white"></p>
 
@@ -646,7 +542,7 @@ body.light-mode .swiper-pagination-bullet {
                     </div>
 
                 </div>
-              </form>
+              </div>
             </section>
 
             <!-- MOBILE INFO -->

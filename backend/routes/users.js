@@ -43,6 +43,7 @@ const selectDefault = {
   sexo: true,
   endereco: true,
   telefone: true,
+  is_admin: true
 };
 
 
@@ -273,6 +274,57 @@ router.patch('/:id', authenticateToken, async (req, res) => {
     if (checkUser === null || id !== token.id) {
       return res.sendStatus(403); // 403 Forbidden.
     }
+
+
+    if ('password' in data) {
+      if (data.password.length <= 8) {
+        return res.status(400).json({
+          error: "A senha deve ter no mínimo 8 caracteres."
+        })
+      }
+
+    var mykey = crypto.createCipher('aes-128-cbc', "mypassword");
+    var mystr = mykey.update( data.password , 'utf8', 'hex')
+    mystr += mykey.final('hex');
+
+    data.password = mystr;
+
+
+    }
+    const user = await prisma.user.update({
+      where: {
+        id: id
+      },
+      data: data,
+      select: selectDefault
+    });
+    res.json(user)
+  }
+  catch (exception) {
+    exceptionHandler(exception, res);
+  }
+});
+
+//  Patch de admin
+router.patch('/admin/:id', authenticateToken, async (req, res) => {
+  try {
+    const id = Number(req.params.id);
+    const data = req.body;
+    const token = req.accessToken;
+
+    const checkUser = await prisma.user.findUnique({
+      where: {
+        id: id,
+        email: token.email
+      }
+    });
+    console.log(checkUser);
+
+    // Negar acesso a atualizar o usuário != do dono do token
+    if (token.is_admin !== "true") {
+      return res.sendStatus(403); // 403 Forbidden.
+    }
+
 
     if ('password' in data) {
       if (data.password.length < 8) {

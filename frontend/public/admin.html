@@ -14,51 +14,67 @@
         
         <!-- Sidebar -->
         <div class="w-64 bg-gray-800 text-white p-4">
-            <div class="text-center mb-8">
-                <h2 class="text-2xl font-bold">Admin</h2>
+
+            <div class="text-center flex flex-col mb-8">
+                <h2 class="text-2xl mb-5 font-bold">Admin</h2>
+
+
+                <hr class="">
+                <div class="flex py-4 gap-3 mt-4 flex-row">
+                    
+                    <img src="img/img-admin/iconadm.jpg" alt="Foto de perfil" class="rounded-full my-auto  mx-auto w-12">
+                    <h3 id="nameADM" class="text-left my-auto ext-1xl mb-2 font-poppins ">Name ADM</h3>
+                 </div>
+                 <hr>
+               
             </div>
             <ul class="space-y-4">
-                <li><a href="#" class="hover:bg-gray-700 p-2 rounded block">Dashboard</a></li>
+              
+                <li><a href="admin.html" class="hover:bg-gray-700 p-2 rounded block">Dashboard</a></li>
                 <li><a href="#" class="hover:bg-gray-700 p-2 rounded block">Usuários</a></li>
-                <li><a href="#" class="hover:bg-gray-700 p-2 rounded block">Configurações</a></li>
+                <li><a href="admin-shows.html" class="hover:bg-gray-700 p-2 rounded block">Shows</a></li>
                 <li><a href="#" class="hover:bg-gray-700 p-2 rounded block">Relatórios</a></li>
                 <li><a href="#" class="hover:bg-gray-700 p-2 rounded block">Logout</a></li>
             </ul>
         </div>
 
         <!-- Conteúdo Principal -->
-        <div class="flex-1 bg-gray-100 p-8">
+
+        <div class="flex-1 bg-gray-900 p-8">
             <!-- Cabeçalho -->
-            <header class="flex justify-between items-center mb-8">
-                <h1 class="text-3xl font-bold">Painel de Administração</h1>
+            <header class="flex  justify-between items-center mb-8">
+                <h1 class="text-3xl font-bold text-white">Dashboard Inicial</h1>
+        
                 <div class="flex items-center space-x-4">
-                    <span class="text-gray-600">Admin</span>
-                    <img src="https://via.placeholder.com/40" alt="Foto de perfil" class="rounded-full">
+                    <span id="saudacaoheader" class="text-white">None</span>
+                    <a href="index.html"><img src="img/img-desktop/30logo(1).png" alt="Foto da 30" class="rounded-full w-12"></a>
                 </div>
+
             </header>
 
             <!-- Cards de Dashboard -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold mb-2">Total de Usuários</h3>
-                    <p class="text-3xl font-bold text-blue-600">1,500</p>
+                    <p id="total-user" class=" text-3xl font-bold text-blue-600">0</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">Visitas Hoje</h3>
-                    <p class="text-3xl font-bold text-green-600">320</p>
+                    <h3 class="text-xl font-semibold mb-2">Total de Shows</h3>
+                    <p id="total-show" class="text-3xl font-bold text-blue-600">0</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">Novos Registros</h3>
-                    <p class="text-3xl font-bold text-orange-600">45</p>
+                    <h3 class="text-xl font-semibold mb-2">Usuários maiores 18 de anos</h3>
+                    <p id="users18" class="text-3xl font-bold text-blue-600">0</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">Comentários Pendentes</h3>
-                    <p class="text-3xl font-bold text-red-600">12</p>
+                    <h3 class="text-xl font-semibold mb-2">Compras Neste Mês</h3>
+                    <p id="comprasmes" class="text-3xl font-bold text-blue-600">0</p>
                 </div>
             </div>
         </div>
 
     </div>
-
+    <script src="js/Admin/admin.js"></script>
+    <script src="js/Admin/cabecalhoadmin.js"></script>
 </body>
 </html>

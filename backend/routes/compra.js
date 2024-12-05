@@ -11,6 +11,7 @@ const selectDefault = {
   codigo: true,
   cpf: true,
   status: true,
+  data: true
 };
 // Implementar as rotas de Compra
 
