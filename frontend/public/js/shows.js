@@ -41,9 +41,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function criarCard(show, index) {
-    const card = document.createElement("div");
+    const card = document.createElement("a");
     card.classList = "cardshow max-w-[150px] lg:max-w-[226px] hover:scale-110 transition-all";
     card.id = show.registro;
+    card.setAttribute("onclick", "showclicked(id)");
+    card.setAttribute("data-name", JSON.stringify(show))
+    card.setAttribute("href", "checkout.html")
 
     const content = document.createElement("div");
     content.classList = "flex flex-col font-bold text-white";
@@ -94,5 +97,64 @@ document.addEventListener('click', function() {
 
     })
 
+    function aplicarfiltros() {
+        const Artistadavez = document.getElementById("artistas").value;
+        const Datashow = document.getElementById("datashow").value;
+
+        if (Artistadavez) {
+            // Seleciona todos os elementos da lista de shows
+            const shows = document.querySelectorAll('.cardshow');
+    
+    
+            // Filtra os produtos de acordo com o valor de pesquisa
+            shows.forEach(show => {
+                const showName = show.getAttribute('data-name');
+    
+                console.log(showName);
+                // Verifica se o nome do show contém o texto de pesquisa
+                if (showName.includes(Artistadavez)) {
+                    show.classList.remove("hidden"); // Exibe o produto
+                } else {
+                    show.classList.add("hidden"); // Esconde o produto
+                }
+
+            });
+
+    }
+
+           
+            if (Datashow) {
+                // Seleciona todos os elementos da lista de shows
+                const shows = document.querySelectorAll('.cardshow');
+
+                // Filtra os produtos de acordo com o valor de pesquisa
+                shows.forEach(show => {
+                    const showName = show.getAttribute('data-name');
+
+                   
+                    // Verifica se o nome do show contém o texto de pesquisa
+                    if (showName.includes(Datashow)) {
+                        show.classList.remove("hidden"); // Exibe o produto
+                    } else {
+                        show.classList.add("hidden"); // Esconde o produto
+                    }
+
+                });
+
+        }
+
+}
 
 
+    function redefinirfiltros(){
+        const shows = document.querySelectorAll('.cardshow');
+    
+            // Filtra os produtos de acordo com o valor de pesquisa
+            shows.forEach(show => {
+                show.classList.remove("hidden");
+            })
+    }
+
+    function showclicked(id){
+        sessionStorage.setItem("showclicked", id);
+    }

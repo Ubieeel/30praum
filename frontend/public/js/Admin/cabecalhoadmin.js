@@ -55,7 +55,7 @@ async function carregardadosadmin() {
     fieldsidebar.classList = "text-left my-auto mx-auto text-1xl mb-2 font-poppins";
 
     // Envio da mensagem
-      const Firstname = obterPrimeiroNome(responsedadosjson.name)
+    const Firstname = obterPrimeiroNome(responsedadosjson.name)
 
     const fieldmesage = document.getElementById("saudacaoheader");
     fieldmesage.innerText = `${mensagem} ${Firstname}!`
@@ -69,3 +69,21 @@ async function carregardadosadmin() {
 
   document.addEventListener('DOMContentLoaded', carregardadosadmin);
 
+
+//  BTN LOGOUT ADMIN
+
+function sairconta(){
+  sessionStorage.setItem('iduser', null);
+  sessionStorage.setItem('token', null);
+  sessionStorage.setItem('usuarioLogado', null);
+  
+  
+  
+    usuarioLogado = false;
+   
+  
+     
+  
+  
+    window.location.href = "../index.html"
+  }

@@ -59,6 +59,13 @@ function criarCard(show, index) {
     screenedit.innerText = ""
     screenedit.onclick = function(){ 
         
+          
+   // Sumir BTN DELETE
+
+    const bntdelete = document.getElementById("delete");
+    bntdelete.classList.remove("hidden");
+
+
         modal.classList.toggle("hidden")
 
   
@@ -148,6 +155,14 @@ function criarCard(show, index) {
     return card;
 }
 
+// Fomratação input artistaas
+
+const inputartista = document.getElementById('artista.');
+
+inputartista.addEventListener('input', function() {
+this.value = this.value.toUpperCase();
+});
+
 
 // Fechar modal botao X
 
@@ -183,8 +198,7 @@ function formatarMoeda(input) {
 
 
  async function editshow() {
-  
-  
+
     try {
 
       const accessToken = sessionStorage.getItem('token');
@@ -230,6 +244,10 @@ function formatarMoeda(input) {
 
 function abrirmodaladc() {
   
+  // Sumir BTN DELETE
+
+const bntdelete = document.getElementById("delete");
+bntdelete.classList.add("hidden");
  
   modal.classList.toggle("hidden")
 
@@ -241,17 +259,18 @@ function abrirmodaladc() {
   campartista.value = "";
   campnomevento.value = "";
 
+
+
+
   const btnsubmit = document.getElementById("enviar");
 btnsubmit.setAttribute("onclick", "criarshow()");
 
   const titulomodal = document.getElementById("Titlemodal");
   titulomodal.innerText = "Criar Novo Show"
+
 }
 
-// Sumir BTN DELETE
 
-const bntdelete = document.getElementById("delete");
-bntdelete.classList.toggle("hidden");
 
 
 // BTN ADICIONAR SHOW

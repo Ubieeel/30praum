@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Administração</title>
+     <!-- FAVICON -->
+  <link rel="shortcut icon" href="img/img-desktop/30logo(1).png" type="image/x-icon" />
+    <!-- Link do Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class=" bg-gray-800 font-sans">
+
+    <!-- Layout geral com menu lateral e conteúdo principal -->
+    <div class="flex  h-full">
+        
+        <!-- Sidebar -->
+        <div class="w-64 bg-gray-800 text-white p-4">
+
+            <div class="text-center flex flex-col mb-8">
+                <h2 class="text-2xl mb-5 font-bold">Admin</h2>
+
+
+                <hr class="">
+                <div class="flex py-4 gap-3 mt-4 flex-row">
+                    
+                    <img src="img/img-admin/iconadm.jpg" alt="Foto de perfil" class="rounded-full my-auto  mx-auto w-12">
+                    <h3 id="nameADM" class="text-left my-auto ext-1xl mb-2 font-poppins ">Name ADM</h3>
+                 </div>
+                 <hr>
+               
+            </div>
+            <ul class="space-y-4">
+              
+                <li><a href="admin.html" class="hover:bg-gray-700 p-2 rounded block">Dashboard</a></li>
+                <li><a href="admin-users.html" class="hover:bg-gray-700 p-2 rounded block">Usuários</a></li>
+                <li><a href="admin-shows.html" class="hover:bg-gray-700 p-2 rounded block">Shows</a></li>
+                <li><a href="admin-relatorio.html" class="hover:bg-gray-700 p-2 rounded block">Relatórios</a></li>
+                <li><button onclick="sairconta()" class="hover:bg-gray-700 p-2 rounded block">Logout</button></li>
+            </ul>
+        </div>
+
+        <!-- Conteúdo Principal -->
+
+        <div class="flex-1 bg-gray-900 p-3">
+            <!-- Cabeçalho -->
+            <header class="flex  justify-between items-center mb-8">
+                <h1 class="text-3xl font-bold text-white">Dashboard Usuários</h1>
+        
+                <div class="flex items-center space-x-4">
+                    <span id="saudacaoheader" class="text-white">None</span>
+                    <a href="index.html"><img src="img/img-desktop/30logo(1).png" alt="Foto da 30" class="rounded-full w-12"></a>
+                </div>
+
+            </header>
+            
+            <hr class="mb-3">
+
+            <div class="flex flex-col container -ml-10 mx-auto">
+                
+                <!-- cabecalho tabela -->
+                <div class="max-w-screen-xl mx-auto p-6">
+                    <table class="min-w-full table-auto border-collapse text-white">
+                        <!-- Cabeçalho da tabela -->
+                        <thead class="bg-gray-800">
+                            <tr>
+                                <th class="px-4 py-2 text-center">ID</th>
+                                <th class="px-4 py-2 text-center">Nome</th>
+                                <th class="px-4 py-2 text-center">Email</th>
+                                <th class="px-4 py-2 text-center">Cidade</th>
+                                <th class="px-4 py-2 text-center">CPF</th>
+                                <th class="px-4 py-2 text-center">Endereço</th>
+                                <th class="px-4 py-2 text-center">Nascimento</th>
+                                <th class="px-4 py-2 text-center">Sexo</th>
+                                <th class="px-4 py-2 text-center">Telefone</th>
+                                <th class="px-4 py-2 text-center">UF</th>
+                                <th class="px-4 py-2 text-center">ADMIN</th>
+                                <th class="px-4 py-2 text-center">Edit</th>
+                            </tr>
+                        </thead>
+                
+                        <!-- Corpo da tabela -->
+                        <tbody class="bg-gray-700" id="Linhastabela">
+                            <!-- Linha de dados -->
+                            <tr>
+                                <td class="px-4 py-2 text-center">1</td>
+                                <td class="px-4 py-2 text-center">João Silva</td>
+                                <td class="px-4 py-2 text-center">joao@example.com</td>
+                                <td class="px-4 py-2 text-center">São Paulo</td>
+                                <td class="px-4 py-2 text-center">123.456.789-00</td>
+                                <td class="px-4 py-2 text-center">Rua X, 123</td>
+                                <td class="px-4 py-2 text-center">01/01/1990</td>
+                                <td class="px-4 py-2 text-center">Masculino</td>
+                                <td class="px-4 py-2 text-center">(11) 98765-4321</td>
+                                <td class="px-4 py-2 text-center">SP</td>
+                                <td class="px-4 py-2 text-center">Sim</td>
+                                <td class="px-4 py-2 text-center"><button onclick=""  class="px-2 py-1 rounded-xl bg-blue-400">Edit</button></td>
+                            </tr>
+
+
+                            
+                            <!-- Adicione mais linhas conforme necessário -->
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <!-- MODAL -->
+
+
+    <div id="MODAL" class="hidden -top-14 fixed md:scale-100 md:bottom-0  w-full">
+        <!-- Nome completo  -->
+
+    <section> 
+      <div id="profileForm">
+    
+
+    
+        <div class="w-[90%] mx-auto scale-100 mt-20 rounded-2xl pb-7 bg-[#141414] h-auto ">
+
+            
+    <div class=" mb-2">
+      <h1 class="text-white font-poppins mx-auto  rounded-xl bg-slate-500 text-center text-[32px]">Editar Usuário</h1>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 py-6 max-w-[800px] mx-auto"> <!-- Ajuste do espaçamento e largura para centralizar no modal -->
+  
+    <!-- Nome Completo -->
+    <div class="flex flex-col gap-y-2 mx-auto w-full max-w-[400px]">
+        <label for="Nome_" class="text-white font-poppins">Nome Completo</label>
+        <input type="text" name="nome" id="Nome_" placeholder="Digite seu nome completo" class="px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <div class="h-1 bg-white rounded-2xl"></div>
+    </div>
+
+    <!-- Email -->
+    <div class="flex flex-col gap-y-2 mx-auto w-full max-w-[400px]">
+        <label for="Email_" class="text-white font-poppins">Endereço de e-mail</label>
+        <input type="email" name="email" id="Email_" placeholder="Digite seu email" class="px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500" required="">
+        <div class="h-1 bg-white rounded-2xl"></div>
+    </div>
+
+    <!-- Telefone -->
+    <div class="flex flex-col gap-y-2 mx-auto w-full max-w-[400px]">
+        <label for="Telefone_" class="text-white font-poppins">Número de telefone</label>
+        <input type="text" name="Telefone" id="Telefone_" placeholder="(XX) XXXXX-XXXX" class="px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <div class="h-1 bg-white rounded-2xl"></div>
+    </div>
+
+    <!-- Estado -->
+    <div class="flex flex-col gap-y-2 mx-auto w-full max-w-[400px]">
+        <label for="Estado_" class="text-white font-poppins">Estado</label>
+        <select id="Estado_" class="px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="" selected="">Selecione o Estado</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+            <option value="EX">Estrangeiro</option>
+        </select>
+        <div class="h-1 bg-white rounded-2xl"></div>
+    </div>
+
+    <!-- Endereço -->
+    <div class="flex flex-col gap-y-2 mx-auto w-full max-w-[400px]">
+        <label for="endereco_" class="text-white font-poppins">Endereço</label>
+        <input type="text" name="endereco" id="endereco_" placeholder="Endereço completo" class="px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <div class="h-1 bg-white rounded-2xl"></div>
+    </div>
+
+    <!-- CPF -->
+    <div class="flex flex-col gap-y-2 mx-auto w-full max-w-[400px]">
+        <label for="CPF_" class="text-white font-poppins">CPF</label>
+        <input type="text" name="CPF" id="CPF_" maxlength="14" placeholder="Digite seu CPF" class="px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <div class="h-1 bg-white rounded-2xl"></div>
+    </div>
+
+    <!-- Data de Nascimento -->
+    <div class="flex flex-col gap-y-2 mx-auto w-full max-w-[400px]">
+        <label for="data_" class="text-white font-poppins">Data de Nascimento</label>
+        <input type="date" name="data" id="data_" class="px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <div class="h-1 bg-white rounded-2xl"></div>
+    </div>
+
+    <!-- Senha -->
+    <div class="flex flex-col gap-y-2 mx-auto w-full max-w-[400px]">
+        <label for="Password_" class="text-white font-poppins">Senha</label>
+        <input type="text" name="password" id="Password_" placeholder="Digite sua senha" class="px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <div class="h-1 bg-white rounded-2xl"></div>
+    </div>
+
+    <!-- Cidade -->
+    <div class="flex flex-col gap-y-2 mx-auto w-full max-w-[400px]">
+      <label for="Cidade_" class="text-white font-poppins">Cidade</label>
+      <input type="text" name="city" id="Cidade_" placeholder="Digite sua Cidade" class="px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none" required="">
+      <div class="h-1 bg-white rounded-2xl"></div>
+  </div>
+
+    <!-- Sexo -->
+    <div class="flex flex-col gap-y-2 mx-auto w-full max-w-[400px]">
+        <label for="sexo_" class="text-white font-poppins">Sexo</label>
+        <select id="sexo_" class="px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="" selected="">Selecione</option>
+            <option value="F">Feminino</option>
+            <option value="M">Masculino</option>
+            <option value="">Prefiro não informar</option>
+        </select>
+        <div class="h-1 bg-white rounded-2xl"></div>
+    </div>
+
+
+      <!-- ADMIN -->
+      <div class="flex flex-col gap-y-2 mx-auto w-full max-w-[400px]">
+        <label for="ADMIN_" class="text-white font-poppins">ADMIN</label>
+        <select id="ADMIN_" class="px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="" selected="">Selecione</option>
+            <option value="true">Sim</option>
+            <option value="">Não</option>
+        </select>
+        <div class="h-1 bg-white rounded-2xl"></div>
+    </div>
+
+</div>
+       
+
+
+            <div class=" mt-7 max-h-[80px] gap-y-2 flex flex-col max-w-[260px] lg:max-w-[595px] mx-auto">
+              <button onclick="submitedit()" class="py-2 px-3 rounded-xl text-xl bg-green-300">Salvar</button>
+          </div>
+
+          <div class=" mt-7 max-h-[80px] gap-y-2 flex flex-col max-w-[260px] lg:max-w-[595px] mx-auto">
+            <button onclick="fecharmodal()" class="p-2 rounded-xl text-xl bg-red-300">Cancelar</button>
+         </div>
+                
+
+            </div>
+
+
+        
+        </div>
+        
+      </section></div>
+
+
+
+
+
+
+
+
+    <script src="js/Admin/admin-users.js"></script>
+    <script src="js/Admin/cabecalhoadmin.js"></script>
+
+
+
+
+</body>
+</html>

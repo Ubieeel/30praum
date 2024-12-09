@@ -1,7 +1,18 @@
 var iduser = sessionStorage.getItem('iduser', iduser);
 var id = iduser 
 
-
+var janeirocompra = 0;           
+var fevereirocompra  = 0 ;
+var  marcocompra = 0;
+var abrilcompra = 0;
+var  maiocompra = 0;
+var  junhocompra = 0 ;
+var  julhocompra = 0;
+var  agostocompra  = 0 ;
+var  setembrocompra  = 0;
+var outubrocompra = 0 ;
+var novembrocompra = 0
+var dezembrocompra  = 0 ;
 // Card Total de Usuários
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -150,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Carregamento card compras do mês 
 
-
+ var compras
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -204,6 +215,124 @@ document.addEventListener('DOMContentLoaded', function () {
                 }            
             });
 
+
+            compras.forEach((compra) => {
+
+               var comprax = new Date(compra.data)
+
+              
+
+                var mescompra = comprax.getMonth()
+    
+
+                console.log(mescompra)
+                if (mescompra === 0) {janeirocompra = janeirocompra + 1}                
+                if (mescompra === 1) {fevereirocompra = fevereirocompra + 1}  
+                if (mescompra === 2) {marcocompra = marcocompra  + 1}  
+                if (mescompra === 3) {abrilcompra = abrilcompra + 1}  
+                if (mescompra === 4) {maiocompra = maiocompra + 1}  
+                if (mescompra === 5) {junhocompra = junhocompra + 1}  
+                if (mescompra === 6) {julhocompra = julhocompra + 1}  
+                if (mescompra === 7) {agostocompra = agostocompra + 1}  
+                if (mescompra === 8) {setembrocompra = setembrocompra + 1}  
+                if (mescompra === 9) {outubrocompra =  outubrocompra + 1}  
+                if (mescompra === 10) {novembrocompra =  novembrocompra + 1}  
+                if (mescompra === 11) { dezembrocompra = dezembrocompra + 1}  
+                
+                })
+
+                // Dados para o gráfico e tabela
+const labels = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+    'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+const vendas = [
+janeirocompra,   
+fevereirocompra,
+marcocompra,
+abrilcompra,
+maiocompra,
+junhocompra,
+julhocompra,
+agostocompra,
+setembrocompra,
+outubrocompra,
+novembrocompra,
+dezembrocompra];
+
+
+const Janeirofield = document.getElementById("Janeiro") 
+   
+
+Janeirofield.textContent =janeirocompra
+    
+
+const Fevereirofield = document.getElementById("Fevereiro")   
+
+Fevereirofield.textContent = fevereirocompra
+    
+const Marçofield =document.getElementById("Março")   
+
+Marçofield.textContent = marcocompra
+    
+const Abrilfield = document.getElementById("Abril")   
+
+Abrilfield.textContent = abrilcompra
+    
+const Maiofield = document.getElementById("Maio")   
+
+Maiofield.textContent = maiocompra
+    
+ const Junhofield = document.getElementById("Junho")   
+
+ Junhofield.textContent = junhocompra
+     
+ const Julhofield = document.getElementById("Julho")   
+
+ Julhofield.textContent = julhocompra;
+     
+ const Agostofield  = document.getElementById("Agosto")   
+
+ Agostofield.textContent = agostocompra;
+     
+ const Setembrofield = document.getElementById("Setembro")   
+
+ Setembrofield.textContent = setembrocompra
+     
+ const Outubrofield =  document.getElementById("Outubro")   
+
+ Outubrofield.textContent = outubrocompra
+     
+ const Novembrofield = document.getElementById("Novembro")   
+
+ Novembrofield.textContent = novembrocompra
+     
+ const Dezembrofield = document.getElementById("Dezembro")   
+
+ Dezembrofield.textContent = dezembrocompra
+    
+
+// Criando o gráfico
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
+type: 'bar', // Tipo de gráfico (barras)
+data: {
+    labels: labels,
+    datasets: [{
+        label: 'Vendas',
+        data: vendas,
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 1
+    }]
+},
+options: {
+    responsive: true,
+    scales: {
+        y: {
+            beginAtZero: true
+        }
+    }
+}
+});
               
             const qntdfield = document.getElementById("comprasmes");
             qntdfield.innerText = qntd;
@@ -218,3 +347,4 @@ document.addEventListener('DOMContentLoaded', function () {
     Carregarcompras();
 
 })
+

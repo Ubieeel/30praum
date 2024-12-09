@@ -31,11 +31,12 @@ async function carregardados() {
     });
 
     const responsedadosjson = await responsedados.json()
+    console.log(responsedadosjson)
 
     if (responsedados.ok) {
       sexo = responsedadosjson.sexo;
       var sexo;
-
+    
       if (responsedadosjson.sexo === 'F')  sexo = "Feminino";
       if (responsedadosjson.sexo === 'M')  sexo = "Masculino";
       if (!responsedadosjson.sexo) sexo = "Não informado."
@@ -51,6 +52,103 @@ async function carregardados() {
     }
     
 
+      // VER COMPRAS DO USER
+
+  async function carregarShowscompras() {
+
+    try {
+        const response = await fetch(`http://127.0.0.1:5000/api/compra/profile/${responsedadosjson.cpf
+        }`,{
+            method: "GET",
+      headers: {
+        'Content-Type': 'application/json',
+      }
+        });
+        if (!response.ok) {
+            throw new Error('Erro ao carregar as compras')
+        }
+        const data = await response.json();
+        console.log(data);
+
+        data.forEach(show => {
+
+          async function carregarclicado() {
+            try {
+                const response = await fetch(`http://127.0.0.1:5000/api/show/${show.registroid}`,{
+                    method: "GET",
+              headers: {
+                'Content-Type': 'application/json',
+              }
+                });
+                if (!response.ok) {
+                    throw new Error('Erro ao carregar os filmes')
+                }
+                const data = await response.json();
+                show = data;
+                console.log(show);
+                
+                const sumariocompras = document.getElementById('ingressos')
+
+                const cardcompra = document.createElement('div');
+                cardcompra.classList = "mb-3 mt-2 flex flex-row justify-between "
+                
+                const infodiv = document.createElement('div')
+                infodiv.classList = "flex flex-col"
+
+                const tituloshow = document.createElement('h2');
+                tituloshow.textContent = show.nome
+                tituloshow.classList = "text-2xl font-bold text-white underline"
+
+                const datashow = document.createElement('p')
+                datashow.textContent = `Data do evento: ${show.data}`
+                datashow.classList = " mt-5 text-white text-1xl"
+
+                const enderecoshow = document.createElement('p')
+                enderecoshow.textContent = `Endereço: ${show.endereco}`
+                enderecoshow.classList = " mt-2 text-white text-1xl"
+
+                const horarioshow = document.createElement('p')
+                horarioshow.textContent = `Horário de início : ${show.horario}`
+                horarioshow.classList = " mt-2 text-white text-1xl"
+
+                const separador = document.createElement('hr')
+
+                const ingressoqrcode = document.createElement('img')
+                ingressoqrcode.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgjB-Q95sgAKkagx-I8rWP1eMOZAgPI-24WQ&s")
+                ingressoqrcode.setAttribute("width", "90px")
+                ingressoqrcode.classList = "mb-10 my-auto"
+
+                sumariocompras.appendChild(cardcompra)
+
+                cardcompra.appendChild(infodiv)
+                infodiv.appendChild(tituloshow)
+                infodiv.appendChild(datashow)
+                infodiv.appendChild(enderecoshow)
+                infodiv.appendChild(horarioshow)
+                cardcompra.appendChild(ingressoqrcode)
+                sumariocompras.appendChild(separador)
+        
+            } catch (error) {
+                console.error('Erro: ', error)
+            }
+            
+        }
+
+        carregarclicado()
+        });
+     
+
+    
+
+
+
+
+    } catch (error) {
+        console.error('Erro: ', error)
+    }
+}
+carregarShowscompras();
+
 
     
   } catch (error) {
@@ -61,6 +159,9 @@ async function carregardados() {
 }
 
 document.addEventListener('DOMContentLoaded', carregardados);
+
+
+
 
 
 function abrirmodal(){
@@ -88,7 +189,7 @@ function abrirmodal(){
 
     document.getElementById('Nome_').value = bodydata.name;
     document.getElementById('Email_').value = bodydata.email;
-    document.getElementById('Password_').value = bodydata.password;
+    // document.getElementById('Password_').value = bodydata.password;
     document.getElementById("Telefone_").value =  bodydata.telefone;
     document.getElementById('data_').value = bodydata.nascimento;
     document.getElementById('sexo_').value = bodydata.sexo ;
@@ -164,22 +265,18 @@ async function sabercomota() {
     var usuarioLogado = localStorage.getItem('usuarioLogado');
     console.log(usuarioLogado)
 
-  
-
-   
-
     const iduser = localStorage.getItem('iduser');
 
     var accessToken =  sessionStorage.getItem('token');
   
 
-    
 }
 
 document.addEventListener('DOMContentLoaded', sabercomota);
 
 
 const buttonedit = document.getElementById('buttonedit');
+
 
 
 async function submitedit() {
@@ -202,7 +299,7 @@ try {
   
     if(document.getElementById('data_').value) bodydata.nascimento = document.getElementById('data_').value;
     if(document.getElementById('sexo_').value) bodydata.sexo = document.getElementById('sexo_').value;
-    if(document.getElementById('Cidade_').value) {bodydata.cidade = document.getElementById('Cidade_').value;}
+    if(document.getElementById('Cidade_').value) {bodydata.cidade =  document.getElementById('Cidade_').value;}
     if(document.getElementById('CPF_').value) {
 
       const cpfformat = document.getElementById('CPF_').value;

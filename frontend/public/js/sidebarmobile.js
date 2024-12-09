@@ -70,4 +70,33 @@ var userinfo = decodeToken(tokenuser)
 
     }
 
+
+    
+    if (userinfo.is_admin === "true") {
+        
+        const listaShows2 = document.getElementById('headermobile');
+    
+      
+        const btnlink2 = document.createElement("a")
+        btnlink2.href = "admin.html";
+        btnlink2.textContent = "ADMINISTRAÇÃO";
+    
+        
+        listaShows2.appendChild(btnlink2)
+        
+        const btnmobile1 = document.getElementById('bntmobile1');
+        const btnmobile2 = document.getElementById('bntmobile2');
+    
+        btnmobile1.classList = "hidden"
+        btnmobile2.innerHTML = "Ver meu Perfil"
+        btnmobile2.setAttribute("onclick", "openprofile()")
+
+      
+        }
+
+}
+
+
+function openprofile(){
+    window.location = "profile.html"
 }

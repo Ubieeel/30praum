@@ -7,7 +7,7 @@
   <title>30PraUM</title>
 
   <!-- FAVICON -->
-  <link rel="shortcut icon" href="../public/img/img-desktop/30logo(1).png" type="image/x-icon" />
+  <link rel="shortcut icon" href="img/img-desktop/30logo(1).png" type="image/x-icon" />
   <!-- FONTES -->
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -153,7 +153,7 @@
     </div>
 
     <section>
-      <nav class="flex flex-col text-center text-xl gap-y-3 mt-8 text-white">
+      <nav id="headermobile" class="flex flex-col text-center text-xl gap-y-3 mt-8 text-white">
         <a href="index.html">INÍCIO</a>
         <a href="shows.html">SHOWS</a>
         <a href="contato.html">CONTATO</a>
@@ -165,18 +165,20 @@
 
 
 
+        
     <div class="max-w-[245px] mx-auto mt-40">
-      <img class="mx-auto mb-5" src="img/img-mobile/iconperson2.png" alt="">
+      <img id="listbtn" class="mx-auto mb-5" src="img/img-mobile/iconperson2.png" alt="">
       <a href="login.html">
         <button
-          class="mx-auto mb-5 py-3 px-[91px] rounded-3xl text-[16px] bg-[#01e1ff7c] font-poppins text-white">LOGIN</button>
+        id="bntmobile1" class="mx-auto mb-5 py-3 px-[91px] rounded-3xl text-[16px] bg-[#01e1ff7c] font-poppins text-white">LOGIN</button>
       </a>
 
       <a href="cadastro.html" class="contents">
         <button
-          class="mx-auto py-3 px-[66px] rounded-3xl text-[16px] bg-[#252323] font-poppins text-white">CADASTRE-SE</button>
+        id="bntmobile2"  class="mx-auto py-3 px-[66px] rounded-3xl text-[16px] bg-[#252323] font-poppins text-white">CADASTRE-SE</button>
       </a>
     </div>
+
 
   </div>
 
@@ -191,10 +193,7 @@
         <div class="justify-center flex-row flex gap-x-[190px]">
           <img class="pt-[45px]" src="img/img-mobile/30logo(2).png" alt="Logo">
 
-          <div class="flex gap-[40px]">
-            <button class="contents">
-              <img class="max-w-[31px] max-h-[31px] mt-16" src="img/img-mobile/Search.png" alt="">
-            </button>
+         
 
             <button onclick="opensidebar()" class="contents">
               <img class="max-w-[40px] mt-[67px] max-h-[27px]" src="img/img-mobile/nav.png" alt="">
@@ -216,7 +215,7 @@
 
         <img class="pt-[54px]" src="img/img-mobile/30logo(2).png" alt="Logo">
 
-        <div class="mt-[77px] flex flex-row ml-40">
+        <div class="mt-[77px] flex flex-row">
           <ul id="header" class="flex flex-row gap-x-[39px]">
             <li class="text-nav ">
               <a href="index.html">INÍCIO</a>
@@ -234,21 +233,11 @@
         </div>
 
 
-        <div class="flex flex-row">
-          <button onclick="searchWord()" class=" contents">
-            <img
-              class="max-w-[33px] max-h-[33px] absolute top-[71px] sm:right-[135px] lg:right-[152px] xl:right-[152px]"
-              src="img/img-desktop/Search.png" alt="Search">
-          </button>
-
-          <input type="text" id="search-input"
-            class="mt-[71px] rounded-xl bg-[#585757]  max-w-[225px] min-w-[180px] h-[35px]" type="text">
-
+      
           <a onclick="personbutton()" class="contents">
             <img class="mt-[75px] ml-[40px] w-[24px] h-[27px]" src="img/img-desktop/person.png" alt="Icon person">
           </a>
 
-        </div>
 
       </div>
 
@@ -409,7 +398,7 @@
             <div class="text-center">
               <ul>
                 <button id="scrollToTop" class="">Voltar ao Topo</button>
-                <li class="mb-1"><a href="login.html">Minha conta</a></li>
+                <li class="mb-1"><a href="profile.html">Minha conta</a></li>
                 <li><a href="shows.html">Shows</a></li>
               </ul>
             </div>

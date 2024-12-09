@@ -11,7 +11,8 @@ const selectDefault = {
   codigo: true,
   cpf: true,
   status: true,
-  data: true
+  data: true,
+  registroid: true
 };
 // Implementar as rotas de Compra
 
@@ -76,10 +77,10 @@ router.get('/:codigo', async (req, res) => {
 //GET /api/Compra/{cpf}
 
 
-router.get('/:cpf', async (req, res) => {
+router.get('/profile/:cpf', async (req, res) => {
   try {
     const cpf = req.params.cpf;
-    const compra = await prisma.compra.findUnique({
+    const compra = await prisma.compra.findMany({
       where: {
         cpf: cpf
       },

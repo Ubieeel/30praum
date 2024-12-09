@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel de Administração</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <div class="flex h-screen">
+      <!-- Sidebar -->
+      <div class="w-64 bg-gray-800 text-white p-4">
+        <div class="text-center mb-8">
+          <h2 class="text-2xl font-bold">Admin</h2>
+        </div>
+        <ul class="space-y-4">
+          <li>
+            <a href="#" class="hover:bg-gray-700 p-2 rounded block"
+              >Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:bg-gray-700 p-2 rounded block">Usuários</a>
+          </li>
+          <li>
+            <a href="#" class="hover:bg-gray-700 p-2 rounded block"
+              >Configurações</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:bg-gray-700 p-2 rounded block"
+              >Relatórios</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:bg-gray-700 p-2 rounded block">Logout</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Conteúdo Principal -->
+      <div class="flex-1 bg-gray-100 p-8">
+        <header class="flex justify-between items-center mb-8">
+          <h1 class="text-3xl font-bold">Painel de Administração</h1>
+          <div class="flex items-center space-x-4">
+            <span class="text-gray-600">Admin</span>
+            <img
+              src="https://via.placeholder.com/40"
+              alt="Foto de perfil"
+              class="rounded-full" />
+          </div>
+        </header>
+
+        <!-- Seção com Tabela -->
+        <div class="container mx-auto w-[80%] mb-8">
+          <div class="border border-gray-200 shadow-lg rounded-lg">
+            <table
+              class="table-auto w-full text-black border-collapse bg-white">
+              <thead class="bg-gray-800 text-gray-200">
+                <tr>
+                  <th class="px-4 py-3 border-b border-gray-300 text-left">
+                    Artista
+                  </th>
+                  <th class="px-4 py-3 border-b border-gray-300 text-left">
+                    Show mais recente
+                  </th>
+                  <th class="px-4 py-3 border-b border-gray-300 text-left">
+                    Shows feitos
+                  </th>
+                  <th class="px-4 py-3 border-b border-gray-300 text-left">
+                    Quantidade de compras
+                  </th>
+                  <th class="px-4 py-3 border-b border-gray-300 text-left">
+                    Quantidade de ingressos
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-4 py-3 border-b border-gray-200">MATUÊ</td>
+                  <td
+                    id="mostSalesMatue"
+                    class="px-4 py-3 border-b border-gray-200"></td>
+                  <td
+                    id="showsMatue"
+                    class="px-4 py-3 border-b border-gray-200"></td>
+                  <td
+                    id="quantidadeVendasMatue"
+                    class="px-4 py-3 border-b border-gray-200"></td>
+                  <td
+                    id="quantidadeIngressosMatue"
+                    class="px-4 py-3 border-b border-gray-200"></td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-4 py-3 border-b border-gray-200">WIU</td>
+                  <td
+                    id="mostSalesWiu"
+                    class="px-4 py-3 border-b border-gray-200"></td>
+                  <td
+                    id="showsWiu"
+                    class="px-4 py-3 border-b border-gray-200"></td>
+                  <td
+                    id="quantidadeVendasWiu"
+                    class="px-4 py-3 border-b border-gray-200"></td>
+                  <td
+                    id="quantidadeIngressosWiu"
+                    class="px-4 py-3 border-b border-gray-200"></td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-4 py-3 border-b border-gray-200">TETO</td>
+                  <td
+                    id="mostSalesTeto"
+                    class="px-4 py-3 border-b border-gray-200"></td>
+                  <td
+                    id="showsTeto"
+                    class="px-4 py-3 border-b border-gray-200"></td>
+                  <td
+                    id="quantidadeVendasTeto"
+                    class="px-4 py-3 border-b border-gray-200"></td>
+                  <td
+                    id="quantidadeIngressosTeto"
+                    class="px-4 py-3 border-b border-gray-200"></td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-4 py-3 border-b border-gray-200">BRANDÃO</td>
+                  <td
+                    id="mostSalesBrandao"
+                    class="px-4 py-3 border-b border-gray-200"></td>
+                  <td
+                    id="showsBrandao"
+                    class="px-4 py-3 border-b border-gray-200"></td>
+                  <td
+                    id="quantidadeVendasBrandao"
+                    class="px-4 py-3 border-b border-gray-200"></td>
+                  <td
+                    id="quantidadeIngressosBrandao"
+                    class="px-4 py-3 border-b border-gray-200"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script do Relatório -->
+    <script src="js/relatorio.js"></script>
+  </body>
+</html>

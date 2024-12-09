@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const listaShows = document.getElementById('lancamento');
         listaShows.innerHTML = "";
 
-        show.slice(1,4).forEach((show, index) => {
+        show.slice(-3).forEach((show, index) => {
             const card = criarCard(show, index);
             listaShows.appendChild(card);
         });
@@ -55,9 +55,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function criarCard(show, index) {
-    const card = document.createElement("div");
-    card.classList = "cardshow text-center scale-75 md:scale-100  md:block xl:block cursor-pointer hover:scale-[1.1] transition-all";
+    const card = document.createElement("a");
+    card.classList = "cardshow text-center mt-10 scale-75 md:scale-100  md:block xl:block cursor-pointer hover:scale-[1.1] transition-all";
     card.id = show.registro
+    card.setAttribute("href", "checkout.html")
+    card.setAttribute("onclick", "showclicked(id)");
 
     const imagem = document.createElement("img");
     imagem.src = show.capa;
@@ -95,7 +97,7 @@ document.addEventListener('click', function() {
     // Função que será chamada ao clicar em qualquer botão
     function capturarId(event) {
       idClicado = this.id; // Captura o ID do elemento clicado
-      console.log("ID do botão clicado:", idClicado);
+    //   console.log("ID do botão clicado:", idClicado);
     }
 
     // Adiciona o evento de clique para os botões
@@ -105,5 +107,7 @@ document.addEventListener('click', function() {
 
     })
 
-
+    function showclicked(id){
+        sessionStorage.setItem("showclicked", id);
+    }
 

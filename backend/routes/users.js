@@ -3,7 +3,7 @@ var router = express.Router();
 
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient({ errorFormat: "minimal" });
-var crypto = require('crypto');
+const bcrypt = require('bcryptjs');
 
 
 const { exceptionHandler } = require('../utils/handlers');
@@ -173,12 +173,7 @@ router.post('/', async (req, res) => {
         error: "A senha é obrigatória e deve no minímo 8 caracteres"
       });
     }
-
-    var mykey = crypto.createCipher('aes-128-cbc', "mypassword");
-    var mystr = mykey.update( data.password , 'utf8', 'hex')
-    mystr += mykey.final('hex');
-
-    data.password = mystr;
+    data.password = await bcrypt.hash(data.password, 10);
 
     const user = await prisma.user.create({
       data,
@@ -233,19 +228,11 @@ router.get('/profile/:id', authenticateToken, async (req, res) => {
       }
     });
      // Negar acesso a atualizar o usuário != do dono do token
-     if (checkUser === null || id !== token.id) {
+     if (!token.is_admin) {
       return res.sendStatus(403); // 403 Forbidden.
     }
 
-    var mykey = crypto.createDecipher('aes-128-cbc', 'mypassword');
-    var mystr = mykey.update(user.password, 'hex', 'utf8')
-    mystr += mykey.final('utf8');
-
-    const decryptedpass = mystr;
-
-
-    user.password = decryptedpass;
-
+    
     res.json(user);
   }
   catch (exception) {
@@ -283,12 +270,7 @@ router.patch('/:id', authenticateToken, async (req, res) => {
         })
       }
 
-    var mykey = crypto.createCipher('aes-128-cbc', "mypassword");
-    var mystr = mykey.update( data.password , 'utf8', 'hex')
-    mystr += mykey.final('hex');
-
-    data.password = mystr;
-
+      data.password = await bcrypt.hash(data.password, 10);
 
     }
     const user = await prisma.user.update({
@@ -321,7 +303,7 @@ router.patch('/admin/:id', authenticateToken, async (req, res) => {
     console.log(checkUser);
 
     // Negar acesso a atualizar o usuário != do dono do token
-    if (token.is_admin !== "true") {
+    if (!token.is_admin) {
       return res.sendStatus(403); // 403 Forbidden.
     }
 
@@ -332,13 +314,7 @@ router.patch('/admin/:id', authenticateToken, async (req, res) => {
           error: "A senha deve ter no mínimo 8 caracteres."
         })
       }
-
-    var mykey = crypto.createCipher('aes-128-cbc', "mypassword");
-    var mystr = mykey.update( data.password , 'utf8', 'hex')
-    mystr += mykey.final('hex');
-
-    data.password = mystr;
-
+      data.password = await bcrypt.hash(data.password, 10);
 
     }
     const user = await prisma.user.update({
@@ -392,18 +368,13 @@ router.post('/login', async (req, res) => {
 
     // Verificar a senha
     
-    var mykey = crypto.createDecipher('aes-128-cbc', 'mypassword');
-    var mystr = mykey.update(user.password, 'hex', 'utf8')
-    mystr += mykey.final('utf8');
-
-    const decryptedpass = mystr;
-
-    if  (decryptedpass !== data.password) {
+    const passwordCheck = await bcrypt.compare(data.password, user.password);
+    if (!passwordCheck) {
       return res.status(401).json({
         error: "Usuário e/ou senha incorreto(s)"
       });
     }
-    delete data.password;
+    delete user.password;
     const jwt = generateAccessToken(user);
     user.accessToken = jwt;
     res.json(user);

@@ -181,7 +181,7 @@
     </div>
 
     <section>
-        <nav class="flex flex-col text-center text-xl gap-y-3 mt-8 text-white">
+        <nav  id="headermobile" class="flex flex-col text-center text-xl gap-y-3 mt-8 text-white">
             <a href="index.html">INÍCIO</a>
             <a href="shows.html">SHOWS</a>
             <a href="contato.html">CONTATO</a>
@@ -190,17 +190,20 @@
         </nav>
     </section>
     
-
+    
     <div class="max-w-[245px] mx-auto mt-40">
-        <img class="mx-auto mb-5" src="img/img-mobile/iconperson2.png" alt="">
-
-        <button class="mx-auto mb-5 py-3 px-[91px] rounded-3xl text-[16px] bg-[#01e1ff7c] font-poppins text-white">LOGIN</button>
-
-        <button class="mx-auto py-3 px-[66px] rounded-3xl text-[16px] bg-[#252323] font-poppins text-white">CADASTRE-SE</button>
-
-    </div>
-
-</div>
+        <img id="listbtn" class="mx-auto mb-5" src="img/img-mobile/iconperson2.png" alt="">
+        <a href="login.html">
+          <button
+          id="bntmobile1" class="mx-auto mb-5 py-3 px-[91px] rounded-3xl text-[16px] bg-[#01e1ff7c] font-poppins text-white">LOGIN</button>
+        </a>
+  
+        <a href="cadastro.html" class="contents">
+          <button
+          id="bntmobile2"  class="mx-auto py-3 px-[66px] rounded-3xl text-[16px] bg-[#252323] font-poppins text-white">CADASTRE-SE</button>
+        </a>
+      </div>
+  
 
 <!-- FIM SIDE BAR -->
 
@@ -213,11 +216,7 @@
                 <div class="justify-center flex-row flex gap-x-[190px]">
                     <img class="pt-[45px]" src="img/img-mobile/30logo(2).png" alt="Logo">
 
-                    <div class="flex gap-[40px]">
-                        <button class="contents">
-                            <img class="max-w-[31px] max-h-[31px] mt-16" src="img/img-mobile/Search.png" alt="">
-                        </button>
-
+                  
                         <button onclick="opensidebar()" class="contents">
                             <img class="max-w-[40px] mt-[67px] max-h-[27px]" src="img/img-mobile/nav.png" alt="">
                         </button>
@@ -238,8 +237,8 @@
 
                 <img class="pt-[54px]" src="img/img-mobile/30logo(2).png" alt="Logo">
 
-                <div class="mt-[77px] flex flex-row ml-40">
-                    <ul class="header flex flex-row gap-x-[39px]">
+                <div class="mt-[77px] flex flex-row">
+                    <ul id="header" class="flex flex-row gap-x-[39px]">
                         <li class="text-nav ">
                             <a href="index.html">INÍCIO</a>
                         </li>
@@ -257,20 +256,12 @@
                 </div>
 
 
-                <div class="flex flex-row">
-                    
-                    <button class=" contents">
-                        <img class="max-w-[33px] max-h-[33px] absolute top-[71px] sm:right-[135px] lg:right-[152px] xl:right-[152px]"
-                            src="img/img-desktop/Search.png" alt="Search">
-                    </button>
-
-                    <input class="mt-[71px] rounded-xl bg-[#585757]  max-w-[225px] min-w-[180px] h-[35px]" type="text">
-
+           
 
                     <a onclick="personbutton()"  class="contents">                  
                         <img class="mt-[75px] ml-[40px] w-[24px] h-[27px]" src="img/img-desktop/person.png"  alt="Icon person">
                         </a>
-                </div>
+       
 
             </div>
 
@@ -306,8 +297,28 @@
 
     
     <div id="comprasingresso" class="container mx-auto mt-10 mb-10 max-w-[320px] p-10 bg-[#5857578c] rounded-3xl lg:max-w-[1002px]">
+        
+        <h1 class="text-2xl font-bold mb-6 font-poppins text-white">Informações do show </h1>
 
-        <h1 class="text-2xl font-bold mb-6 font-poppins text-white">Ingressos</h1>
+        <div>
+            <h1 id="tituloshow" class="text-center mb-6 text-white font-poppins underline text-4xl">Title</h1>
+
+        
+            <img  id="capashow" src="" width="400px" class="mx-auto mb-6" alt="Cape Show">
+
+            <p class="text-center text-white text-2xl "> Endereço: </p>
+            <p  id="endereco" class="text-center mb-6 text-white text-1xl"> Rua ... </p>
+
+            <p class="text-center text-white text-2xl "> Artistas: </p>
+            <p  id="artistas" class="text-center text-white text-1xl"> TETO WIU MATUE</p>
+
+            <p class="text-center text-white text-2xl "> Data e horário: </p>
+            <p  id="data-hora" class="text-center text-white text-1xl"> ... </p>
+
+
+        </div>
+
+        <h1 class="text-center text-2xl mt-6 font-bold mb-6 font-poppins text-white">Ingressos</h1>
 
 
         <main class="flex-1 md:p-6">
@@ -320,23 +331,23 @@
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <h3 class="text-xl font-bold  mb-2">Meia entrada</h3>
                         <p class=" mb-4">Estudantes ou menores de 15 anos</p>
-                        <h2 class="text-gray-600 font-bold mb-4 font-poppins text-2xl">R$ 80,00</h2>
-                        <button type="button" class="adicionar-ingresso block text-white text-bold font-poppins rounded-xl p-3 bg-green-500 hover:underline" onclick="adicionarItem(80)" data-valor="80.00">Adicionar Ingresso</button>
+                        <h2 id="campmeio" class="text-gray-600 font-bold mb-4 font-poppins text-2xl">R$ 0,00</h2>
+                        <button id="btnmeio" type="button" class="adicionar-ingresso block text-white text-bold font-poppins rounded-xl p-3 bg-green-500 hover:underline" onclick="adicionarItem(id)" data-valor="50.00">Adicionar Ingresso</button>
                     </div>
                     <!-- Evento 2 -->
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <h3 class="text-xl font-bold  mb-2">Entrada</h3>
                         <p class=" mb-4">Pista Normal <br> (+18)</p>
-                        <h2 class="text-gray-600 font-bold mb-4 font-poppins text-2xl">R$ 160,00</h2>
-                        <button type="button" class="adicionar-ingresso block text-white text-bold font-poppins rounded-xl p-3 bg-green-500 hover:underline" onclick="adicionarItem(160)" data-valor="160.00">Adicionar Ingresso</button>
+                        <h2 id="campinteira" class="text-gray-600 font-bold mb-4 font-poppins text-2xl">R$ 0,00</h2>
+                        <button id="btninteira" type="button" class="adicionar-ingresso block text-white text-bold font-poppins rounded-xl p-3 bg-green-500 hover:underline" onclick="adicionarItem(id)" data-valor="160.00">Adicionar Ingresso</button>
                     
                     </div>
                     <!-- Evento 3 -->
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <h3 class="text-xl font-bold  mb-2">VIP entrada</h3>
                         <p class=" mb-4">Camarote VIP, Combo bebida plus, foto com artista</p>
-                        <h2 class="text-gray-600  font-bold mb-4 font-poppins text-2xl">R$ 320,00</h2>
-                        <button type="button" class="adicionar-ingresso block text-white text-bold font-poppins rounded-xl p-3 bg-green-500 hover:underline" onclick="adicionarItem(320)" data-valor="320.00">Adicionar Ingresso</button>
+                        <h2 id="campvip" class="text-gray-600  font-bold mb-4 font-poppins text-2xl">R$ 320,00</h2>
+                        <button  id="btnpvip" type="button" class="adicionar-ingresso block text-white text-bold font-poppins rounded-xl p-3 bg-green-500 hover:underline" onclick="adicionarItem(id)" data-valor="320.00">Adicionar Ingresso</button>
                     
                     </div>
                     
@@ -350,9 +361,14 @@
 
                     <div class="bg-white p-6 rounded-md col-span-3">
                         <h3 class="text-lg font-bold text-gray-800">Sumário</h3>
+                        <div id="sumario">
+
+
+
+                        </div>
                         <ul class="text-gray-800 mt-6 space-y-3">
                           <li class="flex flex-wrap gap-4 text-sm">Sub total <span id="subTotal" class="ml-auto font-bold">R$0.00</span></li>
-                          <li class="flex flex-wrap gap-4 text-sm">Taxas (10%) <span id="taxa" class="ml-auto font-bold">R$0.00</span></li>
+                         
                           <hr />
                           <li class="flex flex-wrap gap-4 text-base font-bold">Total <span id="total" class="ml-auto">R$0.00</span></li>
                         </ul>
@@ -547,7 +563,7 @@
             <div class="text-center">
               <ul>
                 <li class="mb-1"><a href="index.html">Voltar ao ínicio</a></li>
-                <li class="mb-1"><a href="login.html">Minha conta</a></li>
+                <li class="mb-1"><a href="profile.html">Minha conta</a></li>
                 <li><a href="shows.html">Shows</a></li>
               </ul>
             </div>
@@ -614,91 +630,9 @@
   </script>
 
 <script>
-    let quantidadeCarrinho = 0; // Quantidade de itens no carrinho
-let totalCarrinho = 0; // Total do carrinho
-
-// Função para atualizar o carrinho
-function atualizarCarrinho(valorIngresso) {
-    quantidadeCarrinho++; // Incrementa a quantidade de itens
-    totalCarrinho += valorIngresso; // Soma o valor do ingresso ao total
-
-    // Atualiza a quantidade de itens no carrinho
-    document.getElementById('quantidadeCarrinho').textContent = quantidadeCarrinho;
-    // Atualiza o valor total no carrinho
-    document.getElementById('totalCarrinho').textContent = `R$ ${totalCarrinho.toFixed(2)}`;
-}
-
-// Adiciona o evento de clique para os botões de adicionar ingresso
-document.querySelectorAll('.adicionar-ingresso').forEach((button) => {
-    button.addEventListener('click', function () {
-        let valorIngresso = parseFloat(this.dataset.valor); // Pega o valor do ingresso
-        atualizarCarrinho(valorIngresso); // Atualiza carrinho com o valor do ingresso
-    });
-});
-
-// Finalizar a compra (opcional, exemplo de redirecionamento)
-document.getElementById('finalizarCompra').addEventListener('click', function() {
-    if (quantidadeCarrinho > 0) {
-        // Redireciona para a página de pagamento (exemplo)
-        window.location.href = "profile.html";
-    } else {
-        alert("Adicione itens ao carrinho antes de finalizar a compra.");
-    }
-});
-
-
-    // Inicializa as variáveis de subtotal, taxa e total
-    let subtotal = 0;
-    const taxaPercentual = 0.10; // 10%
-
-    // Função para adicionar o valor do ingresso ao subtotal
-    function adicionarItem(valor) {
-        // Atualiza o subtotal
-        subtotal += valor;
-
-        // Calcula a taxa de 10% do subtotal
-        const taxa = subtotal * taxaPercentual;
-
-        // Calcula o total
-        const total = subtotal + taxa;
-
-        // Atualiza os valores na interface
-        document.getElementById('subTotal').innerText = `R$ ${subtotal.toFixed(2)}`;
-        document.getElementById('taxa').innerText = `R$ ${taxa.toFixed(2)}`;
-        document.getElementById('total').innerText = `R$ ${total.toFixed(2)}`;
-    }
-
-    // Função para cancelar a compra (reseta tudo)
-    function cancelar() {
-        subtotal = 0;
-        document.getElementById('subTotal').innerText = 'R$ 0.00';
-        document.getElementById('taxa').innerText = 'R$ 0.00';
-        document.getElementById('total').innerText = 'R$ 0.00';
-    }
-
-    // Função chamada ao clicar em "Finalizar Compra"
-    document.getElementById('finalizarCompra').addEventListener('click', function() {
-        // Encontrar o botão "Confirmar"
-        const botaoConfirmar = document.querySelector('button[onclick="escolhametodo()"]');
-        
-        // Rolar a tela suavemente até o botão de "Confirmar"
-        botaoConfirmar.scrollIntoView({
-            behavior: 'smooth', // Rolagem suave
-            block: 'center' // Centraliza o botão na tela
-        });
-
-        // Adiciona a animação de pulsar
-        botaoConfirmar.classList.add('pulse');
-        
-        // Remover a animação após 2 segundos (a pulsação para de acontecer após esse tempo)
-        setTimeout(function() {
-            botaoConfirmar.classList.remove('pulse');
-        }, 2000);
-    });
-
-
+   
 </script>
-  
+<script type="text/javascript" src="js/checkout.js"></script>
 </body>
 
 </html>

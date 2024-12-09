@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel de Administração</title>
+     <!-- FAVICON -->
+  <link rel="shortcut icon" href="img/img-desktop/30logo(1).png" type="image/x-icon" />
     <!-- Link do Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body class="bg-gray-100 font-sans">
+<body class="bg-gray-100  font-sans">
 
     <!-- Layout geral com menu lateral e conteúdo principal -->
-    <div class="flex h-screen">
+    <div class="flex  h-full">
         
         <!-- Sidebar -->
         <div class="w-64 bg-gray-800 text-white p-4">
@@ -31,10 +34,10 @@
             <ul class="space-y-4">
               
                 <li><a href="admin.html" class="hover:bg-gray-700 p-2 rounded block">Dashboard</a></li>
-                <li><a href="#" class="hover:bg-gray-700 p-2 rounded block">Usuários</a></li>
+                <li><a href="admin-users.html" class="hover:bg-gray-700 p-2 rounded block">Usuários</a></li>
                 <li><a href="admin-shows.html" class="hover:bg-gray-700 p-2 rounded block">Shows</a></li>
-                <li><a href="#" class="hover:bg-gray-700 p-2 rounded block">Relatórios</a></li>
-                <li><a href="#" class="hover:bg-gray-700 p-2 rounded block">Logout</a></li>
+                <li><a href="admin-relatorio.html" class="hover:bg-gray-700 p-2 rounded block">Relatórios</a></li>
+                <li><button onclick="sairconta()" class="hover:bg-gray-700 p-2 rounded block">Logout</button></li>
             </ul>
         </div>
 
@@ -71,6 +74,80 @@
                     <p id="comprasmes" class="text-3xl font-bold text-blue-600">0</p>
                 </div>
             </div>
+
+            <div class="max-w-4xl mx-auto px-4 py-8">
+                <h1 class="text-3xl font-bold text-center pb-5 text-white"> Vendas De 2024</h1>
+        
+                <!-- Canvas para o gráfico -->
+                <div class="bg-slate-100 shadow-md rounded-lg p-4 mb-8">
+                    <canvas id="myChart" width="400" height="200"></canvas>
+                </div>
+        
+                <!-- Tabela de dados -->
+                <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <table class="w-full table-auto">
+                        <thead class="bg-gray-200">
+                            <tr>
+                                <th class="px-4 py-2 text-left text-gray-700">Mês</th>
+                                <th class="px-4 py-2 text-left text-gray-700">Vendas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="px-4 py-2 border-b text-gray-700">Janeiro</td>
+                                <td id="Janeiro"  class="px-4 py-2 border-b text-gray-700"></td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2  border-b text-gray-700">Fevereiro</td>
+                                <td  id="Fevereiro" class="px-4 py-2 border-b text-gray-700"></td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 border-b text-gray-700">Março</td>
+                                <td  id="Março" class="px-4 py-2 border-b text-gray-700"></td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 border-b text-gray-700">Abril</td>
+                                <td id="Abril"  class="px-4 py-2 border-b text-gray-700"></td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 border-b text-gray-700">Maio</td>
+                                <td id="Maio"  class="px-4 py-2 border-b text-gray-700"></td> 
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 border-b text-gray-700">Junho</td>
+                                <td id="Junho"  class="px-4 py-2 border-b text-gray-700"></td> 
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 border-b text-gray-700">Julho</td>
+                                <td id="Julho"  class="px-4 py-2 border-b text-gray-700"></td> 
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 border-b text-gray-700">Agosto</td>
+                                <td id="Agosto"  class="px-4 py-2 border-b text-gray-700"></td> 
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 border-b text-gray-700">Setembro</td>
+                                <td  id="Setembro" class="px-4 py-2 border-b text-gray-700"></td> 
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 border-b text-gray-700">Outubro</td>
+                                <td  id="Outubro" class="px-4 py-2 border-b text-gray-700"></td> 
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 border-b text-gray-700">Novembro</td>
+                                <td  id="Novembro" class="px-4 py-2 border-b text-gray-700"></td> 
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 border-b text-gray-700">Dezembro</td>
+                                <td id="Dezembro" class="px-4 py-2 border-b text-gray-700"></td> 
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
         </div>
 
     </div>

@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sgows - 30PraUm</title>
+  <title> Shows - 30PraUm</title>
 
   <!-- FAVICON -->
-  <link rel="shortcut icon" href="../public/img/img-desktop/30logo(1).png" type="image/x-icon" />
+  <link rel="shortcut icon" href="img/img-desktop/30logo(1).png" type="image/x-icon" />
   <!-- FONTES -->
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -116,7 +116,7 @@
     </div>
 
     <section>
-      <nav class="flex flex-col text-center text-xl gap-y-3 mt-8 text-white">
+      <nav id="headermobile" class="flex flex-col text-center text-xl gap-y-3 mt-8 text-white">
         <a href="index.html">INÍCIO</a>
         <a href="shows.html">SHOWS</a>
         <a href="contato.html">CONTATO</a>
@@ -124,17 +124,20 @@
       </nav>
     </section>
 
-
+    
     <div class="max-w-[245px] mx-auto mt-40">
-      <img class="mx-auto mb-5" src="img/img-mobile/iconperson2.png" alt="">
+      <img id="listbtn" class="mx-auto mb-5" src="img/img-mobile/iconperson2.png" alt="">
+      <a href="login.html">
+        <button
+        id="bntmobile1" class="mx-auto mb-5 py-3 px-[91px] rounded-3xl text-[16px] bg-[#01e1ff7c] font-poppins text-white">LOGIN</button>
+      </a>
 
-      <button
-        class="mx-auto mb-5 py-3 px-[91px] rounded-3xl text-[16px] bg-[#01e1ff7c] font-poppins text-white">LOGIN</button>
-
-      <button
-        class="mx-auto py-3 px-[66px] rounded-3xl text-[16px] bg-[#252323] font-poppins text-white">CADASTRE-SE</button>
-
+      <a href="cadastro.html" class="contents">
+        <button
+        id="bntmobile2"  class="mx-auto py-3 px-[66px] rounded-3xl text-[16px] bg-[#252323] font-poppins text-white">CADASTRE-SE</button>
+      </a>
     </div>
+
 
   </div>
 
@@ -151,10 +154,6 @@
         <div class="justify-center flex-row flex gap-x-[190px]">
           <img class="pt-[45px]" src="img/img-mobile/30logo(2).png" alt="Logo">
 
-          <div class="flex gap-[40px]">
-            <button class="contents">
-              <img class="max-w-[31px] max-h-[31px] mt-16" src="img/img-mobile/Search.png" alt="">
-            </button>
 
             <button onclick="opensidebar()" class="contents">
               <img class="max-w-[40px] mt-[67px] max-h-[27px]" src="img/img-mobile/nav.png" alt="">
@@ -176,7 +175,7 @@
 
         <img class="pt-[54px]" src="img/img-mobile/30logo(2).png" alt="Logo">
 
-        <div class="mt-[77px] flex flex-row ml-40">
+        <div class="mt-[77px] flex flex-row">
           <ul id="header" class=" flex flex-row gap-x-[39px]">
             <li class="text-nav ">
               <a href="index.html">INÍCIO</a>
@@ -193,15 +192,6 @@
           </ul>
         </div>
 
-
-        <div class="flex flex-row">
-          <button class=" contents">
-            <img
-              class="max-w-[33px] max-h-[33px] absolute top-[71px] sm:right-[135px] lg:right-[152px] xl:right-[152px]"
-              src="img/img-desktop/Search.png" alt="Search">
-          </button>
-
-          <input class="mt-[71px] rounded-xl bg-[#585757]  max-w-[225px] min-w-[180px] h-[35px]" type="text">
 
 
           <a onclick="personbutton()" class="contents">
@@ -229,58 +219,29 @@
       <form class="mx-auto pt-2 max-w-[338px]">
         <select id="artistas"
           class="bg-zinc-600 max-h-[40px] w-[228px] border border-gray-300 text-gray-900 text-[14px] rounded-lg focus:ring-blue-500 focus:border-blue-500 block font-medium p-2.5 dark:bg-zinc-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-          <option selected class="">Qual o artista da vez?</option>
+          <option value="" selected class="">Qual o artista da vez?</option>
           <option value="TETO">TETO</option>
-          <option value="WUY">WIU</option>
+          <option value="WIU">WIU</option>
           <option value="MATUE">MATUÊ</option>
-          <option value="BRANDÃO">BRANDÃO</option>
+          <option value="BRANDAO">BRANDÃO</option>
         </select>
       </form>
 
-      <form class="mx-auto my-auto w-[184px]">
-        <select id="artistas"
-          class="bg-zinc-600 w-[184px] border border-gray-300 text-gray-900 text-[14px] rounded-lg font-medium focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-zinc-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-          <option selected class="">Selecione o Estado</option>
-          <option value="AC">Acre</option>
-          <option value="AL">Alagoas</option>
-          <option value="AP">Amapá</option>
-          <option value="AM">Amazonas</option>
-          <option value="BA">Bahia</option>
-          <option value="CE">Ceará</option>
-          <option value="DF">Distrito Federal</option>
-          <option value="ES">Espírito Santo</option>
-          <option value="GO">Goiás</option>
-          <option value="MA">Maranhão</option>
-          <option value="MT">Mato Grosso</option>
-          <option value="MS">Mato Grosso do Sul</option>
-          <option value="MG">Minas Gerais</option>
-          <option value="PA">Pará</option>
-          <option value="PB">Paraíba</option>
-          <option value="PR">Paraná</option>
-          <option value="PE">Pernambuco</option>
-          <option value="PI">Piauí</option>
-          <option value="RJ">Rio de Janeiro</option>
-          <option value="RN">Rio Grande do Norte</option>
-          <option value="RS">Rio Grande do Sul</option>
-          <option value="RO">Rondônia</option>
-          <option value="RR">Roraima</option>
-          <option value="SC">Santa Catarina</option>
-          <option value="SP">São Paulo</option>
-          <option value="SE">Sergipe</option>
-          <option value="TO">Tocantins</option>
-          <option value="EX">Estrangeiro</option>
-        </select>
-      </form>
+      
 
       <form
         class="bgborder mx-auto my-auto border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 font-medium dark:bg-zinc-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 p-2.5 text-[14px] rounded-lg flex flex-row"
         action="/action_page.php">
-        <label class="mr-3 my-auto" for="birthday">Qual data?</label>
-        <input class="bg-slate-500" type="date" id="birthday" name="birthday" />
+        <label class="mr-3 my-auto" for="datashow">Qual data?</label>
+        <input class="bg-slate-500" type="date" id="datashow" name="DataShow" />
       </form>
 
-      <button type="submit">
-        <img class="mx-auto lg:mr-2 my-auto p-1 bg-zinc-600 rounded-xl" src="img/img-desktop/Search.png"
+      <button class="bg-zinc-600 my-auto mx-auto max-h-[40px] w-[28px] border border-gray-300 text-gray-900 text-[14px] rounded-lg focus:ring-blue-500 focus:border-blue-500 block font-medium p-2.5 dark:bg-zinc-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onclick="redefinirfiltros()">
+        Redefinir
+      </button>
+
+      <button>
+        <img onclick="aplicarfiltros()" class="mx-auto lg:mr-2 my-auto p-1 bg-zinc-600 rounded-xl" src="img/img-desktop/Search.png"
           alt="Lupa submit" />
       </button>
     </div>
@@ -376,7 +337,7 @@
             <div class="text-center">
               <ul>
                 <li class="mb-1"><a href="index.html">Voltar ao ínicio</a></li>
-                <li class="mb-1"><a href="login.html">Minha conta</a></li>
+                <li class="mb-1"><a href="profile.html">Minha conta</a></li>
                 <li><a href="shows.html">Shows</a></li>
               </ul>
             </div>
