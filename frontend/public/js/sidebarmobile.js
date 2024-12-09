@@ -69,8 +69,17 @@ var userinfo = decodeToken(tokenuser)
 
 
     }
+    var usuarioLogado = sessionStorage.getItem('usuarioLogado');
 
-
+    if (usuarioLogado === "true"){
+    const btnmobile1 = document.getElementById('bntmobile1');
+        const btnmobile2 = document.getElementById('bntmobile2');
+    
+        btnmobile1.classList = "hidden"
+        btnmobile2.innerHTML = "Ver meu Perfil"
+        btnmobile2.setAttribute("onclick", "openprofile()")
+        document.getElementById('cadastro').setAttribute("href", "profile.html")
+    }
     
     if (userinfo.is_admin === "true") {
         
@@ -83,13 +92,7 @@ var userinfo = decodeToken(tokenuser)
     
         
         listaShows2.appendChild(btnlink2)
-        
-        const btnmobile1 = document.getElementById('bntmobile1');
-        const btnmobile2 = document.getElementById('bntmobile2');
     
-        btnmobile1.classList = "hidden"
-        btnmobile2.innerHTML = "Ver meu Perfil"
-        btnmobile2.setAttribute("onclick", "openprofile()")
 
       
         }
@@ -97,6 +100,6 @@ var userinfo = decodeToken(tokenuser)
 }
 
 
-function openprofile(){
-    window.location = "profile.html"
-}
+// function openprofile(){
+//     window.location = "profile.html"
+// }
