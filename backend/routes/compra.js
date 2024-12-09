@@ -12,7 +12,8 @@ const selectDefault = {
   cpf: true,
   status: true,
   data: true,
-  registroid: true
+  registroid: true,
+  quantidade: true
 };
 // Implementar as rotas de Compra
 

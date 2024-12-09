@@ -140,8 +140,8 @@ carregarclicado()
         totalCarrinho += valorIngresso; // Soma o valor do ingresso ao total
     
         // Atualiza a quantidade de itens no carrinho
-        document.getElementById('total').textContent = 'R$ ' + totalCarrinho
-        document.getElementById('subTotal').textContent = 'R$ ' + totalCarrinho
+        document.getElementById('total').textContent = 'R$ ' + totalCarrinho.toFixed(2)
+        document.getElementById('subTotal').textContent = 'R$ ' + totalCarrinho.toFixed(2)
         document.getElementById('quantidadeCarrinho').textContent = quantidadeCarrinho;
         // Atualiza o valor total no carrinho
         document.getElementById('totalCarrinho').textContent = `R$ ${totalCarrinho.toFixed(2)}`;
@@ -252,10 +252,18 @@ carregarclicado()
     
         // Função para cancelar a compra (reseta tudo)
         function cancelar() {
-            subtotal = 0;
-            document.getElementById('subTotal').innerText = 'R$ 0.00';
-            document.getElementById('taxa').innerText = 'R$ 0.00';
-            document.getElementById('total').innerText = 'R$ 0.00';
+        subtotal = 0;
+
+            totalCarrinho = 0
+            quantidadeCarrinho= 0
+
+            document.getElementById('sumario').textContent = ""
+
+        document.getElementById('total').textContent = "R$0,00"
+        document.getElementById('subTotal').textContent = "R$0,00"
+        document.getElementById('quantidadeCarrinho').textContent = "0"
+        // Atualiza o valor total no carrinho
+        document.getElementById('totalCarrinho').textContent ="R$ 0,00"
         }
     
         // Função chamada ao clicar em "Finalizar Compra"

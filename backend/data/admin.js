@@ -25,6 +25,7 @@ async function main() {
     data: {
       email: "admin5@admin.com",
       name: faker.person.fullName(),
+      // Senha é:  testesenha
       password: "$2a$10$YIuLBS2JTvOinVAf3w6eqOO54QNmuH5PHw.Zh0FsPHm8xQFugTXXa",
       cidade: faker.location.city(),
       cpf: "12412412442",

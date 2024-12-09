@@ -227,12 +227,8 @@ router.get('/profile/:id', authenticateToken, async (req, res) => {
         email: token.email
       }
     });
-     // Negar acesso a atualizar o usuário != do dono do token
-     if (!token.is_admin) {
-      return res.sendStatus(403); // 403 Forbidden.
-    }
+  
 
-    
     res.json(user);
   }
   catch (exception) {

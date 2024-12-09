@@ -75,7 +75,7 @@ const generateRandomDate2023to2024 = () => {
   // Gerar dados para a tabela 'show'
   const shows = [];
 
-  const urlshows = ["https://showpass.com.br/images/imagens-site/642616d077815.jpeg", "https://www.eventosaqui.com.br/directories/15425/banner.jpg", "https://www.designi.com.br/images/preview/10506161.jpg", "https://s3-assets.bilheteriadigital.com/eventos/60221a.jpg?1729594789000", "https://www.designi.com.br/images/preview/10609765.jpg" ]
+  const urlshows = ["https://showpass.com.br/images/imagens-site/642616d077815.jpeg", "https://www.eventosaqui.com.br/directories/15425/banner.jpg", "https://mir-s3-cdn-cf.behance.net/project_modules/1400/cadb5c147351373.62c0e5262ed1b.png", "https://s3-assets.bilheteriadigital.com/eventos/60221a.jpg?1729594789000", "https://www.designi.com.br/images/preview/10609765.jpg", ]
 
   const artistas = ["MATUE", "WIU", "BRANDAO", "TETO"]
 
